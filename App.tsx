@@ -55,12 +55,12 @@ const App: React.FC = () => {
   };
 
   return (
-    <div className="min-h-screen bg-zinc-100 py-12 flex flex-col items-center text-zinc-900 font-sans">
-      <div className="fixed top-6 right-6 z-50 flex flex-col items-end gap-2 no-print">
+    <div className="min-h-screen bg-zinc-100 py-4 md:py-12 flex flex-col items-center text-zinc-900 font-sans">
+      <div className="fixed top-4 right-4 md:top-6 md:right-6 z-50 flex flex-col items-end gap-2 no-print">
         <button
           onClick={downloadPDF}
           disabled={isGenerating}
-          className={`flex items-center gap-2 px-8 py-4 rounded-full font-bold shadow-2xl transition-all ${
+          className={`flex items-center gap-2 px-4 py-3 md:px-8 md:py-4 rounded-full text-sm md:text-base font-bold shadow-2xl transition-all ${
             isGenerating 
               ? 'bg-zinc-300 text-zinc-500 cursor-not-allowed' 
               : 'bg-zinc-900 text-white hover:bg-zinc-800 active:scale-95'
@@ -71,11 +71,12 @@ const App: React.FC = () => {
           ) : (
             <Download size={20} />
           )}
-          {isGenerating ? 'PDF生成中...' : '統合戦略資料(v6)をPDF出力'}
+          <span className="hidden sm:inline">{isGenerating ? 'PDF生成中...' : '統合戦略資料(v6)をPDF出力'}</span>
+          <span className="sm:hidden">{isGenerating ? '生成中...' : 'PDF'}</span>
         </button>
       </div>
 
-      <div className="flex flex-col gap-12">
+      <div className="flex flex-col gap-4 md:gap-12 w-full">
         
         {/* SLIDE 1: MAIN TITLE */}
         <Slide id={1} title="DeepBiz × TheSide 統合AI戦略" subtitle="営業DXの次世代モデル：高精度解析と自動送信の融合" pageNumber={1} totalPageCount={totalSlides}>

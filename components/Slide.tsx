@@ -1,5 +1,5 @@
 
-import React from 'react';
+import React, { useEffect, useRef, useState } from 'react';
 import { SlideProps } from '../types';
 
 const Slide: React.FC<SlideProps> = ({ 
@@ -10,11 +10,42 @@ const Slide: React.FC<SlideProps> = ({
   pageNumber, 
   totalPageCount 
 }) => {
+  const containerRef = useRef<HTMLDivElement>(null);
+  const [scale, setScale] = useState(1);
+
+  useEffect(() => {
+    const updateScale = () => {
+      if (!containerRef.current) return;
+      
+      const slideWidth = 1123; // A4 landscape width in px
+      const viewportWidth = window.innerWidth;
+      const margin = 32; // 16px margin on each side
+      
+      if (viewportWidth < slideWidth + margin) {
+        const newScale = (viewportWidth - margin) / slideWidth;
+        setScale(newScale);
+      } else {
+        setScale(1);
+      }
+    };
+
+    updateScale();
+    window.addEventListener('resize', updateScale);
+    return () => window.removeEventListener('resize', updateScale);
+  }, []);
+
   return (
-    <div 
-      id={`slide-${id}`}
-      className="a4-landscape bg-white text-zinc-900 flex flex-col shadow-xl border border-zinc-200 m-4 rounded-sm relative slide-container"
-    >
+    <div className="flex justify-center items-center" style={{ padding: '16px' }}>
+      <div 
+        ref={containerRef}
+        id={`slide-${id}`}
+        className="a4-landscape bg-white text-zinc-900 flex flex-col shadow-xl border border-zinc-200 rounded-sm relative slide-container"
+        style={{
+          transform: `scale(${scale})`,
+          transformOrigin: 'top center',
+          marginBottom: scale < 1 ? `${(1 - scale) * 794}px` : '0'
+        }}
+      >
       {/* Background decoration */}
       <div className="absolute top-0 right-0 w-96 h-96 bg-blue-50/50 blur-[120px] rounded-full pointer-events-none" />
       <div className="absolute bottom-0 left-0 w-96 h-96 bg-indigo-50/50 blur-[120px] rounded-full pointer-events-none" />
@@ -56,6 +87,7 @@ const Slide: React.FC<SlideProps> = ({
         <div className="text-zinc-400 text-xs font-bold tracking-widest">
           {pageNumber} / {totalPageCount}
         </div>
+      </div>
       </div>
     </div>
   );
