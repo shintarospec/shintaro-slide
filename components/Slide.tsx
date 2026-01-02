@@ -35,15 +35,14 @@ const Slide: React.FC<SlideProps> = ({
   }, []);
 
   return (
-    <div className="flex justify-center items-center" style={{ padding: '16px' }}>
+    <div className="flex justify-center items-center w-full" style={{ padding: '8px', minHeight: `${794 * scale}px` }}>
       <div 
         ref={containerRef}
         id={`slide-${id}`}
         className="a4-landscape bg-white text-zinc-900 flex flex-col shadow-xl border border-zinc-200 rounded-sm relative slide-container"
         style={{
           transform: `scale(${scale})`,
-          transformOrigin: 'top center',
-          marginBottom: scale < 1 ? `${(1 - scale) * 794}px` : '0'
+          transformOrigin: 'center center'
         }}
       >
       {/* Background decoration */}
