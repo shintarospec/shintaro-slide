@@ -18,15 +18,17 @@ const Slide: React.FC<SlideProps> = ({
       if (!containerRef.current) return;
       
       const slideWidth = 1123; // A4 landscape width in px
+      const slideHeight = 794; // A4 landscape height in px
       const viewportWidth = window.innerWidth;
-      const margin = 32; // 16px margin on each side
+      const viewportHeight = window.innerHeight;
+      const margin = 16; // margin on each side
       
-      if (viewportWidth < slideWidth + margin) {
-        const newScale = (viewportWidth - margin) / slideWidth;
-        setScale(newScale);
-      } else {
-        setScale(1);
-      }
+      // Calculate scale based on both width and height
+      const scaleX = (viewportWidth - margin * 2) / slideWidth;
+      const scaleY = (viewportHeight - margin * 2 - 100) / slideHeight; // 100px for header/footer space
+      
+      const newScale = Math.min(scaleX, scaleY, 1);
+      setScale(newScale);
     };
 
     updateScale();
@@ -35,7 +37,7 @@ const Slide: React.FC<SlideProps> = ({
   }, []);
 
   return (
-    <div className="flex justify-center items-center w-full" style={{ padding: '8px', minHeight: `${794 * scale}px` }}>
+    <div className="flex justify-center items-center w-full py-2 md:py-4">
       <div 
         ref={containerRef}
         id={`slide-${id}`}
