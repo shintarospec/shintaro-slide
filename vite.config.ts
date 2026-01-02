@@ -21,3 +21,7 @@ export default defineConfig(({ mode }) => {
       }
     };
 });
+export default defineConfig({
+  base: '/shintaro-slide/', // リポジトリ名を / で囲んで指定
+  // ...他の設定
+})
