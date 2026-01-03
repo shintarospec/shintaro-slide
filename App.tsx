@@ -20,37 +20,14 @@ import {
   MousePointerClick,
   ChevronRight
 } from 'lucide-react';
-import Slide from '../shared/Slide';
+import Slide from './components/Slide';
 import html2canvas from 'html2canvas';
 import { jsPDF } from 'jspdf';
 
 const App: React.FC = () => {
-  const [isAuthenticated, setIsAuthenticated] = useState(false);
   const [isGenerating, setIsGenerating] = useState(false);
   const [scale, setScale] = useState(1);
   const totalSlides = 23;
-
-  // 簡易認証チェック
-  useEffect(() => {
-    const authKey = 'slide_auth_deepbiz';
-    const isAuth = sessionStorage.getItem(authKey) === 'true';
-    
-    if (isAuth) {
-      setIsAuthenticated(true);
-      return;
-    }
-
-    const password = prompt('🔐 このスライドを閲覧するにはパスワードを入力してください:');
-    const correctPassword = 'deepbiz2026'; // パスワードを変更可能
-    
-    if (password === correctPassword) {
-      sessionStorage.setItem(authKey, 'true');
-      setIsAuthenticated(true);
-    } else {
-      alert('❌ パスワードが正しくありません');
-      window.location.href = '/shintaro-slide/';
-    }
-  }, []);
 
   const BASE_WIDTH = 1123;
   const BASE_HEIGHT = 794;
@@ -110,18 +87,6 @@ const App: React.FC = () => {
     width: `${BASE_WIDTH}px`,
     height: `${BASE_HEIGHT}px`,
   }), [scale]);
-
-  // 認証されていない場合は何も表示しない
-  if (!isAuthenticated) {
-    return (
-      <div className="min-h-screen bg-slate-50 flex items-center justify-center">
-        <div className="text-center">
-          <div className="text-6xl mb-4">🔐</div>
-          <p className="text-slate-500">認証中...</p>
-        </div>
-      </div>
-    );
-  }
 
   return (
     <div className="min-h-screen bg-slate-50 flex flex-col items-center pb-24 sm:pb-12">

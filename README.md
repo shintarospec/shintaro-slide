@@ -5,6 +5,8 @@
 ## 🎯 スライド一覧
 
 - **[DeepBiz × TheSide 統合AI戦略](https://shintarospec.github.io/shintaro-slide/slides/deepbiz-theside/)** - 営業DXの次世代モデル（23スライド）
+  - 🔐 パスワード: `deepbiz2026`
+  - 🔐 パスワード: `deepbiz2026`
 
 ## 📁 プロジェクト構造
 
@@ -44,7 +46,23 @@ npm run build
 
 詳細は [A4_SLIDE_RULES.md](./A4_SLIDE_RULES.md) を参照。
 
-## 📖 ドキュメント
+## � 認証について
+
+各スライドには簡易的なJavaScript認証を実装しています。
+
+- 初回アクセス時にパスワード入力を要求
+- セッション中は再入力不要
+- ⚠️ **注意**: ソースコードにパスワードが含まれるため、完全なセキュリティではありません
+- より強固なセキュリティが必要な場合は、Netlify/Vercelへの移行を推奨
+
+### パスワード変更方法
+
+`slides/[スライド名]/App.tsx` の以下の行を変更：
+```tsx
+const correctPassword = 'deepbiz2026'; // ここを変更
+```
+
+## �📖 ドキュメント
 
 - [A4スライド作成ルール](./A4_SLIDE_RULES.md)
 
