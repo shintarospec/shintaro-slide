@@ -199,9 +199,11 @@ const App: React.FC = () => {
             </div>
           </div>
         </Slide>
+        </div></div>
 
         {/* PART 1: DEEPBIZ START */}
-        <Slide id={4} title="PART 1. DeepBiz システム戦略" subtitle="店舗・企業データベース + AI解析プラットフォーム" pageNumber={4} totalPageCount={totalSlides}>
+        <div style={wrapperStyle}><div style={scalerStyle}>
+          <Slide id={4} title="PART 1. DeepBiz システム戦略" subtitle="店舗・企業データベース + AI解析プラットフォーム" pageNumber={4} totalPageCount={totalSlides}>
           <div className="h-full flex flex-col justify-center items-center text-center">
             <div className="w-32 h-32 rounded-3xl bg-blue-50 flex items-center justify-center text-blue-600 mb-8 border border-blue-100 shadow-sm">
               <Database size={64} />
@@ -210,8 +212,10 @@ const App: React.FC = () => {
             <p className="text-zinc-500 max-w-lg text-lg leading-relaxed">高精度なデータ収集とAI解析により、Web上の情報を構造化データへ変換する調査基盤。</p>
           </div>
         </Slide>
+        </div></div>
 
-        <Slide id={5} title="DeepBiz システム全体フロー" subtitle="全体アーキテクチャ：Phase 1 & 2" pageNumber={5} totalPageCount={totalSlides}>
+        <div style={wrapperStyle}><div style={scalerStyle}>
+          <Slide id={5} title="DeepBiz システム全体フロー" subtitle="全体アーキテクチャ：Phase 1 & 2" pageNumber={5} totalPageCount={totalSlides}>
           <div className="grid grid-cols-2 gap-8 h-full items-center">
             <div className="p-8 bg-zinc-50 rounded-3xl border border-zinc-100 space-y-4">
               <h5 className="text-sm font-black text-blue-600 uppercase tracking-widest border-b border-blue-100 pb-2">【Phase 1】 データ収集</h5>
