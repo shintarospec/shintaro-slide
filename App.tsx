@@ -73,20 +73,20 @@ const App: React.FC = () => {
     setIsGenerating(false);
   };
 
-  const wrapperStyle = useMemo(() => ({
+  const wrapperStyle: React.CSSProperties = {
     width: '100%',
     height: `${BASE_HEIGHT * scale}px`,
     display: 'flex',
     justifyContent: 'center',
-    marginBottom: window.innerWidth < 640 ? '2rem' : '4rem',
-  }), [scale]);
+    marginBottom: '4rem',
+  };
 
-  const scalerStyle = useMemo(() => ({
+  const scalerStyle: React.CSSProperties = {
     transform: `scale(${scale})`,
     transformOrigin: 'top center',
     width: `${BASE_WIDTH}px`,
     height: `${BASE_HEIGHT}px`,
-  }), [scale]);
+  };
 
   return (
     <div className="min-h-screen bg-zinc-100 py-4 md:py-12 flex flex-col items-center text-zinc-900 font-sans">
