@@ -18,16 +18,15 @@ const Slide: React.FC<SlideProps> = ({
       if (!containerRef.current) return;
       
       const slideWidth = 1123;
-      const slideHeight = 794;
       const viewportWidth = window.innerWidth;
-      const viewportHeight = window.innerHeight;
-      const margin = 16;
+      const margin = 32;
       
-      const scaleX = (viewportWidth - margin * 2) / slideWidth;
-      const scaleY = (viewportHeight - margin * 2) / slideHeight;
-      
-      const newScale = Math.min(scaleX, scaleY, 1);
-      setScale(newScale);
+      if (viewportWidth < slideWidth + margin) {
+        const newScale = (viewportWidth - margin) / slideWidth;
+        setScale(newScale);
+      } else {
+        setScale(1);
+      }
     };
 
     updateScale();
@@ -36,7 +35,7 @@ const Slide: React.FC<SlideProps> = ({
   }, []);
 
   return (
-    <div className="flex justify-center items-center w-full py-4" style={{ minHeight: `${794 * scale + 32}px` }}>
+    <div className="flex justify-center items-center w-full py-4">
       <div 
         ref={containerRef}
         id={`slide-${id}`}
@@ -45,7 +44,8 @@ const Slide: React.FC<SlideProps> = ({
           width: '1123px',
           height: '794px',
           transform: `scale(${scale})`,
-          transformOrigin: 'center center'
+          transformOrigin: 'top center',
+          marginBottom: scale < 1 ? `${-(794 * (1 - scale))}px` : '0'
         }}
       >
       {/* Background decoration */}
