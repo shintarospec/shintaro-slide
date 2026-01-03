@@ -36,7 +36,7 @@ const App: React.FC = () => {
     const handleResize = () => {
       const padding = window.innerWidth < 640 ? 20 : 80;
       const availableWidth = window.innerWidth - padding;
-      const newScale = Math.min(availableWidth / BASE_WIDTH, 1);
+      const newScale = Math.min(availableWidth / BASE_WIDTH, 1.1);
       setScale(newScale);
     };
 
@@ -78,7 +78,7 @@ const App: React.FC = () => {
     height: `${BASE_HEIGHT * scale}px`,
     display: 'flex',
     justifyContent: 'center',
-    marginBottom: '4rem',
+    marginBottom: window.innerWidth < 640 ? '1rem' : '2rem',
   }), [scale]);
 
   const scalerStyle = useMemo(() => ({
@@ -89,28 +89,21 @@ const App: React.FC = () => {
   }), [scale]);
 
   return (
-    <div className="min-h-screen bg-zinc-100 py-4 md:py-12 flex flex-col items-center text-zinc-900 font-sans">
-      <div className="fixed top-4 right-4 md:top-6 md:right-6 z-50 flex flex-col items-end gap-2 no-print">
+    <div className="min-h-screen bg-slate-50 flex flex-col items-center pb-24 sm:pb-12">
+      <div className="fixed bottom-6 right-6 sm:top-8 sm:right-8 sm:bottom-auto z-[100] no-print">
         <button
           onClick={downloadPDF}
           disabled={isGenerating}
-          className={`flex items-center gap-2 px-4 py-3 md:px-8 md:py-4 rounded-full text-sm md:text-base font-bold shadow-2xl transition-all ${
-            isGenerating 
-              ? 'bg-zinc-300 text-zinc-500 cursor-not-allowed' 
-              : 'bg-zinc-900 text-white hover:bg-zinc-800 active:scale-95'
+          className={`flex items-center gap-3 px-6 py-4 sm:px-8 sm:py-4 rounded-full font-bold shadow-[0_20px_50px_rgba(0,0,0,0.2)] transition-all transform active:scale-95 ${
+            isGenerating ? 'bg-slate-300 text-slate-500 cursor-not-allowed' : 'bg-slate-900 text-white hover:bg-slate-800'
           }`}
         >
-          {isGenerating ? (
-            <div className="animate-spin rounded-full h-5 w-5 border-2 border-white/20 border-t-white" />
-          ) : (
-            <Download size={20} />
-          )}
-          <span className="hidden sm:inline">{isGenerating ? 'PDF生成中...' : '統合戦略資料(v6)をPDF出力'}</span>
-          <span className="sm:hidden">{isGenerating ? '生成中...' : 'PDF'}</span>
+          {isGenerating ? <div className="animate-spin rounded-full h-5 w-5 border-2 border-white/20 border-t-white" /> : <Download size={22} />}
+          <span className="text-base sm:text-lg">{isGenerating ? 'PDF生成中...' : '資料をPDF出力'}</span>
         </button>
       </div>
 
-      <div className="w-full flex flex-col items-center pt-8 md:pt-12">
+      <div className="w-full flex flex-col items-center pt-8 sm:pt-12">
         
         {/* SLIDE 1: MAIN TITLE */}
         <div style={wrapperStyle}><div style={scalerStyle}>
