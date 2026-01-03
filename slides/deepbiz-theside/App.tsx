@@ -714,18 +714,23 @@ const App: React.FC = () => {
                   <tr><td className="px-6 py-4 font-bold text-zinc-500">想定企業数</td><td className="px-6 py-4 text-center">10,000社</td><td className="px-6 py-4 text-center font-black">20,000社</td><td className="px-6 py-4 text-center">50,000社</td></tr>
                   <tr><td className="px-6 py-4 font-bold text-zinc-500">システム維持費 (VPS)</td><td className="px-6 py-4 text-center">6,656円</td><td className="px-6 py-4 text-center">10,084円</td><td className="px-6 py-4 text-center">16,336円</td></tr>
                   <tr><td className="px-6 py-4 font-bold text-zinc-500">外部データ費 (GMap)</td><td className="px-6 py-4 text-center text-emerald-600 font-bold">0円</td><td className="px-6 py-4 text-center text-orange-600 font-black">8,000円</td><td className="px-6 py-4 text-center text-orange-600 font-black">32,000円</td></tr>
-                  <tr><td className="px-6 py-4 font-bold text-zinc-500">AI利用料 (Gemini/GPT-4)</td><td className="px-6 py-4 text-center">829円</td><td className="px-6 py-4 text-center">1,639円</td><td className="px-4 py-4 text-center">4,069円</td></tr>
+                  <tr className="bg-blue-50/30"><td className="px-6 py-3 font-bold text-blue-600" colSpan={4}>AI利用料 内訳</td></tr>
+                  <tr><td className="px-6 py-2 text-zinc-400 text-[10px] pl-12">├ DeepBiz分析 (0.12円/社)</td><td className="px-6 py-2 text-center text-[10px]">1,200円</td><td className="px-6 py-2 text-center text-[10px]">2,400円</td><td className="px-6 py-2 text-center text-[10px]">6,000円</td></tr>
+                  <tr><td className="px-6 py-2 text-zinc-400 text-[10px] pl-12">├ テンプレート作成 (6.4円/案件)</td><td className="px-6 py-2 text-center text-[10px]">320円</td><td className="px-6 py-2 text-center text-[10px]">640円</td><td className="px-6 py-2 text-center text-[10px]">1,600円</td></tr>
+                  <tr><td className="px-6 py-2 text-zinc-400 text-[10px] pl-12">├ 文面個別化 (0.013円/件)</td><td className="px-6 py-2 text-center text-[10px]">390円</td><td className="px-6 py-2 text-center text-[10px]">780円</td><td className="px-6 py-2 text-center text-[10px]">1,950円</td></tr>
+                  <tr><td className="px-6 py-2 text-zinc-400 text-[10px] pl-12">└ フォーム認識 (0.019円/社)</td><td className="px-6 py-2 text-center text-[10px]">190円</td><td className="px-6 py-2 text-center text-[10px]">380円</td><td className="px-6 py-2 text-center text-[10px]">950円</td></tr>
+                  <tr><td className="px-6 py-4 font-bold text-blue-600">AI利用料 合計</td><td className="px-6 py-4 text-center font-bold">2,100円</td><td className="px-6 py-4 text-center font-bold">4,200円</td><td className="px-6 py-4 text-center font-bold">10,500円</td></tr>
                   <tr className="bg-zinc-50 font-black">
                     <td className="px-6 py-8 text-lg font-black tracking-widest">🔥 月額合計 (税込)</td>
-                    <td className="px-6 py-8 text-center text-2xl">¥7,485</td>
-                    <td className="px-6 py-8 text-center text-4xl text-blue-600 ring-4 ring-blue-50 shadow-inner">¥19,723</td>
-                    <td className="px-6 py-8 text-center text-2xl">¥52,405</td>
+                    <td className="px-6 py-8 text-center text-2xl">¥8,756</td>
+                    <td className="px-6 py-8 text-center text-4xl text-blue-600 ring-4 ring-blue-50 shadow-inner">¥22,284</td>
+                    <td className="px-6 py-8 text-center text-2xl">¥58,836</td>
                   </tr>
                   <tr className="bg-white">
                     <td className="px-6 py-4 text-zinc-400 font-bold uppercase tracking-widest">送信単価 /件</td>
-                    <td className="px-6 py-4 text-center text-zinc-900 font-bold">0.25円</td>
-                    <td className="px-6 py-4 text-center text-zinc-900 font-black underline decoration-blue-600 decoration-4">0.33円</td>
-                    <td className="px-6 py-4 text-center text-zinc-900 font-bold">0.35円</td>
+                    <td className="px-6 py-4 text-center text-zinc-900 font-bold">0.29円</td>
+                    <td className="px-6 py-4 text-center text-zinc-900 font-black underline decoration-blue-600 decoration-4">0.37円</td>
+                    <td className="px-6 py-4 text-center text-zinc-900 font-bold">0.39円</td>
                   </tr>
                 </tbody>
               </table>
