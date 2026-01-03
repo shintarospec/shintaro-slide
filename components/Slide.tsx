@@ -1,5 +1,5 @@
 
-import React, { useEffect, useRef, useState } from 'react';
+import React from 'react';
 import { SlideProps } from '../types';
 
 const Slide: React.FC<SlideProps> = ({ 
@@ -10,42 +10,11 @@ const Slide: React.FC<SlideProps> = ({
   pageNumber, 
   totalPageCount 
 }) => {
-  const containerRef = useRef<HTMLDivElement>(null);
-  const [scale, setScale] = useState(1);
-
-  useEffect(() => {
-    const updateScale = () => {
-      if (!containerRef.current) return;
-      
-      const slideWidth = 1123; // A4 landscape width in px
-      const slideHeight = 794; // A4 landscape height in px
-      const viewportWidth = window.innerWidth;
-      const viewportHeight = window.innerHeight;
-      const margin = 16; // margin on each side
-      
-      // Calculate scale based on both width and height
-      const scaleX = (viewportWidth - margin * 2) / slideWidth;
-      const scaleY = (viewportHeight - margin * 2 - 100) / slideHeight; // 100px for header/footer space
-      
-      const newScale = Math.min(scaleX, scaleY, 1);
-      setScale(newScale);
-    };
-
-    updateScale();
-    window.addEventListener('resize', updateScale);
-    return () => window.removeEventListener('resize', updateScale);
-  }, []);
-
   return (
     <div className="flex justify-center items-center w-full py-2 md:py-4">
       <div 
-        ref={containerRef}
         id={`slide-${id}`}
-        className="a4-landscape bg-white text-zinc-900 flex flex-col shadow-xl border border-zinc-200 rounded-sm relative slide-container"
-        style={{
-          transform: `scale(${scale})`,
-          transformOrigin: 'center center'
-        }}
+        className="w-full max-w-[1123px] aspect-[1123/794] bg-white text-zinc-900 flex flex-col shadow-xl border border-zinc-200 rounded-sm relative slide-container mx-2 md:mx-4"
       >
       {/* Background decoration */}
       <div className="absolute top-0 right-0 w-96 h-96 bg-blue-50/50 blur-[120px] rounded-full pointer-events-none" />

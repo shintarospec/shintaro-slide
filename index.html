@@ -13,20 +13,16 @@
             background-color: #f4f4f5;
             color: #18181b;
         }
-        /* A4 Landscape dimensions in px at 96 DPI: 1123x794 */
-        .a4-landscape {
-            width: 1123px;
-            height: 794px;
-            overflow: hidden;
-            position: relative;
-        }
+        /* A4 Landscape dimensions for print */
         @media print {
             .no-print { display: none; }
-            .a4-landscape {
-                width: 297mm;
-                height: 210mm;
+            .slide-container {
+                width: 297mm !important;
+                height: 210mm !important;
+                max-width: none !important;
                 box-shadow: none;
                 margin: 0;
+                page-break-after: always;
             }
         }
     </style>
