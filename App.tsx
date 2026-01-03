@@ -1,5 +1,5 @@
 
-import React, { useState } from 'react';
+import React, { useState, useEffect, useMemo } from 'react';
 import { 
   Download, 
   Cpu, 
@@ -26,7 +26,24 @@ import { jsPDF } from 'jspdf';
 
 const App: React.FC = () => {
   const [isGenerating, setIsGenerating] = useState(false);
+  const [scale, setScale] = useState(1);
   const totalSlides = 23;
+
+  const BASE_WIDTH = 1123;
+  const BASE_HEIGHT = 794;
+
+  useEffect(() => {
+    const handleResize = () => {
+      const padding = window.innerWidth < 640 ? 20 : 80;
+      const availableWidth = window.innerWidth - padding;
+      const newScale = Math.min(availableWidth / BASE_WIDTH, 1);
+      setScale(newScale);
+    };
+
+    handleResize();
+    window.addEventListener('resize', handleResize);
+    return () => window.removeEventListener('resize', handleResize);
+  }, []);
 
   const downloadPDF = async () => {
     setIsGenerating(true);
@@ -41,6 +58,8 @@ const App: React.FC = () => {
         useCORS: true,
         backgroundColor: '#ffffff',
         logging: false,
+        width: BASE_WIDTH,
+        height: BASE_HEIGHT,
       });
       const imgData = canvas.toDataURL('image/png');
       const pdfWidth = pdf.internal.pageSize.getWidth();
@@ -53,6 +72,21 @@ const App: React.FC = () => {
     pdf.save('DeepBiz-TheSide-Strategic-Proposal-v6.pdf');
     setIsGenerating(false);
   };
+
+  const wrapperStyle = useMemo(() => ({
+    width: '100%',
+    height: `${BASE_HEIGHT * scale}px`,
+    display: 'flex',
+    justifyContent: 'center',
+    marginBottom: window.innerWidth < 640 ? '1rem' : '2rem',
+  }), [scale]);
+
+  const scalerStyle = useMemo(() => ({
+    transform: `scale(${scale})`,
+    transformOrigin: 'top center',
+    width: `${BASE_WIDTH}px`,
+    height: `${BASE_HEIGHT}px`,
+  }), [scale]);
 
   return (
     <div className="min-h-screen bg-zinc-100 py-4 md:py-12 flex flex-col items-center text-zinc-900 font-sans">
@@ -76,10 +110,11 @@ const App: React.FC = () => {
         </button>
       </div>
 
-      <div className="flex flex-col gap-4 md:gap-12 w-full">
+      <div className="w-full flex flex-col items-center pt-8 md:pt-12">
         
         {/* SLIDE 1: MAIN TITLE */}
-        <Slide id={1} title="DeepBiz × TheSide 統合AI戦略" subtitle="営業DXの次世代モデル：高精度解析と自動送信の融合" pageNumber={1} totalPageCount={totalSlides}>
+        <div style={wrapperStyle}><div style={scalerStyle}>
+          <Slide id={1} title="DeepBiz × TheSide 統合AI戦略" subtitle="営業DXの次世代モデル：高精度解析と自動送信の融合" pageNumber={1} totalPageCount={totalSlides}>
           <div className="h-full flex flex-col justify-center items-center text-center space-y-12">
             <div className="relative">
               <div className="absolute -inset-8 bg-blue-100 rounded-full blur-3xl opacity-50"></div>
@@ -98,6 +133,7 @@ const App: React.FC = () => {
             </div>
           </div>
         </Slide>
+        </div></div>
 
         {/* SLIDE 2: TOC */}
         <Slide id={2} title="統合戦略：目次" subtitle="本資料の構成" pageNumber={2} totalPageCount={totalSlides}>
