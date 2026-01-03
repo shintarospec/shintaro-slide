@@ -835,33 +835,33 @@ const App: React.FC = () => {
 
         <div style={wrapperStyle}><div style={scalerStyle}>
         <Slide id={22} title="Google Maps API 超過コストの考え方" subtitle="月1万件の境界線とビジネス判断" pageNumber={22} totalPageCount={totalSlides}>
-          <div className="grid grid-cols-2 gap-12 h-full items-center">
-            <div className="space-y-8">
-              <div className="p-10 bg-blue-50 rounded-3xl border border-blue-100 shadow-sm relative overflow-hidden">
-                <div className="absolute top-0 right-0 w-24 h-24 bg-white/50 blur-[40px]"></div>
-                <h5 className="text-lg font-black text-blue-600 mb-6 flex items-center gap-3"><Info size={24}/> 超過分の料金発生</h5>
-                <p className="text-sm text-zinc-600 leading-relaxed">
-                  月間10,000社を超える新規Place ID取得を行う際、超過分に対して<span className="font-black">0.8円/件</span>の課金が発生します。月20,000社なら<span className="font-black text-orange-600">8,000円</span>の超過料金です。
+          <div className="h-full flex flex-col justify-center space-y-4">
+            <div className="grid grid-cols-2 gap-8">
+              <div className="space-y-6">
+                <div className="p-8 bg-blue-50 rounded-3xl border border-blue-100 shadow-sm relative overflow-hidden">
+                  <div className="absolute top-0 right-0 w-24 h-24 bg-white/50 blur-[40px]"></div>
+                  <h5 className="text-base font-black text-blue-600 mb-4 flex items-center gap-2"><Info size={20}/> 超過分の料金発生</h5>
+                  <p className="text-xs text-zinc-600 leading-relaxed">
+                    月間10,000社を超える新規Place ID取得を行う際、超過分に対して<span className="font-black">0.8円/件</span>の課金が発生します。月20,000社なら<span className="font-black text-orange-600">8,000円</span>の超過料金です。
+                  </p>
+                </div>
+                <div className="p-6 bg-zinc-50 rounded-2xl border border-zinc-100 italic text-[10px] text-zinc-400 leading-relaxed">
+                  「月1万件の無料枠内なら完全無料。超過しても0.8円/件と格安で、人件費と比較すれば圧倒的低コストです。」
+                </div>
+              </div>
+              <div className="p-8 bg-white border border-zinc-200 rounded-3xl shadow-sm space-y-4">
+                <h5 className="text-sm font-black text-zinc-900 uppercase tracking-widest border-l-4 border-blue-600 pl-3">資産化によるコスト低減</h5>
+                <p className="text-xs text-zinc-500 leading-relaxed">
+                  一度取得した Place ID はシステム内に蓄積(キャッシュ)されます。
                 </p>
-              </div>
-              <div className="p-8 bg-zinc-50 rounded-3xl border border-zinc-100 italic text-xs text-zinc-400 leading-relaxed">
-                「月1万件の無料枠内なら完全無料。超過しても0.8円/件と格安で、人件費と比較すれば圧倒的低コストです。」
-              </div>
-            </div>
-            <div className="p-10 bg-white border border-zinc-200 rounded-3xl shadow-sm space-y-6">
-              <h5 className="text-sm font-black text-zinc-900 uppercase tracking-widest border-l-4 border-blue-600 pl-3">資産化によるコスト低減</h5>
-              <p className="text-sm text-zinc-500 leading-relaxed">
-                一度取得した Place ID はシステム内に蓄積(キャッシュ)されます。
-              </p>
-              <div className="p-6 bg-zinc-50 rounded-2xl border border-zinc-100 text-xs font-bold text-zinc-700 leading-relaxed">
-                同じ企業のリストを2回目以降使う場合は、この超過費は<span className="text-emerald-600 underline">一切発生しません</span>。
+                <div className="p-4 bg-zinc-50 rounded-xl border border-zinc-100 text-[10px] font-bold text-zinc-700 leading-relaxed">
+                  同じ企業のリストを2回目以降使う場合は、この超過費は<span className="text-emerald-600 underline">一切発生しません</span>。
+                </div>
               </div>
             </div>
-          </div>
-          <div className="col-span-2">
-            <div className="p-6 bg-blue-50 border border-blue-200 rounded-2xl">
-              <p className="text-xs font-bold text-blue-900 mb-3">💡 VPSリージョン選択理由:</p>
-              <div className="space-y-2 text-xs text-blue-800">
+            <div className="p-4 bg-blue-50 border border-blue-200 rounded-xl">
+              <p className="text-[10px] font-bold text-blue-900 mb-2">💡 VPSリージョン選択理由:</p>
+              <div className="grid grid-cols-2 gap-3 text-[10px] text-blue-800">
                 <p>• <span className="font-bold text-blue-600">DeepBiz（石狩 ¥3,227）</span>: バッチ処理中心でレイテンシーの影響が少ない。コスト最優先。</p>
                 <p>• <span className="font-bold text-indigo-600">TheSide（大阪 ¥3,429〜）</span>: リアルタイム送信のため、ユーザーに近い位置を選択。コストと性能のバランス。</p>
               </div>
