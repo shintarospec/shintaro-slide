@@ -594,6 +594,13 @@ const App: React.FC = () => {
                     </tbody>
                   </table>
                 </div>
+                <div className="p-4 bg-blue-50 rounded-xl border border-blue-100">
+                  <p className="text-[10px] text-zinc-600 leading-relaxed">
+                    <span className="font-bold text-blue-600">💡 差額19円の内訳:</span><br/>
+                    テンプレート作成（3案件）をGPT-4（19.2円）とGemini（0.135円）のどちらで行うかの差額。<br/>
+                    カスタマイズ・フォーム認識は両構成ともGemini使用のため差なし。
+                  </p>
+                </div>
               </div>
               <div className="p-10 bg-zinc-900 rounded-3xl text-white shadow-xl relative overflow-hidden flex flex-col justify-center">
                 <div className="absolute top-0 right-0 w-32 h-32 bg-blue-600/20 blur-[60px]"></div>
