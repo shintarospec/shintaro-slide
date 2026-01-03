@@ -28,7 +28,7 @@ const App: React.FC = () => {
   const [isAuthenticated, setIsAuthenticated] = useState(false);
   const [isGenerating, setIsGenerating] = useState(false);
   const [scale, setScale] = useState(1);
-  const totalSlides = 23;
+  const totalSlides = 25;
 
   // 簡易認証チェック
   useEffect(() => {
@@ -698,7 +698,90 @@ const App: React.FC = () => {
         </div></div>
 
         <div style={wrapperStyle}><div style={scalerStyle}>
-        <Slide id={19} title="3. 【重要】最新統合コストシミュレーション" subtitle="Google Maps API 超過料金を反映した運用予測" pageNumber={19} totalPageCount={totalSlides}>
+        <Slide id={19} title="2-1. DeepBiz 単体コストシミュレーション" subtitle="データ収集・分析基盤の運用コスト" pageNumber={19} totalPageCount={totalSlides}>
+          <div className="h-full flex flex-col justify-center space-y-6">
+            <div className="overflow-hidden rounded-3xl border-2 border-blue-600 shadow-xl bg-white">
+              <table className="w-full text-left text-xs">
+                <thead className="bg-blue-600 text-white font-bold tracking-widest">
+                  <tr>
+                    <th className="px-6 py-4 uppercase">項目</th>
+                    <th className="px-6 py-4 text-center">月1万件</th>
+                    <th className="px-6 py-4 text-center">月2万件</th>
+                    <th className="px-6 py-4 text-center">月5万件</th>
+                  </tr>
+                </thead>
+                <tbody className="divide-y divide-zinc-100">
+                  <tr><td className="px-6 py-3 font-bold text-zinc-500">想定企業数</td><td className="px-6 py-3 text-center">10,000社</td><td className="px-6 py-3 text-center">20,000社</td><td className="px-6 py-3 text-center">50,000社</td></tr>
+                  <tr><td className="px-6 py-3 font-bold text-zinc-500">VPSサーバー (4G)</td><td className="px-6 py-3 text-center">3,227円</td><td className="px-6 py-3 text-center">3,227円</td><td className="px-6 py-3 text-center">3,227円</td></tr>
+                  <tr><td className="px-6 py-3 font-bold text-zinc-500">Google Maps API</td><td className="px-6 py-3 text-center text-emerald-600 font-bold">0円</td><td className="px-6 py-3 text-center text-orange-600 font-black">8,000円</td><td className="px-6 py-3 text-center text-orange-600 font-black">32,000円</td></tr>
+                  <tr><td className="px-6 py-3 font-bold text-blue-600">Gemini 2.5 AI分析</td><td className="px-6 py-3 text-center font-bold">1,200円</td><td className="px-6 py-3 text-center font-bold">2,400円</td><td className="px-6 py-3 text-center font-bold">6,000円</td></tr>
+                  <tr className="bg-blue-50 font-black">
+                    <td className="px-6 py-5 text-base font-black tracking-widest">🔥 月額合計</td>
+                    <td className="px-6 py-5 text-center text-xl text-blue-600">¥4,427</td>
+                    <td className="px-6 py-5 text-center text-xl text-blue-600">¥13,627</td>
+                    <td className="px-6 py-5 text-center text-xl text-blue-600">¥41,227</td>
+                  </tr>
+                  <tr className="bg-white">
+                    <td className="px-6 py-3 text-zinc-400 font-bold uppercase tracking-widest text-[10px]">企業分析単価 /社</td>
+                    <td className="px-6 py-3 text-center text-zinc-900 font-bold">0.44円</td>
+                    <td className="px-6 py-3 text-center text-zinc-900 font-bold">0.68円</td>
+                    <td className="px-6 py-3 text-center text-zinc-900 font-bold">0.82円</td>
+                  </tr>
+                </tbody>
+              </table>
+            </div>
+            <div className="p-6 bg-blue-50/30 border border-blue-100 rounded-2xl text-xs text-zinc-500 italic text-center">
+              💡 月1万件までは無料枠内で運用可能。企業分析データは90日間キャッシュされ、2回目以降は無料。
+            </div>
+          </div>
+        </Slide>
+        </div></div>
+
+        <div style={wrapperStyle}><div style={scalerStyle}>
+        <Slide id={20} title="2-2. TheSide 単体コストシミュレーション" subtitle="営業自動化プラットフォームの運用コスト" pageNumber={20} totalPageCount={totalSlides}>
+          <div className="h-full flex flex-col justify-center space-y-6">
+            <div className="overflow-hidden rounded-3xl border-2 border-indigo-600 shadow-xl bg-white">
+              <table className="w-full text-left text-xs">
+                <thead className="bg-indigo-600 text-white font-bold tracking-widest">
+                  <tr>
+                    <th className="px-6 py-4 uppercase">項目</th>
+                    <th className="px-6 py-4 text-center">月3万件</th>
+                    <th className="px-6 py-4 text-center">月6万件</th>
+                    <th className="px-6 py-4 text-center">月15万件</th>
+                  </tr>
+                </thead>
+                <tbody className="divide-y divide-zinc-100">
+                  <tr><td className="px-6 py-3 font-bold text-zinc-500">想定企業数</td><td className="px-6 py-3 text-center">10,000社</td><td className="px-6 py-3 text-center">20,000社</td><td className="px-6 py-3 text-center">50,000社</td></tr>
+                  <tr><td className="px-6 py-3 font-bold text-zinc-500">VPSサーバー</td><td className="px-6 py-3 text-center">3,429円</td><td className="px-6 py-3 text-center">6,857円</td><td className="px-6 py-3 text-center">13,109円</td></tr>
+                  <tr className="bg-indigo-50/30"><td className="px-6 py-2 font-bold text-indigo-600" colSpan={4}>AI利用料 内訳</td></tr>
+                  <tr><td className="px-6 py-1 text-zinc-400 text-[10px] pl-12">├ テンプレート作成 (GPT-4)</td><td className="px-6 py-1 text-center text-[10px]">320円</td><td className="px-6 py-1 text-center text-[10px]">640円</td><td className="px-6 py-1 text-center text-[10px]">1,600円</td></tr>
+                  <tr><td className="px-6 py-1 text-zinc-400 text-[10px] pl-12">├ 文面個別化 (Gemini 2.5)</td><td className="px-6 py-1 text-center text-[10px]">390円</td><td className="px-6 py-1 text-center text-[10px]">780円</td><td className="px-6 py-1 text-center text-[10px]">1,950円</td></tr>
+                  <tr><td className="px-6 py-1 text-zinc-400 text-[10px] pl-12">└ フォーム認識 (Gemini 2.5)</td><td className="px-6 py-1 text-center text-[10px]">190円</td><td className="px-6 py-1 text-center text-[10px]">380円</td><td className="px-6 py-1 text-center text-[10px]">950円</td></tr>
+                  <tr><td className="px-6 py-3 font-bold text-indigo-600">AI利用料 合計</td><td className="px-6 py-3 text-center font-bold">900円</td><td className="px-6 py-3 text-center font-bold">1,800円</td><td className="px-6 py-3 text-center font-bold">4,500円</td></tr>
+                  <tr className="bg-indigo-50 font-black">
+                    <td className="px-6 py-5 text-base font-black tracking-widest">🔥 月額合計</td>
+                    <td className="px-6 py-5 text-center text-xl text-indigo-600">¥4,329</td>
+                    <td className="px-6 py-5 text-center text-xl text-indigo-600">¥8,657</td>
+                    <td className="px-6 py-5 text-center text-xl text-indigo-600">¥17,609</td>
+                  </tr>
+                  <tr className="bg-white">
+                    <td className="px-6 py-3 text-zinc-400 font-bold uppercase tracking-widest text-[10px]">送信単価 /件</td>
+                    <td className="px-6 py-3 text-center text-zinc-900 font-bold">0.14円</td>
+                    <td className="px-6 py-3 text-center text-zinc-900 font-bold">0.14円</td>
+                    <td className="px-6 py-3 text-center text-zinc-900 font-bold">0.12円</td>
+                  </tr>
+                </tbody>
+              </table>
+            </div>
+            <div className="p-6 bg-indigo-50/30 border border-indigo-100 rounded-2xl text-xs text-zinc-500 italic text-center">
+              💡 GPT-4 + Geminiハイブリッド構成。フォーム認識は初回のみ実行され、2回目以降は学習済みデータを使用。
+            </div>
+          </div>
+        </Slide>
+        </div></div>
+
+        <div style={wrapperStyle}><div style={scalerStyle}>
+        <Slide id={21} title="3. 【重要】最新統合コストシミュレーション" subtitle="Google Maps API 超過料金を反映した運用予測" pageNumber={21} totalPageCount={totalSlides}>
           <div className="h-full flex flex-col justify-center space-y-6">
             <div className="overflow-hidden rounded-3xl border-2 border-zinc-900 shadow-xl bg-white">
               <table className="w-full text-left text-xs">
@@ -740,7 +823,7 @@ const App: React.FC = () => {
         </div></div>
 
         <div style={wrapperStyle}><div style={scalerStyle}>
-        <Slide id={20} title="Google Maps API 超過コストの考え方" subtitle="月1万件の境界線とビジネス判断" pageNumber={20} totalPageCount={totalSlides}>
+        <Slide id={22} title="Google Maps API 超過コストの考え方" subtitle="月1万件の境界線とビジネス判断" pageNumber={22} totalPageCount={totalSlides}>
           <div className="grid grid-cols-2 gap-12 h-full items-center">
             <div className="space-y-8">
               <div className="p-10 bg-blue-50 rounded-3xl border border-blue-100 shadow-sm relative overflow-hidden">
@@ -768,7 +851,7 @@ const App: React.FC = () => {
         </div></div>
 
         <div style={wrapperStyle}><div style={scalerStyle}>
-        <Slide id={21} title="4. まとめ：本システムのビジネス価値" subtitle="「量」と「質」の両立、そして資産が積み上がる設計" pageNumber={21} totalPageCount={totalSlides}>
+        <Slide id={23} title="4. まとめ：本システムのビジネス価値" subtitle="「量」と「質」の両立、そして資産が積み上がる設計" pageNumber={23} totalPageCount={totalSlides}>
           <div className="h-full flex flex-col justify-center space-y-8">
             <div className="grid grid-cols-3 gap-8">
               {[
@@ -793,7 +876,7 @@ const App: React.FC = () => {
         </div></div>
 
         <div style={wrapperStyle}><div style={scalerStyle}>
-        <Slide id={22} title="統合運用のビジネス価値総括" subtitle="原価を戦略的に設計した、AI駆動型営業プラットフォーム" pageNumber={22} totalPageCount={totalSlides}>
+        <Slide id={24} title="統合運用のビジネス価値総括" subtitle="原価を戦略的に設計した、AI駆動型営業プラットフォーム" pageNumber={24} totalPageCount={totalSlides}>
           <div className="h-full flex flex-col justify-center items-center">
             <div className="max-w-3xl w-full p-16 bg-zinc-900 rounded-3xl text-white shadow-2xl relative overflow-hidden text-center">
               <div className="absolute top-0 right-0 w-64 h-64 bg-blue-600/20 blur-[80px]"></div>
@@ -812,7 +895,7 @@ const App: React.FC = () => {
         </div></div>
 
         <div style={wrapperStyle}><div style={scalerStyle}>
-        <Slide id={23} title="Thank You" subtitle="次世代の営業組織への変革を、共に。" pageNumber={23} totalPageCount={totalSlides}>
+        <Slide id={25} title="Thank You" subtitle="次世代の営業組織への変革を、共に。" pageNumber={25} totalPageCount={totalSlides}>
           <div className="h-full flex flex-col justify-center items-center text-center space-y-16">
             <div className="w-24 h-24 rounded-full bg-zinc-50 flex items-center justify-center text-zinc-900 shadow-sm border border-zinc-100">
               <CheckCircle2 size={48} />
