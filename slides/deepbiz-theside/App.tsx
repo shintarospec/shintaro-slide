@@ -385,9 +385,23 @@ const App: React.FC = () => {
               </div>
               <div className="p-8 bg-blue-600 rounded-3xl text-white text-center shadow-lg">
                 <p className="text-[10px] font-bold uppercase tracking-widest opacity-80 mb-1">Cost per analysis</p>
-                <p className="text-4xl font-black flex items-center justify-center">
+                <p className="text-4xl font-black flex items-center justify-center mb-4">
                   0.023<span className="ml-3 text-3xl font-bold">円</span>
                 </p>
+                <div className="bg-blue-700/50 rounded-xl p-4 text-[10px] text-left space-y-2">
+                  <div className="flex justify-between border-b border-blue-400/30 pb-1">
+                    <span>入力 (5,310t)</span>
+                    <span>$0.0001</span>
+                  </div>
+                  <div className="flex justify-between border-b border-blue-400/30 pb-1">
+                    <span>出力 (600t)</span>
+                    <span>$0.000045</span>
+                  </div>
+                  <div className="flex justify-between font-bold pt-1">
+                    <span>合計</span>
+                    <span>$0.000145</span>
+                  </div>
+                </div>
               </div>
             </div>
             <div className="col-span-3 p-8 bg-zinc-900 rounded-3xl font-mono text-xs text-blue-300 shadow-xl border border-zinc-800">
@@ -418,7 +432,18 @@ const App: React.FC = () => {
               </div>
               <div className="p-8 bg-white border border-zinc-200 rounded-3xl shadow-sm space-y-4">
                 <h5 className="text-sm font-bold text-zinc-900 flex items-center gap-2"><Cpu size={18} className="text-indigo-600"/> 2. Gemini 2.0 Flash選定</h5>
-                <p className="text-xs text-zinc-500 leading-relaxed">GPT-4(63円)比で <span className="text-zinc-900 font-bold underline decoration-blue-500 decoration-2">2,739倍安い</span>。大量データ処理に最適な最高コスパモデルを採用。</p>
+                <div className="overflow-hidden rounded-xl border border-zinc-100">
+                  <table className="w-full text-left text-[10px]">
+                    <thead className="bg-zinc-50 text-zinc-500 font-bold">
+                      <tr><th className="px-3 py-2">モデル</th><th className="px-3 py-2">コスト</th><th className="px-3 py-2">差</th></tr>
+                    </thead>
+                    <tbody className="divide-y divide-zinc-100">
+                      <tr><td className="px-3 py-2">GPT-4</td><td className="px-3 py-2">63円</td><td className="px-3 py-2 text-red-500 font-bold">2,739倍</td></tr>
+                      <tr><td className="px-3 py-2">GPT-3.5</td><td className="px-3 py-2">1.4円</td><td className="px-3 py-2 text-orange-500">61倍</td></tr>
+                      <tr className="bg-blue-50/50"><td className="px-3 py-2 font-bold text-blue-600">Gemini 2.0</td><td className="px-3 py-2 font-bold text-blue-600">0.023円</td><td className="px-3 py-2 font-bold text-blue-600">最安</td></tr>
+                    </tbody>
+                  </table>
+                </div>
               </div>
             </div>
             <div className="p-10 bg-zinc-50 rounded-3xl border border-zinc-100">
