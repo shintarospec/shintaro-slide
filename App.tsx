@@ -249,7 +249,9 @@ const App: React.FC = () => {
             </div>
           </div>
         </Slide>
+        </div></div>
 
+        <div style={wrapperStyle}><div style={scalerStyle}>
         <Slide id={6} title="DeepBiz AI使用箇所とコスト" subtitle="コスト発生箇所マトリックス（AI + API）" pageNumber={6} totalPageCount={totalSlides}>
           <div className="flex flex-col justify-center h-full space-y-8">
             <div className="overflow-hidden rounded-2xl border border-zinc-200 bg-white shadow-sm">
@@ -298,7 +300,9 @@ const App: React.FC = () => {
             </div>
           </div>
         </Slide>
+        </div></div>
 
+        <div style={wrapperStyle}><div style={scalerStyle}>
         <Slide id={7} title="Google Maps API 戦略" subtitle="新API (Essentials) 体系による月1万件無料運用の実現" pageNumber={7} totalPageCount={totalSlides}>
           <div className="h-full flex flex-col justify-center space-y-10">
             <div className="p-8 bg-blue-50/30 border border-blue-100 rounded-3xl">
@@ -328,7 +332,9 @@ const App: React.FC = () => {
             </div>
           </div>
         </Slide>
+        </div></div>
 
+        <div style={wrapperStyle}><div style={scalerStyle}>
         <Slide id={8} title="企業分析機能詳細 (Phase 2)" subtitle="非構造化テキストを営業用インテリジェンスへ変換" pageNumber={8} totalPageCount={totalSlides}>
           <div className="grid grid-cols-5 gap-8 h-full items-center">
             <div className="col-span-2 space-y-6">
@@ -372,7 +378,9 @@ const App: React.FC = () => {
             </div>
           </div>
         </Slide>
+        </div></div>
 
+        <div style={wrapperStyle}><div style={scalerStyle}>
         <Slide id={9} title="DeepBiz コスト最適化戦略" subtitle="データ資産化と格安AIモデルの戦略的選定" pageNumber={9} totalPageCount={totalSlides}>
           <div className="h-full flex flex-col justify-center space-y-12">
             <div className="grid grid-cols-2 gap-8">
@@ -397,6 +405,9 @@ const App: React.FC = () => {
         </Slide>
 
         {/* PART 2: THESIDE START */}
+        </div></div>
+
+        <div style={wrapperStyle}><div style={scalerStyle}>
         <Slide id={10} title="PART 2. TheSide 実行戦略" subtitle="AIお問い合わせフォーム自動送信プラットフォーム" pageNumber={10} totalPageCount={totalSlides}>
           <div className="h-full flex flex-col justify-center items-center text-center">
             <div className="w-32 h-32 rounded-3xl bg-indigo-50 flex items-center justify-center text-indigo-600 mb-8 border border-indigo-100 shadow-sm">
@@ -406,7 +417,9 @@ const App: React.FC = () => {
             <p className="text-zinc-500 max-w-lg text-lg leading-relaxed">DeepBizの分析データを使い、一社一社に最適化された営業文を企業の窓口へ自動で送り届ける。</p>
           </div>
         </Slide>
+        </div></div>
 
+        <div style={wrapperStyle}><div style={scalerStyle}>
         <Slide id={11} title="TheSide サービス概要" subtitle="解決する課題とターゲットユーザー" pageNumber={11} totalPageCount={totalSlides}>
           <div className="h-full flex flex-col justify-center space-y-12">
             <div className="grid grid-cols-2 gap-12">
@@ -446,7 +459,9 @@ const App: React.FC = () => {
             </div>
           </div>
         </Slide>
+        </div></div>
 
+        <div style={wrapperStyle}><div style={scalerStyle}>
         <Slide id={12} title="TheSide システム全体フロー" subtitle="外部連携から自動送信までの5ステップ" pageNumber={12} totalPageCount={totalSlides}>
           <div className="h-full flex flex-col justify-center">
             <div className="p-5 bg-blue-50 border border-blue-100 rounded-2xl text-center mb-8">
@@ -476,7 +491,9 @@ const App: React.FC = () => {
             </div>
           </div>
         </Slide>
+        </div></div>
 
+        <div style={wrapperStyle}><div style={scalerStyle}>
         <Slide id={13} title="AI使用箇所とコストマトリックス" subtitle="各プロセスのAI選定理由とコスト最適化の根拠" pageNumber={13} totalPageCount={totalSlides}>
           <div className="h-full flex flex-col justify-center space-y-8">
             <div className="overflow-hidden rounded-2xl border border-zinc-200 bg-white shadow-sm">
@@ -501,7 +518,9 @@ const App: React.FC = () => {
             </div>
           </div>
         </Slide>
+        </div></div>
 
+        <div style={wrapperStyle}><div style={scalerStyle}>
         <Slide id={14} title="ハイブリッド構成推奨の結論" subtitle="GPT-4の「質」とGeminiの「量」を戦略的に融合" pageNumber={14} totalPageCount={totalSlides}>
           <div className="h-full flex flex-col justify-center space-y-12">
             <div className="grid grid-cols-2 gap-12">
@@ -532,7 +551,9 @@ const App: React.FC = () => {
             </div>
           </div>
         </Slide>
+        </div></div>
 
+        <div style={wrapperStyle}><div style={scalerStyle}>
         <Slide id={15} title="AI活用のコスト設計戦略 (TheSide)" subtitle="構造の透明性と予測可能性の確保" pageNumber={15} totalPageCount={totalSlides}>
           <div className="h-full flex flex-col justify-center gap-6">
             <div className="grid grid-cols-3 gap-6">
@@ -554,6 +575,9 @@ const App: React.FC = () => {
         </Slide>
 
         {/* PART 3: INTEGRATED COST STRATEGY START */}
+        </div></div>
+
+        <div style={wrapperStyle}><div style={scalerStyle}>
         <Slide id={16} title="PART 3. 統合AI戦略：営業DXの次世代モデル" subtitle="経営層・営業部門へ送る、最新統合コストプラン" pageNumber={16} totalPageCount={totalSlides}>
           <div className="h-full flex flex-col justify-center items-center text-center">
             <div className="w-32 h-32 rounded-full bg-emerald-50 flex items-center justify-center text-emerald-600 mb-8 border border-emerald-100 shadow-sm">
@@ -563,7 +587,9 @@ const App: React.FC = () => {
             <p className="text-zinc-500 max-w-lg text-lg leading-relaxed">Google Maps APIの超過料金を正確に反映した、<br/>直感的に理解できる最新のコストシミュレーション。</p>
           </div>
         </Slide>
+        </div></div>
 
+        <div style={wrapperStyle}><div style={scalerStyle}>
         <Slide id={17} title="1. サービスが解決する「営業の課題」" subtitle="人的作業の限界を、2つのシステム連携で突破する" pageNumber={17} totalPageCount={totalSlides}>
           <div className="grid grid-cols-2 gap-12 h-full items-center">
             <div className="p-10 bg-white border border-zinc-200 rounded-3xl shadow-sm relative overflow-hidden group hover:border-blue-200 transition-colors">
@@ -588,7 +614,9 @@ const App: React.FC = () => {
             </div>
           </div>
         </Slide>
+        </div></div>
 
+        <div style={wrapperStyle}><div style={scalerStyle}>
         <Slide id={18} title="2. なぜ「AI」を使うのか？" subtitle="従来のITシステムでは不可能だった「文脈理解」の代行" pageNumber={18} totalPageCount={totalSlides}>
           <div className="h-full flex flex-col justify-center gap-8">
             <div className="overflow-hidden rounded-3xl border border-zinc-200 shadow-sm">
@@ -613,7 +641,9 @@ const App: React.FC = () => {
             </div>
           </div>
         </Slide>
+        </div></div>
 
+        <div style={wrapperStyle}><div style={scalerStyle}>
         <Slide id={19} title="3. 【重要】最新統合コストシミュレーション" subtitle="Google Maps API 超過料金を反映した運用予測" pageNumber={19} totalPageCount={totalSlides}>
           <div className="h-full flex flex-col justify-center space-y-8">
             <div className="overflow-hidden rounded-3xl border-2 border-zinc-900 shadow-xl bg-white">
@@ -648,7 +678,9 @@ const App: React.FC = () => {
             </div>
           </div>
         </Slide>
+        </div></div>
 
+        <div style={wrapperStyle}><div style={scalerStyle}>
         <Slide id={20} title="Google Maps API 超過コストの考え方" subtitle="月1万件の境界線とビジネス判断の妥当性" pageNumber={20} totalPageCount={totalSlides}>
           <div className="grid grid-cols-2 gap-12 h-full items-center">
             <div className="space-y-8">
@@ -674,7 +706,9 @@ const App: React.FC = () => {
             </div>
           </div>
         </Slide>
+        </div></div>
 
+        <div style={wrapperStyle}><div style={scalerStyle}>
         <Slide id={21} title="4. まとめ：本システムのビジネス価値" subtitle="「量」と「質」の両立、そして資産が積み上がる設計" pageNumber={21} totalPageCount={totalSlides}>
           <div className="h-full flex flex-col justify-center space-y-8">
             <div className="grid grid-cols-3 gap-8">
@@ -697,6 +731,9 @@ const App: React.FC = () => {
         </Slide>
 
         {/* CLOSING SLIDES */}
+        </div></div>
+
+        <div style={wrapperStyle}><div style={scalerStyle}>
         <Slide id={22} title="統合運用のビジネス価値総括" subtitle="原価を戦略的に設計した、AI駆動型営業プラットフォーム" pageNumber={22} totalPageCount={totalSlides}>
           <div className="h-full flex flex-col justify-center items-center">
             <div className="max-w-3xl w-full p-16 bg-zinc-900 rounded-3xl text-white shadow-2xl relative overflow-hidden text-center">
@@ -713,7 +750,9 @@ const App: React.FC = () => {
             </div>
           </div>
         </Slide>
+        </div></div>
 
+        <div style={wrapperStyle}><div style={scalerStyle}>
         <Slide id={23} title="Thank You" subtitle="次世代の営業組織への変革を、共に。" pageNumber={23} totalPageCount={totalSlides}>
           <div className="h-full flex flex-col justify-center items-center text-center space-y-16">
             <div className="w-24 h-24 rounded-full bg-zinc-50 flex items-center justify-center text-zinc-900 shadow-sm border border-zinc-100">
