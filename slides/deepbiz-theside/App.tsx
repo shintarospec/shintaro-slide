@@ -687,13 +687,13 @@ const App: React.FC = () => {
                 <tbody className="divide-y divide-zinc-100">
                   <tr><td className="px-6 py-4 font-bold text-zinc-500">想定企業数</td><td className="px-6 py-4 text-center">10,000社</td><td className="px-6 py-4 text-center font-black">20,000社</td><td className="px-6 py-4 text-center">50,000社</td></tr>
                   <tr><td className="px-6 py-4 font-bold text-zinc-500">システム維持費 (VPS)</td><td className="px-6 py-4 text-center">6,656円</td><td className="px-6 py-4 text-center">10,084円</td><td className="px-6 py-4 text-center">16,336円</td></tr>
-                  <tr><td className="px-6 py-4 font-bold text-zinc-500">外部データ費 (GMap)</td><td className="px-6 py-4 text-center text-emerald-600 font-bold">0円</td><td className="px-6 py-4 text-center text-emerald-600 font-bold">0円</td><td className="px-6 py-4 text-center text-emerald-600 font-bold">0円</td></tr>
+                  <tr><td className="px-6 py-4 font-bold text-zinc-500">外部データ費 (GMap)</td><td className="px-6 py-4 text-center text-emerald-600 font-bold">0円</td><td className="px-6 py-4 text-center text-orange-600 font-black">8,000円</td><td className="px-6 py-4 text-center text-orange-600 font-black">32,000円</td></tr>
                   <tr><td className="px-6 py-4 font-bold text-zinc-500">AI利用料 (Gemini/GPT-4)</td><td className="px-6 py-4 text-center">829円</td><td className="px-6 py-4 text-center">1,639円</td><td className="px-4 py-4 text-center">4,069円</td></tr>
                   <tr className="bg-zinc-50 font-black">
                     <td className="px-6 py-8 text-lg font-black tracking-widest">🔥 月額合計 (税込)</td>
                     <td className="px-6 py-8 text-center text-2xl">¥7,485</td>
-                    <td className="px-6 py-8 text-center text-4xl text-blue-600 ring-4 ring-blue-50 shadow-inner">¥11,723</td>
-                    <td className="px-6 py-8 text-center text-2xl">¥20,405</td>
+                    <td className="px-6 py-8 text-center text-4xl text-blue-600 ring-4 ring-blue-50 shadow-inner">¥19,723</td>
+                    <td className="px-6 py-8 text-center text-2xl">¥52,405</td>
                   </tr>
                   <tr className="bg-white">
                     <td className="px-6 py-4 text-zinc-400 font-bold uppercase tracking-widest">送信単価 /件</td>
@@ -709,27 +709,27 @@ const App: React.FC = () => {
         </div></div>
 
         <div style={wrapperStyle}><div style={scalerStyle}>
-        <Slide id={20} title="Google Maps API コスト戦略" subtitle="新API採用で月1万件まで完全無料を実現" pageNumber={20} totalPageCount={totalSlides}>
+        <Slide id={20} title="Google Maps API 超過コストの考え方" subtitle="月1万件の境界線とビジネス判断" pageNumber={20} totalPageCount={totalSlides}>
           <div className="grid grid-cols-2 gap-12 h-full items-center">
             <div className="space-y-8">
-              <div className="p-10 bg-emerald-50 rounded-3xl border border-emerald-100 shadow-sm relative overflow-hidden">
+              <div className="p-10 bg-blue-50 rounded-3xl border border-blue-100 shadow-sm relative overflow-hidden">
                 <div className="absolute top-0 right-0 w-24 h-24 bg-white/50 blur-[40px]"></div>
-                <h5 className="text-lg font-black text-emerald-600 mb-6 flex items-center gap-3"><CheckCircle2 size={24}/> 月1万件まで完全無料</h5>
+                <h5 className="text-lg font-black text-blue-600 mb-6 flex items-center gap-3"><Info size={24}/> 超過分の料金発生</h5>
                 <p className="text-sm text-zinc-600 leading-relaxed">
-                  Google Maps API (Essentials) の採用により、月間10,000件までのPlace ID取得が<span className="font-black text-emerald-600">完全無料</span>。超過料金も<span className="font-black">$0.005/件 (0.8円)</span>と格安です。
+                  月間10,000社を超える新規Place ID取得を行う際、超過分に対して<span className="font-black">0.8円/件</span>の課金が発生します。月20,000社なら<span className="font-black text-orange-600">8,000円</span>の超過料金です。
                 </p>
               </div>
               <div className="p-8 bg-zinc-50 rounded-3xl border border-zinc-100 italic text-xs text-zinc-400 leading-relaxed">
-                「旧APIでは$0.032/件だったコストが、新APIで84%削減。月1万件の無料枠により、初期運用コストはゼロです。」
+                「月1万件の無料枠内なら完全無料。超過しても0.8円/件と格安で、人件費と比較すれば圧倒的低コストです。」
               </div>
             </div>
             <div className="p-10 bg-white border border-zinc-200 rounded-3xl shadow-sm space-y-6">
-              <h5 className="text-sm font-black text-zinc-900 uppercase tracking-widest border-l-4 border-blue-600 pl-3">資産化によるコスト最適化</h5>
+              <h5 className="text-sm font-black text-zinc-900 uppercase tracking-widest border-l-4 border-blue-600 pl-3">資産化によるコスト低減</h5>
               <p className="text-sm text-zinc-500 leading-relaxed">
-                一度取得した Place ID はシステム内に永続的に蓄積(キャッシュ)されます。
+                一度取得した Place ID はシステム内に蓄積(キャッシュ)されます。
               </p>
               <div className="p-6 bg-zinc-50 rounded-2xl border border-zinc-100 text-xs font-bold text-zinc-700 leading-relaxed">
-                同じ企業のリストを2回目以降使う場合は、API呼び出し自体が<span className="text-emerald-600 underline">一切発生しません</span>（完全無料）。
+                同じ企業のリストを2回目以降使う場合は、この超過費は<span className="text-emerald-600 underline">一切発生しません</span>。
               </div>
             </div>
           </div>
