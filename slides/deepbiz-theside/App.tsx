@@ -829,11 +829,6 @@ const App: React.FC = () => {
                 </tbody>
               </table>
             </div>
-            <div className="p-6 bg-zinc-50 border border-zinc-200 rounded-2xl text-xs text-zinc-500 leading-relaxed">
-              <p className="mb-2"><span className="font-bold text-zinc-700">💡 VPSリージョン選択理由:</span></p>
-              <p className="mb-1">• <span className="font-bold text-blue-600">DeepBiz（石狩 ¥3,227）</span>: バッチ処理中心でレイテンシーの影響が少ない。コスト最優先。</p>
-              <p>• <span className="font-bold text-indigo-600">TheSide（大阪 ¥3,429〜）</span>: リアルタイム送信のため、ユーザーに近い位置を選択。コストと性能のバランス。</p>
-            </div>
           </div>
         </Slide>
         </div></div>
@@ -860,6 +855,15 @@ const App: React.FC = () => {
               </p>
               <div className="p-6 bg-zinc-50 rounded-2xl border border-zinc-100 text-xs font-bold text-zinc-700 leading-relaxed">
                 同じ企業のリストを2回目以降使う場合は、この超過費は<span className="text-emerald-600 underline">一切発生しません</span>。
+              </div>
+            </div>
+          </div>
+          <div className="col-span-2">
+            <div className="p-6 bg-blue-50 border border-blue-200 rounded-2xl">
+              <p className="text-xs font-bold text-blue-900 mb-3">💡 VPSリージョン選択理由:</p>
+              <div className="space-y-2 text-xs text-blue-800">
+                <p>• <span className="font-bold text-blue-600">DeepBiz（石狩 ¥3,227）</span>: バッチ処理中心でレイテンシーの影響が少ない。コスト最優先。</p>
+                <p>• <span className="font-bold text-indigo-600">TheSide（大阪 ¥3,429〜）</span>: リアルタイム送信のため、ユーザーに近い位置を選択。コストと性能のバランス。</p>
               </div>
             </div>
           </div>
