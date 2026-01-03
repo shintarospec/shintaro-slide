@@ -829,6 +829,11 @@ const App: React.FC = () => {
                 </tbody>
               </table>
             </div>
+            <div className="p-6 bg-zinc-50 border border-zinc-200 rounded-2xl text-xs text-zinc-500 leading-relaxed">
+              <p className="mb-2"><span className="font-bold text-zinc-700">💡 VPSリージョン選択理由:</span></p>
+              <p className="mb-1">• <span className="font-bold text-blue-600">DeepBiz（石狩 ¥3,227）</span>: バッチ処理中心でレイテンシーの影響が少ない。コスト最優先。</p>
+              <p>• <span className="font-bold text-indigo-600">TheSide（大阪 ¥3,429〜）</span>: リアルタイム送信のため、ユーザーに近い位置を選択。コストと性能のバランス。</p>
+            </div>
           </div>
         </Slide>
         </div></div>
