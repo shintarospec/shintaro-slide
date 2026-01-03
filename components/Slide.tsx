@@ -35,7 +35,13 @@ const Slide: React.FC<SlideProps> = ({
   }, []);
 
   return (
-    <div className="flex justify-center items-center w-full py-4">
+    <div 
+      className="flex justify-center items-start w-full overflow-hidden"
+      style={{ 
+        padding: '16px 0',
+        minHeight: `${794 * scale}px`
+      }}
+    >
       <div 
         ref={containerRef}
         id={`slide-${id}`}
@@ -44,8 +50,7 @@ const Slide: React.FC<SlideProps> = ({
           width: '1123px',
           height: '794px',
           transform: `scale(${scale})`,
-          transformOrigin: 'top center',
-          marginBottom: scale < 1 ? `${-(794 * (1 - scale))}px` : '0'
+          transformOrigin: 'top center'
         }}
       >
       {/* Background decoration */}
