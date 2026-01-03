@@ -699,38 +699,38 @@ const App: React.FC = () => {
 
         <div style={wrapperStyle}><div style={scalerStyle}>
         <Slide id={19} title="3. 【重要】最新統合コストシミュレーション" subtitle="Google Maps API 超過料金を反映した運用予測" pageNumber={19} totalPageCount={totalSlides}>
-          <div className="h-full flex flex-col justify-center space-y-8">
+          <div className="h-full flex flex-col justify-center space-y-6">
             <div className="overflow-hidden rounded-3xl border-2 border-zinc-900 shadow-xl bg-white">
               <table className="w-full text-left text-xs">
                 <thead className="bg-zinc-900 text-white font-bold tracking-widest">
                   <tr>
-                    <th className="px-6 py-6 uppercase">規模のイメージ</th>
-                    <th className="px-6 py-6 text-center">月3万件 (検証期)</th>
-                    <th className="px-6 py-6 text-center text-blue-400 font-black">月6万件 (本格運用)</th>
-                    <th className="px-6 py-6 text-center">月15万件 (拡大期)</th>
+                    <th className="px-6 py-4 uppercase">規模のイメージ</th>
+                    <th className="px-6 py-4 text-center">月3万件 (検証期)</th>
+                    <th className="px-6 py-4 text-center">月6万件 (本格運用)</th>
+                    <th className="px-6 py-4 text-center">月15万件 (拡大期)</th>
                   </tr>
                 </thead>
                 <tbody className="divide-y divide-zinc-100">
-                  <tr><td className="px-6 py-4 font-bold text-zinc-500">想定企業数</td><td className="px-6 py-4 text-center">10,000社</td><td className="px-6 py-4 text-center font-black">20,000社</td><td className="px-6 py-4 text-center">50,000社</td></tr>
-                  <tr><td className="px-6 py-4 font-bold text-zinc-500">システム維持費 (VPS)</td><td className="px-6 py-4 text-center">6,656円</td><td className="px-6 py-4 text-center">10,084円</td><td className="px-6 py-4 text-center">16,336円</td></tr>
-                  <tr><td className="px-6 py-4 font-bold text-zinc-500">外部データ費 (GMap)</td><td className="px-6 py-4 text-center text-emerald-600 font-bold">0円</td><td className="px-6 py-4 text-center text-orange-600 font-black">8,000円</td><td className="px-6 py-4 text-center text-orange-600 font-black">32,000円</td></tr>
-                  <tr className="bg-blue-50/30"><td className="px-6 py-3 font-bold text-blue-600" colSpan={4}>AI利用料 内訳</td></tr>
-                  <tr><td className="px-6 py-2 text-zinc-400 text-[10px] pl-12">├ DeepBiz分析 (0.12円/社)</td><td className="px-6 py-2 text-center text-[10px]">1,200円</td><td className="px-6 py-2 text-center text-[10px]">2,400円</td><td className="px-6 py-2 text-center text-[10px]">6,000円</td></tr>
-                  <tr><td className="px-6 py-2 text-zinc-400 text-[10px] pl-12">├ テンプレート作成 (6.4円/案件)</td><td className="px-6 py-2 text-center text-[10px]">320円</td><td className="px-6 py-2 text-center text-[10px]">640円</td><td className="px-6 py-2 text-center text-[10px]">1,600円</td></tr>
-                  <tr><td className="px-6 py-2 text-zinc-400 text-[10px] pl-12">├ 文面個別化 (0.013円/件)</td><td className="px-6 py-2 text-center text-[10px]">390円</td><td className="px-6 py-2 text-center text-[10px]">780円</td><td className="px-6 py-2 text-center text-[10px]">1,950円</td></tr>
-                  <tr><td className="px-6 py-2 text-zinc-400 text-[10px] pl-12">└ フォーム認識 (0.019円/社)</td><td className="px-6 py-2 text-center text-[10px]">190円</td><td className="px-6 py-2 text-center text-[10px]">380円</td><td className="px-6 py-2 text-center text-[10px]">950円</td></tr>
-                  <tr><td className="px-6 py-4 font-bold text-blue-600">AI利用料 合計</td><td className="px-6 py-4 text-center font-bold">2,100円</td><td className="px-6 py-4 text-center font-bold">4,200円</td><td className="px-6 py-4 text-center font-bold">10,500円</td></tr>
+                  <tr><td className="px-6 py-3 font-bold text-zinc-500">想定企業数</td><td className="px-6 py-3 text-center">10,000社</td><td className="px-6 py-3 text-center">20,000社</td><td className="px-6 py-3 text-center">50,000社</td></tr>
+                  <tr><td className="px-6 py-3 font-bold text-zinc-500">システム維持費 (VPS)</td><td className="px-6 py-3 text-center">6,656円</td><td className="px-6 py-3 text-center">10,084円</td><td className="px-6 py-3 text-center">16,336円</td></tr>
+                  <tr><td className="px-6 py-3 font-bold text-zinc-500">外部データ費 (GMap)</td><td className="px-6 py-3 text-center text-emerald-600 font-bold">0円</td><td className="px-6 py-3 text-center text-orange-600 font-black">8,000円</td><td className="px-6 py-3 text-center text-orange-600 font-black">32,000円</td></tr>
+                  <tr className="bg-blue-50/30"><td className="px-6 py-2 font-bold text-blue-600" colSpan={4}>AI利用料 内訳</td></tr>
+                  <tr><td className="px-6 py-1 text-zinc-400 text-[10px] pl-12">├ DeepBiz分析 (0.12円/社)</td><td className="px-6 py-1 text-center text-[10px]">1,200円</td><td className="px-6 py-1 text-center text-[10px]">2,400円</td><td className="px-6 py-1 text-center text-[10px]">6,000円</td></tr>
+                  <tr><td className="px-6 py-1 text-zinc-400 text-[10px] pl-12">├ テンプレート作成 (6.4円/案件)</td><td className="px-6 py-1 text-center text-[10px]">320円</td><td className="px-6 py-1 text-center text-[10px]">640円</td><td className="px-6 py-1 text-center text-[10px]">1,600円</td></tr>
+                  <tr><td className="px-6 py-1 text-zinc-400 text-[10px] pl-12">├ 文面個別化 (0.013円/件)</td><td className="px-6 py-1 text-center text-[10px]">390円</td><td className="px-6 py-1 text-center text-[10px]">780円</td><td className="px-6 py-1 text-center text-[10px]">1,950円</td></tr>
+                  <tr><td className="px-6 py-1 text-zinc-400 text-[10px] pl-12">└ フォーム認識 (0.019円/社)</td><td className="px-6 py-1 text-center text-[10px]">190円</td><td className="px-6 py-1 text-center text-[10px]">380円</td><td className="px-6 py-1 text-center text-[10px]">950円</td></tr>
+                  <tr><td className="px-6 py-3 font-bold text-blue-600">AI利用料 合計</td><td className="px-6 py-3 text-center font-bold">2,100円</td><td className="px-6 py-3 text-center font-bold">4,200円</td><td className="px-6 py-3 text-center font-bold">10,500円</td></tr>
                   <tr className="bg-zinc-50 font-black">
-                    <td className="px-6 py-8 text-lg font-black tracking-widest">🔥 月額合計 (税込)</td>
-                    <td className="px-6 py-8 text-center text-2xl">¥8,756</td>
-                    <td className="px-6 py-8 text-center text-4xl text-blue-600 ring-4 ring-blue-50 shadow-inner">¥22,284</td>
-                    <td className="px-6 py-8 text-center text-2xl">¥58,836</td>
+                    <td className="px-6 py-5 text-base font-black tracking-widest">🔥 月額合計 (税込)</td>
+                    <td className="px-6 py-5 text-center text-xl">¥8,756</td>
+                    <td className="px-6 py-5 text-center text-xl">¥22,284</td>
+                    <td className="px-6 py-5 text-center text-xl">¥58,836</td>
                   </tr>
                   <tr className="bg-white">
-                    <td className="px-6 py-4 text-zinc-400 font-bold uppercase tracking-widest">送信単価 /件</td>
-                    <td className="px-6 py-4 text-center text-zinc-900 font-bold">0.29円</td>
-                    <td className="px-6 py-4 text-center text-zinc-900 font-black underline decoration-blue-600 decoration-4">0.37円</td>
-                    <td className="px-6 py-4 text-center text-zinc-900 font-bold">0.39円</td>
+                    <td className="px-6 py-3 text-zinc-400 font-bold uppercase tracking-widest text-[10px]">送信単価 /件</td>
+                    <td className="px-6 py-3 text-center text-zinc-900 font-bold">0.29円</td>
+                    <td className="px-6 py-3 text-center text-zinc-900 font-bold">0.37円</td>
+                    <td className="px-6 py-3 text-center text-zinc-900 font-bold">0.39円</td>
                   </tr>
                 </tbody>
               </table>
