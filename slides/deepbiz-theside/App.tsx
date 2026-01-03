@@ -802,7 +802,11 @@ const App: React.FC = () => {
                 </thead>
                 <tbody className="divide-y divide-zinc-100">
                   <tr><td className="px-6 py-3 font-bold text-zinc-500">想定企業数</td><td className="px-6 py-3 text-center">10,000社</td><td className="px-6 py-3 text-center">20,000社</td><td className="px-6 py-3 text-center">50,000社</td></tr>
-                  <tr><td className="px-6 py-3 font-bold text-zinc-500">システム維持費 (VPS)</td><td className="px-6 py-3 text-center">6,656円</td><td className="px-6 py-3 text-center">10,084円</td><td className="px-6 py-3 text-center">16,336円</td></tr>
+                  <tr><td className="px-6 py-3 font-bold text-zinc-500">案件数</td><td className="px-6 py-3 text-center">3件</td><td className="px-6 py-3 text-center">3件</td><td className="px-6 py-3 text-center">3件</td></tr>
+                  <tr className="bg-zinc-50/30"><td className="px-6 py-2 font-bold text-zinc-600" colSpan={4}>システム維持費 (VPS) 内訳</td></tr>
+                  <tr><td className="px-6 py-1 text-zinc-400 text-[10px] pl-12">├ DeepBiz用 (4G)</td><td className="px-6 py-1 text-center text-[10px]">3,227円</td><td className="px-6 py-1 text-center text-[10px]">3,227円</td><td className="px-6 py-1 text-center text-[10px]">3,227円</td></tr>
+                  <tr><td className="px-6 py-1 text-zinc-400 text-[10px] pl-12">└ TheSide用 (4G/8G/16G)</td><td className="px-6 py-1 text-center text-[10px]">3,429円</td><td className="px-6 py-1 text-center text-[10px]">6,857円</td><td className="px-6 py-1 text-center text-[10px]">13,109円</td></tr>
+                  <tr><td className="px-6 py-3 font-bold text-zinc-600">VPS合計</td><td className="px-6 py-3 text-center font-bold">6,656円</td><td className="px-6 py-3 text-center font-bold">10,084円</td><td className="px-6 py-3 text-center font-bold">16,336円</td></tr>
                   <tr><td className="px-6 py-3 font-bold text-zinc-500">外部データ費 (GMap)</td><td className="px-6 py-3 text-center text-emerald-600 font-bold">0円</td><td className="px-6 py-3 text-center text-orange-600 font-black">8,000円</td><td className="px-6 py-3 text-center text-orange-600 font-black">32,000円</td></tr>
                   <tr className="bg-blue-50/30"><td className="px-6 py-2 font-bold text-blue-600" colSpan={4}>AI利用料 内訳</td></tr>
                   <tr><td className="px-6 py-1 text-zinc-400 text-[10px] pl-12">├ DeepBiz分析 (0.12円/社)</td><td className="px-6 py-1 text-center text-[10px]">1,200円</td><td className="px-6 py-1 text-center text-[10px]">2,400円</td><td className="px-6 py-1 text-center text-[10px]">6,000円</td></tr>
