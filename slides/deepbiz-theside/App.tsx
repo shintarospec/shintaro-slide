@@ -462,7 +462,47 @@ const App: React.FC = () => {
         </div></div>
 
         <div style={wrapperStyle}><div style={scalerStyle}>
-        <Slide id={10} title="PART 2. TheSide 実行戦略" subtitle="AIお問い合わせフォーム自動送信プラットフォーム" pageNumber={10} totalPageCount={totalSlides}>
+        <Slide id={10} title="DeepBiz 単体コストシミュレーション" subtitle="データ収集・分析基盤の運用コスト" pageNumber={10} totalPageCount={totalSlides}>
+          <div className="h-full flex flex-col justify-center space-y-6">
+            <div className="overflow-hidden rounded-3xl border-2 border-blue-600 shadow-xl bg-white">
+              <table className="w-full text-left text-xs">
+                <thead className="bg-blue-600 text-white font-bold tracking-widest">
+                  <tr>
+                    <th className="px-6 py-4 uppercase">項目</th>
+                    <th className="px-6 py-4 text-center">月1万件</th>
+                    <th className="px-6 py-4 text-center">月2万件</th>
+                    <th className="px-6 py-4 text-center">月5万件</th>
+                  </tr>
+                </thead>
+                <tbody className="divide-y divide-zinc-100">
+                  <tr><td className="px-6 py-3 font-bold text-zinc-500">想定企業数</td><td className="px-6 py-3 text-center">10,000社</td><td className="px-6 py-3 text-center">20,000社</td><td className="px-6 py-3 text-center">50,000社</td></tr>
+                  <tr><td className="px-6 py-3 font-bold text-zinc-500">VPSサーバー (4G)</td><td className="px-6 py-3 text-center">3,227円</td><td className="px-6 py-3 text-center">3,227円</td><td className="px-6 py-3 text-center">3,227円</td></tr>
+                  <tr><td className="px-6 py-3 font-bold text-zinc-500">Google Maps API (0.8円/件)</td><td className="px-6 py-3 text-center text-emerald-600 font-bold">0円</td><td className="px-6 py-3 text-center text-orange-600 font-black">8,000円</td><td className="px-6 py-3 text-center text-orange-600 font-black">32,000円</td></tr>
+                  <tr><td className="px-6 py-3 font-bold text-blue-600">Gemini 2.5 AI分析 (0.12円/社)</td><td className="px-6 py-3 text-center font-bold">1,200円</td><td className="px-6 py-3 text-center font-bold">2,400円</td><td className="px-6 py-3 text-center font-bold">6,000円</td></tr>
+                  <tr className="bg-blue-50 font-black">
+                    <td className="px-6 py-5 text-base font-black tracking-widest">🔥 月額合計</td>
+                    <td className="px-6 py-5 text-center text-xl text-blue-600">¥4,427</td>
+                    <td className="px-6 py-5 text-center text-xl text-blue-600">¥13,627</td>
+                    <td className="px-6 py-5 text-center text-xl text-blue-600">¥41,227</td>
+                  </tr>
+                  <tr className="bg-white">
+                    <td className="px-6 py-3 text-zinc-400 font-bold uppercase tracking-widest text-[10px]">企業分析単価 /社</td>
+                    <td className="px-6 py-3 text-center text-zinc-900 font-bold">0.44円</td>
+                    <td className="px-6 py-3 text-center text-zinc-900 font-bold">0.68円</td>
+                    <td className="px-6 py-3 text-center text-zinc-900 font-bold">0.82円</td>
+                  </tr>
+                </tbody>
+              </table>
+            </div>
+            <div className="p-6 bg-blue-50/30 border border-blue-100 rounded-2xl text-xs text-zinc-500 italic text-center">
+              💡 月1万件までは無料枠内で運用可能。企業分析データは90日間キャッシュされ、2回目以降は無料。
+            </div>
+          </div>
+        </Slide>
+        </div></div>
+
+        <div style={wrapperStyle}><div style={scalerStyle}>
+        <Slide id={11} title="PART 2. TheSide 実行戦略" subtitle="AIお問い合わせフォーム自動送信プラットフォーム" pageNumber={11} totalPageCount={totalSlides}>
           <div className="h-full flex flex-col justify-center items-center text-center">
             <div className="w-32 h-32 rounded-3xl bg-indigo-50 flex items-center justify-center text-indigo-600 mb-8 border border-indigo-100 shadow-sm">
               <Zap size={64} />
@@ -474,7 +514,7 @@ const App: React.FC = () => {
         </div></div>
 
         <div style={wrapperStyle}><div style={scalerStyle}>
-        <Slide id={11} title="TheSide サービス概要" subtitle="解決する課題とターゲットユーザー" pageNumber={11} totalPageCount={totalSlides}>
+        <Slide id={12} title="TheSide サービス概要" subtitle="解決する課題とターゲットユーザー" pageNumber={12} totalPageCount={totalSlides}>
           <div className="h-full flex flex-col justify-center space-y-12">
             <div className="grid grid-cols-2 gap-12">
               <div className="space-y-6">
@@ -516,7 +556,7 @@ const App: React.FC = () => {
         </div></div>
 
         <div style={wrapperStyle}><div style={scalerStyle}>
-        <Slide id={12} title="TheSide システム全体フロー" subtitle="外部連携から自動送信までの5ステップ" pageNumber={12} totalPageCount={totalSlides}>
+        <Slide id={13} title="TheSide システム全体フロー" subtitle="外部連携から自動送信までの5ステップ" pageNumber={13} totalPageCount={totalSlides}>
           <div className="h-full flex flex-col justify-center">
             <div className="p-5 bg-blue-50 border border-blue-100 rounded-2xl text-center mb-8">
               <p className="text-[10px] text-blue-600 font-black uppercase tracking-[0.2em] mb-1">DeepBiz API (分析済みデータ連携)</p>
@@ -548,7 +588,7 @@ const App: React.FC = () => {
         </div></div>
 
         <div style={wrapperStyle}><div style={scalerStyle}>
-        <Slide id={13} title="AI使用箇所とコストマトリックス" subtitle="各プロセスのAI選定理由とコスト最適化の根拠" pageNumber={13} totalPageCount={totalSlides}>
+        <Slide id={14} title="AI使用箇所とコストマトリックス" subtitle="各プロセスのAI選定理由とコスト最適化の根拠" pageNumber={14} totalPageCount={totalSlides}>
           <div className="h-full flex flex-col justify-center space-y-8">
             <div className="overflow-hidden rounded-2xl border border-zinc-200 bg-white shadow-sm">
               <table className="w-full text-left text-xs">
@@ -575,7 +615,7 @@ const App: React.FC = () => {
         </div></div>
 
         <div style={wrapperStyle}><div style={scalerStyle}>
-        <Slide id={14} title="ハイブリッド構成推奨の結論" subtitle="GPT-4の「質」とGeminiの「量」を戦略的に融合" pageNumber={14} totalPageCount={totalSlides}>
+        <Slide id={15} title="ハイブリッド構成推奨の結論" subtitle="GPT-4の「質」とGeminiの「量」を戦略的に融合" pageNumber={15} totalPageCount={totalSlides}>
           <div className="h-full flex flex-col justify-center space-y-12">
             <div className="grid grid-cols-2 gap-12">
               <div className="space-y-6">
@@ -615,7 +655,7 @@ const App: React.FC = () => {
         </div></div>
 
         <div style={wrapperStyle}><div style={scalerStyle}>
-        <Slide id={15} title="AI活用のコスト設計戦略 (TheSide)" subtitle="構造の透明性と予測可能性の確保" pageNumber={15} totalPageCount={totalSlides}>
+        <Slide id={16} title="AI活用のコスト設計戦略 (TheSide)" subtitle="構造の透明性と予測可能性の確保" pageNumber={16} totalPageCount={totalSlides}>
           <div className="h-full flex flex-col justify-center gap-6">
             <div className="grid grid-cols-3 gap-6">
               {[
@@ -639,113 +679,7 @@ const App: React.FC = () => {
         </div></div>
 
         <div style={wrapperStyle}><div style={scalerStyle}>
-        <Slide id={16} title="PART 3. 統合AI戦略：営業DXの次世代モデル" subtitle="経営層・営業部門へ送る、最新統合コストプラン" pageNumber={16} totalPageCount={totalSlides}>
-          <div className="h-full flex flex-col justify-center items-center text-center">
-            <div className="w-32 h-32 rounded-full bg-emerald-50 flex items-center justify-center text-emerald-600 mb-8 border border-emerald-100 shadow-sm">
-              <BarChart3 size={64} />
-            </div>
-            <h2 className="text-5xl font-black mb-6">統合コスト戦略 (最新版)</h2>
-            <p className="text-zinc-500 max-w-lg text-lg leading-relaxed">Google Maps APIの超過料金を正確に反映した、<br/>直感的に理解できる最新のコストシミュレーション。</p>
-          </div>
-        </Slide>
-        </div></div>
-
-        <div style={wrapperStyle}><div style={scalerStyle}>
-        <Slide id={17} title="1. サービスが解決する「営業の課題」" subtitle="人的作業の限界を、2つのシステム連携で突破する" pageNumber={17} totalPageCount={totalSlides}>
-          <div className="grid grid-cols-2 gap-12 h-full items-center">
-            <div className="p-10 bg-white border border-zinc-200 rounded-3xl shadow-sm relative overflow-hidden group hover:border-blue-200 transition-colors">
-              <div className="absolute top-0 right-0 w-32 h-32 bg-blue-50 blur-[50px] group-hover:bg-blue-100 transition-colors"></div>
-              <div className="flex gap-6 items-center mb-6">
-                <div className="w-16 h-16 rounded-2xl bg-blue-50 flex items-center justify-center text-blue-600 shrink-0 shadow-inner"><Search size={32}/></div>
-                <h4 className="text-2xl font-black text-zinc-900">DeepBiz (データ基盤)</h4>
-              </div>
-              <p className="text-sm text-zinc-500 leading-relaxed">
-                ネット上の膨大な情報から「ターゲット企業」を見つけ出し、その特徴を分析する<span className="text-blue-600 font-black italic">「調査員」</span>の役割を果たします。
-              </p>
-            </div>
-            <div className="p-10 bg-white border border-zinc-200 rounded-3xl shadow-sm relative overflow-hidden group hover:border-indigo-200 transition-colors">
-              <div className="absolute top-0 right-0 w-32 h-32 bg-indigo-50 blur-[50px] group-hover:bg-indigo-100 transition-colors"></div>
-              <div className="flex gap-6 items-center mb-6">
-                <div className="w-16 h-16 rounded-2xl bg-indigo-50 flex items-center justify-center text-indigo-600 shrink-0 shadow-inner"><Zap size={32}/></div>
-                <h4 className="text-2xl font-black text-zinc-900">TheSide (営業実行)</h4>
-              </div>
-              <p className="text-sm text-zinc-500 leading-relaxed">
-                DeepBizが調べた情報を元に、企業に刺さる「ラブレター（営業文）」を書き、窓口へ届ける<span className="text-indigo-600 font-black italic">「営業マン」</span>の役割を果たします。
-              </p>
-            </div>
-          </div>
-        </Slide>
-        </div></div>
-
-        <div style={wrapperStyle}><div style={scalerStyle}>
-        <Slide id={18} title="2. なぜ「AI」を使うのか？" subtitle="従来のITシステムでは不可能だった「文脈理解」の代行" pageNumber={18} totalPageCount={totalSlides}>
-          <div className="h-full flex flex-col justify-center gap-8">
-            <div className="overflow-hidden rounded-3xl border border-zinc-200 shadow-sm">
-              <table className="w-full text-left text-sm">
-                <thead className="bg-zinc-50 text-zinc-500 font-bold uppercase tracking-widest">
-                  <tr><th className="px-8 py-6 w-1/4">AIの役割</th><th className="px-8 py-6 w-2/5">具体的な内容</th><th className="px-8 py-6">AIを使う理由</th></tr>
-                </thead>
-                <tbody className="divide-y divide-zinc-100">
-                  {[
-                    { r: "企業の本質を理解", c: "Webサイトから「この会社は今、人材不足に悩んでいるな」と推測。", y: "人が読むと10分かかる調査を, AIなら「2秒」で完了できるため。" },
-                    { r: "心に刺さる文章作成", c: "相手の強みを褒め, 自社サービスがどう役立つかを自然な日本語で作成。", y: "コピペ文ではなく, 成約率を最大化するため。" },
-                    { r: "複雑な操作の代行", d: "企業ごとに異なる複雑なお問い合わせフォームを正しく認識。", y: "あらゆる企業のサイトに低コストで対応するため。" }
-                  ].map((item, i) => (
-                    <tr key={i}>
-                      <td className="px-8 py-8 font-black text-zinc-900">{item.r}</td>
-                      <td className="px-8 py-8 text-zinc-500 leading-relaxed">{item.c || item.d}</td>
-                      <td className="px-8 py-8 text-zinc-400 font-bold">{item.y}</td>
-                    </tr>
-                  ))}
-                </tbody>
-              </table>
-            </div>
-          </div>
-        </Slide>
-        </div></div>
-
-        <div style={wrapperStyle}><div style={scalerStyle}>
-        <Slide id={19} title="2-1. DeepBiz 単体コストシミュレーション" subtitle="データ収集・分析基盤の運用コスト" pageNumber={19} totalPageCount={totalSlides}>
-          <div className="h-full flex flex-col justify-center space-y-6">
-            <div className="overflow-hidden rounded-3xl border-2 border-blue-600 shadow-xl bg-white">
-              <table className="w-full text-left text-xs">
-                <thead className="bg-blue-600 text-white font-bold tracking-widest">
-                  <tr>
-                    <th className="px-6 py-4 uppercase">項目</th>
-                    <th className="px-6 py-4 text-center">月1万件</th>
-                    <th className="px-6 py-4 text-center">月2万件</th>
-                    <th className="px-6 py-4 text-center">月5万件</th>
-                  </tr>
-                </thead>
-                <tbody className="divide-y divide-zinc-100">
-                  <tr><td className="px-6 py-3 font-bold text-zinc-500">想定企業数</td><td className="px-6 py-3 text-center">10,000社</td><td className="px-6 py-3 text-center">20,000社</td><td className="px-6 py-3 text-center">50,000社</td></tr>
-                  <tr><td className="px-6 py-3 font-bold text-zinc-500">VPSサーバー (4G)</td><td className="px-6 py-3 text-center">3,227円</td><td className="px-6 py-3 text-center">3,227円</td><td className="px-6 py-3 text-center">3,227円</td></tr>
-                  <tr><td className="px-6 py-3 font-bold text-zinc-500">Google Maps API (0.8円/件)</td><td className="px-6 py-3 text-center text-emerald-600 font-bold">0円</td><td className="px-6 py-3 text-center text-orange-600 font-black">8,000円</td><td className="px-6 py-3 text-center text-orange-600 font-black">32,000円</td></tr>
-                  <tr><td className="px-6 py-3 font-bold text-blue-600">Gemini 2.5 AI分析 (0.12円/社)</td><td className="px-6 py-3 text-center font-bold">1,200円</td><td className="px-6 py-3 text-center font-bold">2,400円</td><td className="px-6 py-3 text-center font-bold">6,000円</td></tr>
-                  <tr className="bg-blue-50 font-black">
-                    <td className="px-6 py-5 text-base font-black tracking-widest">🔥 月額合計</td>
-                    <td className="px-6 py-5 text-center text-xl text-blue-600">¥4,427</td>
-                    <td className="px-6 py-5 text-center text-xl text-blue-600">¥13,627</td>
-                    <td className="px-6 py-5 text-center text-xl text-blue-600">¥41,227</td>
-                  </tr>
-                  <tr className="bg-white">
-                    <td className="px-6 py-3 text-zinc-400 font-bold uppercase tracking-widest text-[10px]">企業分析単価 /社</td>
-                    <td className="px-6 py-3 text-center text-zinc-900 font-bold">0.44円</td>
-                    <td className="px-6 py-3 text-center text-zinc-900 font-bold">0.68円</td>
-                    <td className="px-6 py-3 text-center text-zinc-900 font-bold">0.82円</td>
-                  </tr>
-                </tbody>
-              </table>
-            </div>
-            <div className="p-6 bg-blue-50/30 border border-blue-100 rounded-2xl text-xs text-zinc-500 italic text-center">
-              💡 月1万件までは無料枠内で運用可能。企業分析データは90日間キャッシュされ、2回目以降は無料。
-            </div>
-          </div>
-        </Slide>
-        </div></div>
-
-        <div style={wrapperStyle}><div style={scalerStyle}>
-        <Slide id={20} title="2-2. TheSide 単体コストシミュレーション" subtitle="営業自動化プラットフォームの運用コスト" pageNumber={20} totalPageCount={totalSlides}>
+        <Slide id={17} title="TheSide 単体コストシミュレーション" subtitle="営業自動化プラットフォームの運用コスト" pageNumber={17} totalPageCount={totalSlides}>
           <div className="h-full flex flex-col justify-center space-y-6">
             <div className="overflow-hidden rounded-3xl border-2 border-indigo-600 shadow-xl bg-white">
               <table className="w-full text-left text-xs">
@@ -788,7 +722,73 @@ const App: React.FC = () => {
         </div></div>
 
         <div style={wrapperStyle}><div style={scalerStyle}>
-        <Slide id={21} title="3. 【重要】最新統合コストシミュレーション" subtitle="Google Maps API 超過料金を反映した運用予測" pageNumber={21} totalPageCount={totalSlides}>
+        <Slide id={18} title="PART 3. 統合AI戦略：営業DXの次世代モデル" subtitle="経営層・営業部門へ送る、最新統合コストプラン" pageNumber={18} totalPageCount={totalSlides}>
+          <div className="h-full flex flex-col justify-center items-center text-center">
+            <div className="w-32 h-32 rounded-full bg-emerald-50 flex items-center justify-center text-emerald-600 mb-8 border border-emerald-100 shadow-sm">
+              <BarChart3 size={64} />
+            </div>
+            <h2 className="text-5xl font-black mb-6">統合コスト戦略 (最新版)</h2>
+            <p className="text-zinc-500 max-w-lg text-lg leading-relaxed">Google Maps APIの超過料金を正確に反映した、<br/>直感的に理解できる最新のコストシミュレーション。</p>
+          </div>
+        </Slide>
+        </div></div>
+
+        <div style={wrapperStyle}><div style={scalerStyle}>
+        <Slide id={19} title="1. サービスが解決する「営業の課題」" subtitle="人的作業の限界を、2つのシステム連携で突破する" pageNumber={19} totalPageCount={totalSlides}>
+          <div className="grid grid-cols-2 gap-12 h-full items-center">
+            <div className="p-10 bg-white border border-zinc-200 rounded-3xl shadow-sm relative overflow-hidden group hover:border-blue-200 transition-colors">
+              <div className="absolute top-0 right-0 w-32 h-32 bg-blue-50 blur-[50px] group-hover:bg-blue-100 transition-colors"></div>
+              <div className="flex gap-6 items-center mb-6">
+                <div className="w-16 h-16 rounded-2xl bg-blue-50 flex items-center justify-center text-blue-600 shrink-0 shadow-inner"><Search size={32}/></div>
+                <h4 className="text-2xl font-black text-zinc-900">DeepBiz (データ基盤)</h4>
+              </div>
+              <p className="text-sm text-zinc-500 leading-relaxed">
+                ネット上の膨大な情報から「ターゲット企業」を見つけ出し、その特徴を分析する<span className="text-blue-600 font-black italic">「調査員」</span>の役割を果たします。
+              </p>
+            </div>
+            <div className="p-10 bg-white border border-zinc-200 rounded-3xl shadow-sm relative overflow-hidden group hover:border-indigo-200 transition-colors">
+              <div className="absolute top-0 right-0 w-32 h-32 bg-indigo-50 blur-[50px] group-hover:bg-indigo-100 transition-colors"></div>
+              <div className="flex gap-6 items-center mb-6">
+                <div className="w-16 h-16 rounded-2xl bg-indigo-50 flex items-center justify-center text-indigo-600 shrink-0 shadow-inner"><Zap size={32}/></div>
+                <h4 className="text-2xl font-black text-zinc-900">TheSide (営業実行)</h4>
+              </div>
+              <p className="text-sm text-zinc-500 leading-relaxed">
+                DeepBizが調べた情報を元に、企業に刺さる「ラブレター（営業文）」を書き、窓口へ届ける<span className="text-indigo-600 font-black italic">「営業マン」</span>の役割を果たします。
+              </p>
+            </div>
+          </div>
+        </Slide>
+        </div></div>
+
+        <div style={wrapperStyle}><div style={scalerStyle}>
+        <Slide id={20} title="2. なぜ「AI」を使うのか？" subtitle="従来のITシステムでは不可能だった「文脈理解」の代行" pageNumber={20} totalPageCount={totalSlides}>
+          <div className="h-full flex flex-col justify-center gap-8">
+            <div className="overflow-hidden rounded-3xl border border-zinc-200 shadow-sm">
+              <table className="w-full text-left text-sm">
+                <thead className="bg-zinc-50 text-zinc-500 font-bold uppercase tracking-widest">
+                  <tr><th className="px-8 py-6 w-1/4">AIの役割</th><th className="px-8 py-6 w-2/5">具体的な内容</th><th className="px-8 py-6">AIを使う理由</th></tr>
+                </thead>
+                <tbody className="divide-y divide-zinc-100">
+                  {[
+                    { r: "企業の本質を理解", c: "Webサイトから「この会社は今、人材不足に悩んでいるな」と推測。", y: "人が読むと10分かかる調査を, AIなら「2秒」で完了できるため。" },
+                    { r: "心に刺さる文章作成", c: "相手の強みを褒め, 自社サービスがどう役立つかを自然な日本語で作成。", y: "コピペ文ではなく, 成約率を最大化するため。" },
+                    { r: "複雑な操作の代行", d: "企業ごとに異なる複雑なお問い合わせフォームを正しく認識。", y: "あらゆる企業のサイトに低コストで対応するため。" }
+                  ].map((item, i) => (
+                    <tr key={i}>
+                      <td className="px-8 py-8 font-black text-zinc-900">{item.r}</td>
+                      <td className="px-8 py-8 text-zinc-500 leading-relaxed">{item.c || item.d}</td>
+                      <td className="px-8 py-8 text-zinc-400 font-bold">{item.y}</td>
+                    </tr>
+                  ))}
+                </tbody>
+              </table>
+            </div>
+          </div>
+        </Slide>
+        </div></div>
+
+        <div style={wrapperStyle}><div style={scalerStyle}>
+        <Slide id={21} title="【重要】統合コストシミュレーション" subtitle="Google Maps API 超過料金を反映した運用予測" pageNumber={21} totalPageCount={totalSlides}>
           <div className="h-full flex flex-col justify-center space-y-6">
             <div className="overflow-hidden rounded-3xl border-2 border-zinc-900 shadow-xl bg-white">
               <table className="w-full text-left text-xs">
