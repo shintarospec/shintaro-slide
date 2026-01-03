@@ -78,7 +78,7 @@ const App: React.FC = () => {
     height: `${BASE_HEIGHT * scale}px`,
     display: 'flex',
     justifyContent: 'center',
-    marginBottom: window.innerWidth < 640 ? '1rem' : '2rem',
+    marginBottom: window.innerWidth < 640 ? '2rem' : '4rem',
   }), [scale]);
 
   const scalerStyle = useMemo(() => ({
