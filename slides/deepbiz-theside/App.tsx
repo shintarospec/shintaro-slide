@@ -20,7 +20,7 @@ import {
   MousePointerClick,
   ChevronRight
 } from 'lucide-react';
-import Slide from './components/Slide';
+import Slide from '../shared/Slide';
 import html2canvas from 'html2canvas';
 import { jsPDF } from 'jspdf';
 

@@ -1,20 +1,60 @@
+# 📊 Shintaro Slide Hub
+
+複数のプロフェッショナルスライドを管理するリポジトリです。
+
+## 🎯 スライド一覧
+
+- **[DeepBiz × TheSide 統合AI戦略](https://shintarospec.github.io/shintaro-slide/slides/deepbiz-theside/)** - 営業DXの次世代モデル（23スライド）
+
+## 📁 プロジェクト構造
+
+```
+shintaro-slide/
+├── slides/
+│   ├── deepbiz-theside/    # 個別スライドプロジェクト
+│   │   ├── App.tsx
+│   │   ├── index.html
+│   │   └── index.tsx
+│   └── shared/              # 共通コンポーネント
+│       └── Slide.tsx
+├── index.html               # スライド一覧ページ
+├── vite.config.ts           # マルチページ設定
+└── A4_SLIDE_RULES.md        # スライド作成ガイド
+```
+
+## 🚀 開発方法
+
+```bash
+# 依存関係のインストール
+npm install
+
+# 開発サーバー起動
+npm run dev
+
+# ビルド
+npm run build
+```
+
+## ➕ 新しいスライドの追加
+
+1. `slides/` に新しいフォルダを作成
+2. `App.tsx`, `index.html`, `index.tsx` を追加
+3. `vite.config.ts` の `input` に追加
+4. ルートの `index.html` にカードを追加
+
+詳細は [A4_SLIDE_RULES.md](./A4_SLIDE_RULES.md) を参照。
+
+## 📖 ドキュメント
+
+- [A4スライド作成ルール](./A4_SLIDE_RULES.md)
+
+## 🌐 公開URL
+
+- **トップページ**: https://shintarospec.github.io/shintaro-slide/
+- **DeepBiz × TheSide**: https://shintarospec.github.io/shintaro-slide/slides/deepbiz-theside/
+
+---
+
 <div align="center">
-<img width="1200" height="475" alt="GHBanner" src="https://github.com/user-attachments/assets/0aa67016-6eaf-458a-adb2-6e31a0763ed6" />
+<sub>Built with React + TypeScript + Vite</sub>
 </div>
-
-# Run and deploy your AI Studio app
-
-This contains everything you need to run your app locally.
-
-View your app in AI Studio: https://ai.studio/apps/drive/1__-Htx9YtNoCb1J3VgoC0oWnF9gZ0usT
-
-## Run Locally
-
-**Prerequisites:**  Node.js
-
-
-1. Install dependencies:
-   `npm install`
-2. Set the `GEMINI_API_KEY` in [.env.local](.env.local) to your Gemini API key
-3. Run the app:
-   `npm run dev`

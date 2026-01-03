@@ -1,37 +1,93 @@
-
 <!DOCTYPE html>
 <html lang="ja">
 <head>
     <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no">
-    <title>DeepBiz × TheSide 統合AIコスト戦略</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>スライド管理 | Shintaro Presentations</title>
     <script src="https://cdn.tailwindcss.com"></script>
-    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600;700&family=Noto+Sans+JP:wght@400;500;700&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600;700;800;900&family=Noto+Sans+JP:wght@400;500;700;900&display=swap" rel="stylesheet">
     <style>
         body {
             font-family: 'Inter', 'Noto Sans JP', sans-serif;
-            background-color: #f8fafc;
-            color: #1e293b;
-            margin: 0;
-            padding: 0;
-            overflow-x: hidden;
-        }
-        /* A4 Landscape dimensions for print */
-        @media print {
-            .no-print { display: none; }
-            .slide-container {
-                width: 297mm !important;
-                height: 210mm !important;
-                max-width: none !important;
-                box-shadow: none;
-                margin: 0;
-                page-break-after: always;
-            }
+            background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+            min-height: 100vh;
         }
     </style>
 </head>
 <body>
-    <div id="root"></div>
-    <script type="module" src="./index.tsx"></script>
+    <div class="min-h-screen py-12 px-4 sm:px-6 lg:px-8">
+        <div class="max-w-6xl mx-auto">
+            <!-- Header -->
+            <div class="text-center mb-16">
+                <h1 class="text-5xl sm:text-6xl font-black text-white mb-4 tracking-tight">
+                    📊 Presentation Hub
+                </h1>
+                <p class="text-xl text-white/80 font-medium">
+                    プロフェッショナル資料コレクション
+                </p>
+            </div>
+
+            <!-- Slide Cards -->
+            <div class="grid gap-8 md:grid-cols-2 lg:grid-cols-3">
+                
+                <!-- Slide 1: DeepBiz × TheSide -->
+                <a href="./slides/deepbiz-theside/" class="group">
+                    <div class="bg-white rounded-3xl shadow-2xl overflow-hidden transform transition-all duration-300 hover:scale-105 hover:shadow-[0_30px_60px_rgba(0,0,0,0.3)]">
+                        <div class="bg-gradient-to-br from-blue-600 to-indigo-700 p-8 relative overflow-hidden">
+                            <div class="absolute top-0 right-0 w-32 h-32 bg-white/10 rounded-full -mr-16 -mt-16"></div>
+                            <div class="relative z-10">
+                                <div class="text-5xl mb-4">🤖</div>
+                                <h2 class="text-2xl font-black text-white mb-2">
+                                    DeepBiz × TheSide
+                                </h2>
+                                <p class="text-blue-100 text-sm font-medium">
+                                    統合AI戦略
+                                </p>
+                            </div>
+                        </div>
+                        <div class="p-6">
+                            <p class="text-slate-600 text-sm leading-relaxed mb-4">
+                                営業DXの次世代モデル。データベース解析とAI活用の完全ガイド。
+                            </p>
+                            <div class="flex items-center justify-between">
+                                <span class="text-xs font-bold text-slate-400 uppercase tracking-wider">23 Slides</span>
+                                <span class="text-blue-600 font-bold text-sm group-hover:translate-x-1 transition-transform">
+                                    表示 →
+                                </span>
+                            </div>
+                        </div>
+                    </div>
+                </a>
+
+                <!-- Placeholder for Future Slides -->
+                <div class="bg-white/10 backdrop-blur-sm rounded-3xl border-2 border-dashed border-white/30 p-8 flex flex-col items-center justify-center text-center min-h-[320px]">
+                    <div class="text-6xl mb-4 opacity-50">➕</div>
+                    <h3 class="text-xl font-bold text-white mb-2">新規スライド</h3>
+                    <p class="text-white/70 text-sm">
+                        次のプレゼンテーションを<br/>追加できます
+                    </p>
+                </div>
+
+                <div class="bg-white/10 backdrop-blur-sm rounded-3xl border-2 border-dashed border-white/30 p-8 flex flex-col items-center justify-center text-center min-h-[320px]">
+                    <div class="text-6xl mb-4 opacity-50">➕</div>
+                    <h3 class="text-xl font-bold text-white mb-2">新規スライド</h3>
+                    <p class="text-white/70 text-sm">
+                        次のプレゼンテーションを<br/>追加できます
+                    </p>
+                </div>
+
+            </div>
+
+            <!-- Footer -->
+            <div class="text-center mt-16 text-white/60 text-sm">
+                <p class="mb-2">🚀 A4 Slide Framework v1.0</p>
+                <p>
+                    <a href="./A4_SLIDE_RULES.md" class="hover:text-white transition-colors underline">
+                        制作ガイドライン
+                    </a>
+                </p>
+            </div>
+        </div>
+    </div>
 </body>
 </html>
