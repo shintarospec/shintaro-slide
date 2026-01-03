@@ -135,8 +135,10 @@ const App: React.FC = () => {
         </Slide>
         </div></div>
 
+
         {/* SLIDE 2: TOC */}
-        <Slide id={2} title="統合戦略：目次" subtitle="本資料の構成" pageNumber={2} totalPageCount={totalSlides}>
+        <div style={wrapperStyle}><div style={scalerStyle}>
+          <Slide id={2} title="統合戦略：目次" subtitle="本資料の構成" pageNumber={2} totalPageCount={totalSlides}>
           <div className="h-full flex items-center justify-center">
             <div className="grid grid-cols-3 gap-8 w-full">
               {[
@@ -155,8 +157,11 @@ const App: React.FC = () => {
             </div>
           </div>
         </Slide>
+        </div></div>
+
 
         {/* SLIDE 3: SYSTEM CONNECTIVITY (Landscape Diagram) */}
+        <div style={wrapperStyle}><div style={scalerStyle}>
         <Slide id={3} title="全体のシステム構造" subtitle="情報のバトンが、高品質な営業活動を実現する" pageNumber={3} totalPageCount={totalSlides}>
           <div className="h-full flex flex-col justify-center">
             <div className="flex items-center justify-between gap-4 mb-12">
@@ -724,6 +729,7 @@ const App: React.FC = () => {
             <div className="text-zinc-400 text-[10px] font-bold uppercase tracking-widest">© 2026 DeepBiz x TheSide Strategy Team v6.0</div>
           </div>
         </Slide>
+        </div></div>
 
       </div>
     </div>
