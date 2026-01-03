@@ -265,7 +265,7 @@ const App: React.FC = () => {
               <div className="space-y-3">
                 {[
                   { t: "Step 1: Web取得", s: "HTML取得・テキスト抽出・洗浄 / AI不要" },
-                  { t: "Step 2: AI解析 (Gemini 2.0)", s: "強み・課題抽出・JSON構造化 / 💰 0.023円/社", active: true },
+                  { t: "Step 2: AI解析 (Gemini 2.5 Flash-Lite)", s: "強み・課題抽出・JSON構造化 / 💰 0.12円/社", active: true },
                   { t: "Step 3: キャッシュ", s: "90日間保存・再利用 / 💰 0円" }
                 ].map((s, i) => (
                   <div key={i} className={`p-4 rounded-xl border ${s.active ? 'bg-indigo-50 border-indigo-200' : 'bg-white border-zinc-100 shadow-sm'}`}>
@@ -308,8 +308,8 @@ const App: React.FC = () => {
                   <tr className="bg-blue-50/50">
                     <td className="px-6 py-4 font-black text-blue-600">Phase 2: 企業分析</td>
                     <td className="px-6 py-4 text-blue-600 font-black">✅ 必須</td>
-                    <td className="px-6 py-4 font-black text-blue-600">0.023円/社</td>
-                    <td className="px-6 py-4 text-zinc-500 font-bold">Gemini 2.0 Flash による構造化</td>
+                    <td className="px-6 py-4 font-black text-blue-600">0.12円/社</td>
+                    <td className="px-6 py-4 text-zinc-500 font-bold">Gemini 2.5 Flash-Lite による構造化</td>
                   </tr>
                 </tbody>
               </table>
@@ -321,9 +321,9 @@ const App: React.FC = () => {
                 <p className="text-[10px] text-emerald-600 font-bold mt-1 italic">※月10,000件まで完全無料枠あり</p>
               </div>
               <div className="p-6 bg-zinc-50 rounded-2xl border border-zinc-100">
-                <p className="text-[10px] font-bold text-zinc-400 mb-2 uppercase tracking-widest">Gemini 2.0 Flash AI</p>
-                <p className="text-2xl font-black text-zinc-900">0.023円 / 社</p>
-                <p className="text-[10px] text-blue-600 font-bold mt-1 italic">※15,000文字を2秒で解析完了</p>
+                <p className="text-[10px] font-bold text-zinc-400 mb-2 uppercase tracking-widest">Gemini 2.5 Flash-Lite</p>
+                <p className="text-2xl font-black text-zinc-900">0.12円 / 社</p>
+                <p className="text-[10px] text-blue-600 font-bold mt-1 italic">※高速スループット最適化モデル</p>
               </div>
             </div>
           </div>
@@ -384,28 +384,28 @@ const App: React.FC = () => {
                 </div>
               </div>
               <div className="p-8 bg-blue-600 rounded-3xl text-white text-center shadow-lg">
-                <p className="text-[10px] font-bold uppercase tracking-widest opacity-80 mb-1">Cost per analysis</p>
+                <p className="text-[10px] font-bold uppercase tracking-widest opacity-80 mb-1">Cost per analysis (2026版)</p>
                 <p className="text-4xl font-black flex items-center justify-center mb-4">
-                  0.023<span className="ml-3 text-3xl font-bold">円</span>
+                  0.12<span className="ml-3 text-3xl font-bold">円</span>
                 </p>
                 <div className="bg-blue-700/50 rounded-xl p-4 text-[10px] text-left space-y-2">
                   <div className="flex justify-between border-b border-blue-400/30 pb-1">
                     <span>入力 (5,310t)</span>
-                    <span>$0.0001</span>
+                    <span>$0.000531</span>
                   </div>
                   <div className="flex justify-between border-b border-blue-400/30 pb-1">
                     <span>出力 (600t)</span>
-                    <span>$0.000045</span>
+                    <span>$0.000240</span>
                   </div>
                   <div className="flex justify-between font-bold pt-1">
                     <span>合計</span>
-                    <span>$0.000145</span>
+                    <span>$0.000771</span>
                   </div>
                 </div>
               </div>
             </div>
             <div className="col-span-3 p-8 bg-zinc-900 rounded-3xl font-mono text-xs text-blue-300 shadow-xl border border-zinc-800">
-              <p className="text-zinc-500 mb-3 border-b border-zinc-800 pb-2">// Gemini 2.0 Flash Analytics Output</p>
+              <p className="text-zinc-500 mb-3 border-b border-zinc-800 pb-2">// Gemini 2.5 Flash-Lite Analytics Output</p>
               <pre className="whitespace-pre-wrap leading-relaxed">{`{
   "description": "中小企業向けAIソリューション提供...",
   "industry": "IT・ソフトウェア",
@@ -428,19 +428,20 @@ const App: React.FC = () => {
             <div className="grid grid-cols-2 gap-8">
               <div className="p-8 bg-white border border-zinc-200 rounded-3xl shadow-sm space-y-4">
                 <h5 className="text-sm font-bold text-zinc-900 flex items-center gap-2"><Share2 size={18} className="text-blue-600"/> 1. AIキャッシュ戦略</h5>
-                <p className="text-xs text-zinc-500 leading-relaxed">初回解析のみ0.023円。結果をDBに90日間保存し、2回目以降は <span className="text-emerald-600 font-bold italic">完全無料(0円)</span>。複数ユーザー共有で効率最大化。</p>
+                <p className="text-xs text-zinc-500 leading-relaxed">初回解析のみ0.12円。結果をDBに90日間保存し、2回目以降は <span className="text-emerald-600 font-bold italic">完全無料(0円)</span>。複数ユーザー共有で効率最大化。</p>
               </div>
               <div className="p-8 bg-white border border-zinc-200 rounded-3xl shadow-sm space-y-4">
-                <h5 className="text-sm font-bold text-zinc-900 flex items-center gap-2"><Cpu size={18} className="text-indigo-600"/> 2. Gemini 2.0 Flash選定</h5>
+                <h5 className="text-sm font-bold text-zinc-900 flex items-center gap-2"><Cpu size={18} className="text-indigo-600"/> 2. Gemini 2.5 Flash-Lite選定 (2026版)</h5>
                 <div className="overflow-hidden rounded-xl border border-zinc-100">
                   <table className="w-full text-left text-[10px]">
                     <thead className="bg-zinc-50 text-zinc-500 font-bold">
                       <tr><th className="px-3 py-2">モデル</th><th className="px-3 py-2">コスト</th><th className="px-3 py-2">差</th></tr>
                     </thead>
                     <tbody className="divide-y divide-zinc-100">
-                      <tr><td className="px-3 py-2">GPT-4</td><td className="px-3 py-2">63円</td><td className="px-3 py-2 text-red-500 font-bold">2,739倍</td></tr>
-                      <tr><td className="px-3 py-2">GPT-3.5</td><td className="px-3 py-2">1.4円</td><td className="px-3 py-2 text-orange-500">61倍</td></tr>
-                      <tr className="bg-blue-50/50"><td className="px-3 py-2 font-bold text-blue-600">Gemini 2.0</td><td className="px-3 py-2 font-bold text-blue-600">0.023円</td><td className="px-3 py-2 font-bold text-blue-600">最安</td></tr>
+                      <tr><td className="px-3 py-2">GPT-4o</td><td className="px-3 py-2">3.04円</td><td className="px-3 py-2 text-red-500 font-bold">25倍</td></tr>
+                      <tr><td className="px-3 py-2">Claude 3.5 Haiku</td><td className="px-3 py-2">1.06円</td><td className="px-3 py-2 text-orange-500">8.8倍</td></tr>
+                      <tr><td className="px-3 py-2">GPT-4o mini</td><td className="px-3 py-2">0.19円</td><td className="px-3 py-2 text-yellow-600">1.5倍</td></tr>
+                      <tr className="bg-blue-50/50"><td className="px-3 py-2 font-bold text-blue-600">Gemini 2.5 FL</td><td className="px-3 py-2 font-bold text-blue-600">0.12円</td><td className="px-3 py-2 font-bold text-blue-600">最安</td></tr>
                     </tbody>
                   </table>
                 </div>
