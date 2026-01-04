@@ -17,6 +17,7 @@ export default defineConfig(({ mode }) => {
           input: {
             main: resolve(__dirname, 'index.html'),
             deepbizTheside: resolve(__dirname, 'slides/deepbiz-theside/index.html'),
+            hybridAutomation: resolve(__dirname, 'slides/hybrid-automation/index.html'),
           },
         },
       },
