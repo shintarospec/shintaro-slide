@@ -41,7 +41,7 @@ const App: React.FC = () => {
     }
 
     const password = prompt('🔐 このスライドを閲覧するにはパスワードを入力してください:');
-    const correctPassword = 'deepbiz2026'; // パスワードを変更可能
+    const correctPassword = '2026'; // パスワードを変更可能
     
     if (password === correctPassword) {
       sessionStorage.setItem(authKey, 'true');
