@@ -367,63 +367,63 @@ function App() {
         {currentSlide === 5 && (
           <Slide id={5} title="提案する解決策" subtitle="インテリジェント振り分けシステム" pageNumber={5} totalPageCount={TOTAL_SLIDES}>
             <div className="h-full">
-              <h3 className="text-2xl font-bold text-slate-800 mb-6 text-center">
+              <h3 className="text-xl font-bold text-slate-800 mb-3 text-center">
                 コンセプト：自動/手動のハイブリッド実行
               </h3>
               
-              <div className="bg-slate-50 rounded-xl p-8 border-2 border-slate-200">
-                <div className="grid grid-cols-3 gap-6">
+              <div className="bg-slate-50 rounded-xl p-4 border-2 border-slate-200">
+                <div className="grid grid-cols-3 gap-3">
                   {/* タスク生成 */}
                   <div className="col-span-3">
-                    <div className="bg-white rounded-lg p-4 border-2 border-blue-300 text-center">
-                      <div className="font-bold text-lg text-slate-800">タスク生成</div>
-                      <div className="text-sm text-slate-600 mt-1">管理コンソールから一括生成</div>
+                    <div className="bg-white rounded-lg p-2 border-2 border-blue-300 text-center">
+                      <div className="font-bold text-slate-800">タスク生成</div>
+                      <div className="text-xs text-slate-600">管理コンソールから一括生成</div>
                     </div>
-                    <div className="flex justify-center my-3">
-                      <div className="text-2xl text-slate-400">↓</div>
+                    <div className="flex justify-center my-1">
+                      <div className="text-lg text-slate-400">↓</div>
                     </div>
                   </div>
 
                   {/* フォーム分析 */}
                   <div className="col-span-3">
-                    <div className="bg-indigo-50 rounded-lg p-4 border-2 border-indigo-300 text-center">
-                      <div className="font-bold text-lg text-slate-800 flex items-center justify-center gap-2">
-                        <Settings className="w-5 h-5" />
+                    <div className="bg-indigo-50 rounded-lg p-2 border-2 border-indigo-300 text-center">
+                      <div className="font-bold text-slate-800 flex items-center justify-center gap-2">
+                        <Settings className="w-4 h-4" />
                         フォーム事前分析エンジン
                       </div>
-                      <div className="text-sm text-slate-600 mt-1">reCAPTCHA検出・バージョン判定</div>
+                      <div className="text-xs text-slate-600">reCAPTCHA検出・バージョン判定</div>
                     </div>
-                    <div className="flex justify-center my-3">
+                    <div className="flex justify-center my-1">
                       <div className="text-2xl text-slate-400">↓</div>
                     </div>
                   </div>
 
                   {/* 分岐 */}
                   <div className="col-span-3">
-                    <div className="bg-amber-100 rounded-lg p-3 border-2 border-amber-400 text-center font-bold text-amber-900">
+                    <div className="bg-amber-100 rounded-lg p-1 border-2 border-amber-400 text-center font-bold text-amber-900 text-sm">
                       reCAPTCHA判定
                     </div>
                   </div>
 
                   {/* 手動モード */}
-                  <div className="bg-red-50 rounded-xl p-4 border-2 border-red-300">
-                    <div className="text-center mb-3">
-                      <div className="bg-red-200 rounded-lg px-3 py-2 inline-block">
-                        <div className="font-bold text-red-800">手動モード</div>
-                        <div className="text-xs text-red-700">reCAPTCHA v2</div>
+                  <div className="bg-red-50 rounded-xl p-2 border-2 border-red-300">
+                    <div className="text-center mb-1">
+                      <div className="bg-red-200 rounded px-2 py-1 inline-block">
+                        <div className="font-bold text-red-800 text-xs">手動モード</div>
+                        <div className="text-[10px] text-red-700">reCAPTCHA v2</div>
                       </div>
                     </div>
-                    <div className="space-y-2">
-                      <div className="bg-white rounded p-2 text-center text-sm border border-red-200">
+                    <div className="space-y-1">
+                      <div className="bg-white rounded p-1 text-center text-xs border border-red-200">
                         ワーカー割当
                       </div>
-                      <div className="text-center text-slate-400">↓</div>
-                      <div className="bg-white rounded p-2 text-center text-sm border border-red-200">
+                      <div className="text-center text-slate-400 text-xs">↓</div>
+                      <div className="bg-white rounded p-1 text-center text-xs border border-red-200">
                         半自動実行<br />
-                        <span className="text-xs text-slate-600">人間がreCAPTCHA対応</span>
+                        <span className="text-[10px] text-slate-600">人間がreCAPTCHA対応</span>
                       </div>
-                      <div className="text-center text-slate-400">↓</div>
-                      <div className="bg-red-100 rounded p-2 text-center font-bold text-red-700 border-2 border-red-300">
+                      <div className="text-center text-slate-400 text-xs">↓</div>
+                      <div className="bg-red-100 rounded p-1 text-center font-bold text-red-700 border-2 border-red-300 text-xs">
                         完了 (120秒)
                       </div>
                     </div>
@@ -435,24 +435,24 @@ function App() {
                   </div>
 
                   {/* 自動モード */}
-                  <div className="bg-green-50 rounded-xl p-4 border-2 border-green-300">
-                    <div className="text-center mb-3">
-                      <div className="bg-green-200 rounded-lg px-3 py-2 inline-block">
-                        <div className="font-bold text-green-800">自動モード</div>
-                        <div className="text-xs text-green-700">reCAPTCHA v3/無し</div>
+                  <div className="bg-green-50 rounded-xl p-2 border-2 border-green-300">
+                    <div className="text-center mb-1">
+                      <div className="bg-green-200 rounded px-2 py-1 inline-block">
+                        <div className="font-bold text-green-800 text-xs">自動モード</div>
+                        <div className="text-[10px] text-green-700">reCAPTCHA v3/無し</div>
                       </div>
                     </div>
-                    <div className="space-y-2">
-                      <div className="bg-white rounded p-2 text-center text-sm border border-green-200">
+                    <div className="space-y-1">
+                      <div className="bg-white rounded p-1 text-center text-xs border border-green-200">
                         自動実行キュー
                       </div>
-                      <div className="text-center text-slate-400">↓</div>
-                      <div className="bg-white rounded p-2 text-center text-sm border border-green-200">
+                      <div className="text-center text-slate-400 text-xs">↓</div>
+                      <div className="bg-white rounded p-1 text-center text-xs border border-green-200">
                         完全自動実行<br />
-                        <span className="text-xs text-slate-600">即座に送信</span>
+                        <span className="text-[10px] text-slate-600">即座に送信</span>
                       </div>
-                      <div className="text-center text-slate-400">↓</div>
-                      <div className="bg-green-100 rounded p-2 text-center font-bold text-green-700 border-2 border-green-300">
+                      <div className="text-center text-slate-400 text-xs">↓</div>
+                      <div className="bg-green-100 rounded p-1 text-center font-bold text-green-700 border-2 border-green-300 text-xs">
                         完了 (15秒)
                       </div>
                     </div>
@@ -460,16 +460,16 @@ function App() {
                 </div>
               </div>
 
-              <div className="mt-4 grid grid-cols-2 gap-4">
-                <div className="bg-red-50 border border-red-200 rounded-lg p-3 text-center">
-                  <div className="text-sm text-slate-600 mb-1">手動対応</div>
-                  <div className="text-2xl font-bold text-red-600">27,000件/月</div>
-                  <div className="text-xs text-slate-500">(45%)</div>
+              <div className="mt-2 grid grid-cols-2 gap-3">
+                <div className="bg-red-50 border border-red-200 rounded-lg p-2 text-center">
+                  <div className="text-xs text-slate-600">手動対応</div>
+                  <div className="text-xl font-bold text-red-600">27,000件/月</div>
+                  <div className="text-[10px] text-slate-500">(45%)</div>
                 </div>
-                <div className="bg-green-50 border border-green-200 rounded-lg p-3 text-center">
-                  <div className="text-sm text-slate-600 mb-1">自動実行</div>
-                  <div className="text-2xl font-bold text-green-600">33,000件/月</div>
-                  <div className="text-xs text-slate-500">(55%)</div>
+                <div className="bg-green-50 border border-green-200 rounded-lg p-2 text-center">
+                  <div className="text-xs text-slate-600">自動実行</div>
+                  <div className="text-xl font-bold text-green-600">33,000件/月</div>
+                  <div className="text-[10px] text-slate-500">(55%)</div>
                 </div>
               </div>
             </div>
@@ -479,10 +479,10 @@ function App() {
         {/* Slide 6: フォーム事前分析エンジン */}
         {currentSlide === 6 && (
           <Slide id={6} title="主要機能" subtitle="1. フォーム事前分析エンジン" pageNumber={6} totalPageCount={TOTAL_SLIDES}>
-            <div className="grid grid-cols-2 gap-8 h-full">
+            <div className="grid grid-cols-2 gap-6 h-full">
               <div>
-                <h3 className="text-xl font-bold text-slate-800 mb-4">分析プロセス</h3>
-                <div className="bg-slate-50 rounded-xl p-6 border border-slate-200">
+                <h3 className="text-lg font-bold text-slate-800 mb-3">分析プロセス</h3>
+                <div className="bg-slate-50 rounded-xl p-4 border border-slate-200">
                   <div className="font-mono text-sm bg-slate-800 text-green-400 p-4 rounded-lg mb-4">
                     <div className="mb-2"># フォーム事前スキャン</div>
                     <div className="text-slate-300">analysis = {'{'}</div>
@@ -496,8 +496,8 @@ function App() {
                   </div>
                 </div>
 
-                <h3 className="text-xl font-bold text-slate-800 mt-6 mb-3">自動振り分けロジック</h3>
-                <table className="w-full border-collapse text-sm">
+                <h3 className="text-base font-bold text-slate-800 mt-4 mb-2">自動振り分けロジック</h3>
+                <table className="w-full border-collapse text-xs">
                   <thead>
                     <tr className="bg-slate-100">
                       <th className="border border-slate-300 px-3 py-2 text-left font-semibold">条件</th>
@@ -522,9 +522,9 @@ function App() {
               </div>
 
               <div>
-                <h3 className="text-xl font-bold text-slate-800 mb-4">分析項目</h3>
-                <div className="space-y-4">
-                  <div className="bg-blue-50 border-l-4 border-blue-500 p-4 rounded-lg">
+                <h3 className="text-lg font-bold text-slate-800 mb-3">分析項目</h3>
+                <div className="space-y-3">
+                  <div className="bg-blue-50 border-l-4 border-blue-500 p-3 rounded-lg">
                     <div className="font-bold text-slate-800 mb-2 flex items-center gap-2">
                       <CheckCircle2 className="w-5 h-5 text-blue-600" />
                       reCAPTCHA検出
@@ -580,10 +580,10 @@ function App() {
         {/* Slide 7: 完全自動実行サービス */}
         {currentSlide === 7 && (
           <Slide id={7} title="主要機能" subtitle="2. 完全自動実行サービス" pageNumber={7} totalPageCount={TOTAL_SLIDES}>
-            <div className="grid grid-cols-2 gap-8 h-full">
+            <div className="grid grid-cols-2 gap-6 h-full">
               <div>
-                <h3 className="text-xl font-bold text-slate-800 mb-4">AutoExecutor 実装</h3>
-                <div className="bg-slate-50 rounded-xl p-6 border border-slate-200 mb-6">
+                <h3 className="text-lg font-bold text-slate-800 mb-3">AutoExecutor 実装</h3>
+                <div className="bg-slate-50 rounded-xl p-4 border border-slate-200 mb-4">
                   <div className="font-mono text-sm bg-slate-800 text-green-400 p-4 rounded-lg">
                     <div className="text-blue-300">class <span className="text-yellow-300">AutoExecutor</span>:</div>
                     <div className="ml-4 text-slate-400"># reCAPTCHA無しフォーム専用</div>
@@ -596,10 +596,10 @@ function App() {
                   </div>
                 </div>
 
-                <h3 className="text-xl font-bold text-slate-800 mb-4">実行フロー</h3>
-                <div className="bg-green-50 rounded-xl p-4 border-2 border-green-300 space-y-2">
-                  <div className="bg-white rounded p-3 border border-green-200">
-                    <div className="font-semibold text-slate-800">1. タスク取得</div>
+                <h3 className="text-base font-bold text-slate-800 mb-3">実行フロー</h3>
+                <div className="bg-green-50 rounded-xl p-3 border-2 border-green-300 space-y-1">
+                  <div className="bg-white rounded p-2 border border-green-200">
+                    <div className="font-semibold text-slate-800 text-sm">1. タスク取得</div>
                     <div className="text-xs text-slate-600">自動実行キューから取得</div>
                   </div>
                   <div className="text-center text-green-400">↓</div>
@@ -625,53 +625,53 @@ function App() {
               </div>
 
               <div>
-                <h3 className="text-xl font-bold text-slate-800 mb-4 flex items-center gap-2">
-                  <Zap className="w-6 h-6 text-amber-600" />
+                <h3 className="text-lg font-bold text-slate-800 mb-3 flex items-center gap-2">
+                  <Zap className="w-5 h-5 text-amber-600" />
                   特徴とメリット
                 </h3>
-                <div className="space-y-4">
-                  <div className="bg-blue-50 rounded-xl p-5 border-2 border-blue-200">
+                <div className="space-y-3">
+                  <div className="bg-blue-50 rounded-xl p-3 border-2 border-blue-200">
                     <div className="flex items-start gap-3">
                       <CheckCircle2 className="w-6 h-6 text-blue-600 flex-shrink-0 mt-1" />
                       <div>
-                        <div className="font-bold text-slate-800 text-lg mb-1">人間の介入不要</div>
-                        <div className="text-sm text-slate-700">
+                        <div className="font-bold text-slate-800 text-base mb-1">人間の介入不要</div>
+                        <div className="text-xs text-slate-700">
                           reCAPTCHA無し・v3のフォームは完全無人で実行。ワーカーの負担ゼロ。
                         </div>
                       </div>
                     </div>
                   </div>
 
-                  <div className="bg-indigo-50 rounded-xl p-5 border-2 border-indigo-200">
+                  <div className="bg-indigo-50 rounded-xl p-3 border-2 border-indigo-200">
                     <div className="flex items-start gap-3">
                       <CheckCircle2 className="w-6 h-6 text-indigo-600 flex-shrink-0 mt-1" />
                       <div>
-                        <div className="font-bold text-slate-800 text-lg mb-1">24時間稼働可能</div>
-                        <div className="text-sm text-slate-700">
+                        <div className="font-bold text-slate-800 text-base mb-1">24時間稼働可能</div>
+                        <div className="text-xs text-slate-700">
                           バックグラウンドで常時稼働。深夜・早朝でも自動処理を継続。
                         </div>
                       </div>
                     </div>
                   </div>
 
-                  <div className="bg-purple-50 rounded-xl p-5 border-2 border-purple-200">
+                  <div className="bg-purple-50 rounded-xl p-3 border-2 border-purple-200">
                     <div className="flex items-start gap-3">
                       <CheckCircle2 className="w-6 h-6 text-purple-600 flex-shrink-0 mt-1" />
                       <div>
-                        <div className="font-bold text-slate-800 text-lg mb-1">並列処理対応</div>
-                        <div className="text-sm text-slate-700">
+                        <div className="font-bold text-slate-800 text-base mb-1">並列処理対応</div>
+                        <div className="text-xs text-slate-700">
                           同時10件の並列実行で処理速度を最大化。スケーラブルな設計。
                         </div>
                       </div>
                     </div>
                   </div>
 
-                  <div className="bg-green-50 rounded-xl p-5 border-2 border-green-200">
+                  <div className="bg-green-50 rounded-xl p-3 border-2 border-green-200">
                     <div className="flex items-start gap-3">
                       <CheckCircle2 className="w-6 h-6 text-green-600 flex-shrink-0 mt-1" />
                       <div>
-                        <div className="font-bold text-slate-800 text-lg mb-1">エラー自動リトライ</div>
-                        <div className="text-sm text-slate-700">
+                        <div className="font-bold text-slate-800 text-base mb-1">エラー自動リトライ</div>
+                        <div className="text-xs text-slate-700">
                           失敗時は3回まで自動リトライ。3回失敗後は手動キューに移動。
                         </div>
                       </div>
@@ -679,14 +679,14 @@ function App() {
                   </div>
                 </div>
 
-                <div className="mt-6 bg-amber-50 border-2 border-amber-300 rounded-xl p-4">
-                  <div className="flex items-center gap-2 mb-2">
+                <div className="mt-3 bg-amber-50 border-2 border-amber-300 rounded-xl p-3">
+                  <div className="flex items-center gap-2 mb-1">
                     <TrendingUp className="w-5 h-5 text-amber-700" />
                     <span className="font-bold text-amber-900">処理速度</span>
                   </div>
                   <div className="text-center">
-                    <div className="text-4xl font-black text-amber-700">1タスク15秒</div>
-                    <div className="text-sm text-slate-600 mt-1">手動対応（120秒）の8倍の速度</div>
+                    <div className="text-3xl font-black text-amber-700">1タスク15秒</div>
+                    <div className="text-xs text-slate-600 mt-1">手動対応（120秒）の8倍の速度</div>
                   </div>
                 </div>
               </div>
@@ -911,43 +911,43 @@ function App() {
         {/* Slide 10: コスト比較 */}
         {currentSlide === 10 && (
           <Slide id={10} title="コスト効果分析" subtitle="現状 vs 提案後の詳細比較" pageNumber={10} totalPageCount={TOTAL_SLIDES}>
-            <div className="grid grid-cols-2 gap-8 h-full">
+            <div className="grid grid-cols-2 gap-6 h-full">
               <div>
-                <h3 className="text-2xl font-bold text-red-600 mb-4 text-center">現状（全手動対応）</h3>
-                <div className="bg-red-50 rounded-xl p-6 border-2 border-red-300">
+                <h3 className="text-xl font-bold text-red-600 mb-3 text-center">現状（全手動対応）</h3>
+                <div className="bg-red-50 rounded-xl p-4 border-2 border-red-300">
                   <table className="w-full border-collapse">
                     <thead>
                       <tr className="bg-red-100">
-                        <th className="border border-red-300 px-4 py-3 text-left font-semibold text-slate-700">項目</th>
-                        <th className="border border-red-300 px-4 py-3 text-right font-semibold text-slate-700">月額</th>
+                        <th className="border border-red-300 px-3 py-2 text-left font-semibold text-slate-700 text-sm">項目</th>
+                        <th className="border border-red-300 px-3 py-2 text-right font-semibold text-slate-700 text-sm">月額</th>
                       </tr>
                     </thead>
                     <tbody>
                       <tr>
-                        <td className="border border-red-200 px-4 py-3">
-                          <div className="font-semibold text-slate-800">ワーカー報酬</div>
+                        <td className="border border-red-200 px-3 py-2">
+                          <div className="font-semibold text-slate-800 text-sm">ワーカー報酬</div>
                           <div className="text-xs text-slate-600">60,000件 × 2円</div>
                         </td>
-                        <td className="border border-red-200 px-4 py-3 text-right font-bold text-xl">120,000円</td>
+                        <td className="border border-red-200 px-3 py-2 text-right font-bold text-lg">120,000円</td>
                       </tr>
                       <tr>
-                        <td className="border border-red-200 px-4 py-3 text-slate-700">インフラ（VPS 8GB）</td>
-                        <td className="border border-red-200 px-4 py-3 text-right font-bold text-lg">6,857円</td>
+                        <td className="border border-red-200 px-3 py-2 text-slate-700 text-sm">インフラ（VPS 8GB）</td>
+                        <td className="border border-red-200 px-3 py-2 text-right font-bold">6,857円</td>
                       </tr>
                       <tr>
-                        <td className="border border-red-200 px-4 py-3 text-slate-700">AI API（Gemini）</td>
-                        <td className="border border-red-200 px-4 py-3 text-right font-bold text-lg">1,179円</td>
+                        <td className="border border-red-200 px-3 py-2 text-slate-700 text-sm">AI API（Gemini）</td>
+                        <td className="border border-red-200 px-3 py-2 text-right font-bold">1,179円</td>
                       </tr>
                       <tr className="bg-red-200">
-                        <td className="border border-red-300 px-4 py-3 font-bold text-slate-900">合計</td>
-                        <td className="border border-red-300 px-4 py-3 text-right font-bold text-2xl text-red-700">128,036円</td>
+                        <td className="border border-red-300 px-3 py-2 font-bold text-slate-900 text-sm">合計</td>
+                        <td className="border border-red-300 px-3 py-2 text-right font-bold text-xl text-red-700">128,036円</td>
                       </tr>
                     </tbody>
                   </table>
 
-                  <div className="mt-6 bg-white rounded-lg p-4 border border-red-200">
-                    <div className="text-sm text-slate-600 mb-2">処理内訳</div>
-                    <div className="space-y-2">
+                  <div className="mt-3 bg-white rounded-lg p-3 border border-red-200">
+                    <div className="text-xs text-slate-600 mb-2">処理内訳</div>
+                    <div className="space-y-1 text-sm">
                       <div className="flex justify-between">
                         <span className="text-slate-700">手動対応</span>
                         <span className="font-bold text-slate-800">60,000件（100%）</span>
@@ -962,48 +962,48 @@ function App() {
               </div>
 
               <div>
-                <h3 className="text-2xl font-bold text-green-600 mb-4 text-center">提案後（ハイブリッド）</h3>
-                <div className="bg-green-50 rounded-xl p-6 border-2 border-green-300">
+                <h3 className="text-xl font-bold text-green-600 mb-3 text-center">提案後（ハイブリッド）</h3>
+                <div className="bg-green-50 rounded-xl p-4 border-2 border-green-300">
                   <table className="w-full border-collapse">
                     <thead>
                       <tr className="bg-green-100">
-                        <th className="border border-green-300 px-4 py-3 text-left font-semibold text-slate-700">項目</th>
-                        <th className="border border-green-300 px-4 py-3 text-right font-semibold text-slate-700">月額</th>
+                        <th className="border border-green-300 px-3 py-2 text-left font-semibold text-slate-700 text-sm">項目</th>
+                        <th className="border border-green-300 px-3 py-2 text-right font-semibold text-slate-700 text-sm">月額</th>
                       </tr>
                     </thead>
                     <tbody>
                       <tr>
-                        <td className="border border-green-200 px-4 py-3">
-                          <div className="font-semibold text-slate-800">ワーカー報酬</div>
+                        <td className="border border-green-200 px-3 py-2">
+                          <div className="font-semibold text-slate-800 text-sm">ワーカー報酬</div>
                           <div className="text-xs text-slate-600">27,000件 × 2円（v2のみ）</div>
                         </td>
-                        <td className="border border-green-200 px-4 py-3 text-right font-bold text-xl">54,000円</td>
+                        <td className="border border-green-200 px-3 py-2 text-right font-bold text-lg">54,000円</td>
                       </tr>
                       <tr>
-                        <td className="border border-green-200 px-4 py-3">
-                          <div className="font-semibold text-slate-800">自動実行コスト</div>
+                        <td className="border border-green-200 px-3 py-2">
+                          <div className="font-semibold text-slate-800 text-sm">自動実行コスト</div>
                           <div className="text-xs text-slate-600">33,000件 × 0円</div>
                         </td>
-                        <td className="border border-green-200 px-4 py-3 text-right font-bold text-xl">0円</td>
+                        <td className="border border-green-200 px-3 py-2 text-right font-bold text-lg">0円</td>
                       </tr>
                       <tr>
-                        <td className="border border-green-200 px-4 py-3 text-slate-700">インフラ（VPS 8GB）</td>
-                        <td className="border border-green-200 px-4 py-3 text-right font-bold text-lg">6,857円</td>
+                        <td className="border border-green-200 px-3 py-2 text-slate-700 text-sm">インフラ（VPS 8GB）</td>
+                        <td className="border border-green-200 px-3 py-2 text-right font-bold">6,857円</td>
                       </tr>
                       <tr>
-                        <td className="border border-green-200 px-4 py-3 text-slate-700">AI API（Gemini）</td>
-                        <td className="border border-green-200 px-4 py-3 text-right font-bold text-lg">1,179円</td>
+                        <td className="border border-green-200 px-3 py-2 text-slate-700 text-sm">AI API（Gemini）</td>
+                        <td className="border border-green-200 px-3 py-2 text-right font-bold">1,179円</td>
                       </tr>
                       <tr className="bg-green-200">
-                        <td className="border border-green-300 px-4 py-3 font-bold text-slate-900">合計</td>
-                        <td className="border border-green-300 px-4 py-3 text-right font-bold text-2xl text-green-700">62,036円</td>
+                        <td className="border border-green-300 px-3 py-2 font-bold text-slate-900 text-sm">合計</td>
+                        <td className="border border-green-300 px-3 py-2 text-right font-bold text-xl text-green-700">62,036円</td>
                       </tr>
                     </tbody>
                   </table>
 
-                  <div className="mt-6 bg-white rounded-lg p-4 border border-green-200">
-                    <div className="text-sm text-slate-600 mb-2">処理内訳</div>
-                    <div className="space-y-2">
+                  <div className="mt-3 bg-white rounded-lg p-3 border border-green-200">
+                    <div className="text-xs text-slate-600 mb-2">処理内訳</div>
+                    <div className="space-y-1 text-sm">
                       <div className="flex justify-between">
                         <span className="text-slate-700">手動対応</span>
                         <span className="font-bold text-red-600">27,000件（45%）</span>
@@ -1018,23 +1018,23 @@ function App() {
               </div>
             </div>
 
-            <div className="mt-6 bg-gradient-to-r from-blue-50 to-indigo-50 border-2 border-blue-300 rounded-xl p-5">
+            <div className="mt-4 bg-gradient-to-r from-blue-50 to-indigo-50 border-2 border-blue-300 rounded-xl p-4">
               <div className="grid grid-cols-4 gap-4 text-center">
                 <div>
-                  <div className="text-sm text-slate-600 mb-1">月額削減</div>
-                  <div className="text-3xl font-black text-blue-600">66,000円</div>
+                  <div className="text-xs text-slate-600 mb-1">月額削減</div>
+                  <div className="text-2xl font-black text-blue-600">66,000円</div>
                 </div>
                 <div>
-                  <div className="text-sm text-slate-600 mb-1">削減率</div>
-                  <div className="text-3xl font-black text-indigo-600">51.6%</div>
+                  <div className="text-xs text-slate-600 mb-1">削減率</div>
+                  <div className="text-2xl font-black text-indigo-600">51.6%</div>
                 </div>
                 <div>
-                  <div className="text-sm text-slate-600 mb-1">年間削減</div>
-                  <div className="text-3xl font-black text-purple-600">792,000円</div>
+                  <div className="text-xs text-slate-600 mb-1">年間削減</div>
+                  <div className="text-2xl font-black text-purple-600">792,000円</div>
                 </div>
                 <div>
-                  <div className="text-sm text-slate-600 mb-1">投資回収</div>
-                  <div className="text-3xl font-black text-green-600">5ヶ月</div>
+                  <div className="text-xs text-slate-600 mb-1">投資回収</div>
+                  <div className="text-2xl font-black text-green-600">5ヶ月</div>
                 </div>
               </div>
             </div>
@@ -1045,114 +1045,114 @@ function App() {
         {currentSlide === 11 && (
           <Slide id={11} title="コスト効果分析" subtitle="スケーラビリティとROI" pageNumber={11} totalPageCount={TOTAL_SLIDES}>
             <div className="h-full">
-              <h3 className="text-2xl font-bold text-slate-800 mb-6">成長シナリオ：月10万件に拡大した場合</h3>
+              <h3 className="text-xl font-bold text-slate-800 mb-4">成長シナリオ：月10万件に拡大した場合</h3>
               
-              <table className="w-full border-collapse mb-6">
+              <table className="w-full border-collapse mb-4">
                 <thead>
                   <tr className="bg-slate-100">
-                    <th className="border border-slate-300 px-4 py-3 text-left font-semibold text-slate-700">モデル</th>
-                    <th className="border border-slate-300 px-4 py-3 text-right font-semibold text-slate-700">月額コスト</th>
-                    <th className="border border-slate-300 px-4 py-3 text-left font-semibold text-slate-700">スケール性</th>
-                    <th className="border border-slate-300 px-4 py-3 text-right font-semibold text-slate-700">削減額</th>
+                    <th className="border border-slate-300 px-3 py-2 text-left font-semibold text-slate-700 text-sm">モデル</th>
+                    <th className="border border-slate-300 px-3 py-2 text-right font-semibold text-slate-700 text-sm">月額コスト</th>
+                    <th className="border border-slate-300 px-3 py-2 text-left font-semibold text-slate-700 text-sm">スケール性</th>
+                    <th className="border border-slate-300 px-3 py-2 text-right font-semibold text-slate-700 text-sm">削減額</th>
                   </tr>
                 </thead>
                 <tbody>
                   <tr className="bg-red-50">
-                    <td className="border border-slate-300 px-4 py-3">
-                      <div className="font-bold text-slate-800">現状（全手動）</div>
+                    <td className="border border-slate-300 px-3 py-2">
+                      <div className="font-bold text-slate-800 text-sm">現状（全手動）</div>
                       <div className="text-xs text-slate-600">100,000件 × 2円</div>
                     </td>
-                    <td className="border border-slate-300 px-4 py-3 text-right font-bold text-xl text-red-600">200,000円</td>
-                    <td className="border border-slate-300 px-4 py-3 text-sm">
+                    <td className="border border-slate-300 px-3 py-2 text-right font-bold text-lg text-red-600">200,000円</td>
+                    <td className="border border-slate-300 px-3 py-2 text-xs">
                       線形増加<br />
-                      <span className="text-xs text-slate-600">ワーカー増員必要</span>
+                      <span className="text-[10px] text-slate-600">ワーカー増員必要</span>
                     </td>
-                    <td className="border border-slate-300 px-4 py-3 text-right">-</td>
+                    <td className="border border-slate-300 px-3 py-2 text-right">-</td>
                   </tr>
                   <tr className="bg-green-50">
-                    <td className="border border-slate-300 px-4 py-3">
-                      <div className="font-bold text-slate-800">提案（ハイブリッド）</div>
+                    <td className="border border-slate-300 px-3 py-2">
+                      <div className="font-bold text-slate-800 text-sm">提案（ハイブリッド）</div>
                       <div className="text-xs text-slate-600">45,000件 × 2円（手動）</div>
                     </td>
-                    <td className="border border-slate-300 px-4 py-3 text-right font-bold text-xl text-green-600">90,000円</td>
-                    <td className="border border-slate-300 px-4 py-3 text-sm">
+                    <td className="border border-slate-300 px-3 py-2 text-right font-bold text-lg text-green-600">90,000円</td>
+                    <td className="border border-slate-300 px-3 py-2 text-xs">
                       <span className="font-bold text-green-700">55%が自動化</span><br />
-                      <span className="text-xs text-slate-600">ワーカー増員不要</span>
+                      <span className="text-[10px] text-slate-600">ワーカー増員不要</span>
                     </td>
-                    <td className="border border-slate-300 px-4 py-3 text-right font-bold text-xl text-green-600">110,000円/月</td>
+                    <td className="border border-slate-300 px-3 py-2 text-right font-bold text-lg text-green-600">110,000円/月</td>
                   </tr>
                 </tbody>
               </table>
 
-              <div className="grid grid-cols-2 gap-8">
-                <div className="bg-blue-50 rounded-xl p-6 border-2 border-blue-200">
-                  <h3 className="text-xl font-bold text-slate-800 mb-4 flex items-center gap-2">
-                    <DollarSign className="w-6 h-6 text-green-600" />
+              <div className="grid grid-cols-2 gap-6">
+                <div className="bg-blue-50 rounded-xl p-4 border-2 border-blue-200">
+                  <h3 className="text-base font-bold text-slate-800 mb-3 flex items-center gap-2">
+                    <DollarSign className="w-5 h-5 text-green-600" />
                     投資回収シミュレーション
                   </h3>
-                  <table className="w-full text-sm">
+                  <table className="w-full text-xs">
                     <thead>
                       <tr className="bg-blue-100">
-                        <th className="border border-blue-300 px-3 py-2 text-left font-semibold">期間</th>
-                        <th className="border border-blue-300 px-3 py-2 text-right font-semibold">累積効果</th>
+                        <th className="border border-blue-300 px-2 py-1 text-left font-semibold">期間</th>
+                        <th className="border border-blue-300 px-2 py-1 text-right font-semibold">累積効果</th>
                       </tr>
                     </thead>
                     <tbody>
                       <tr>
-                        <td className="border border-blue-200 px-3 py-2">初期投資</td>
-                        <td className="border border-blue-200 px-3 py-2 text-right font-bold text-red-600">-300,000円</td>
+                        <td className="border border-blue-200 px-2 py-1">初期投資</td>
+                        <td className="border border-blue-200 px-2 py-1 text-right font-bold text-red-600">-300,000円</td>
                       </tr>
                       <tr>
-                        <td className="border border-blue-200 px-3 py-2">3ヶ月後</td>
-                        <td className="border border-blue-200 px-3 py-2 text-right font-bold text-red-600">-102,000円</td>
+                        <td className="border border-blue-200 px-2 py-1">3ヶ月後</td>
+                        <td className="border border-blue-200 px-2 py-1 text-right font-bold text-red-600">-102,000円</td>
                       </tr>
                       <tr className="bg-green-100">
-                        <td className="border border-green-300 px-3 py-2 font-bold">5ヶ月後</td>
-                        <td className="border border-green-300 px-3 py-2 text-right font-bold text-green-700 text-lg">+30,000円</td>
+                        <td className="border border-green-300 px-2 py-1 font-bold">5ヶ月後</td>
+                        <td className="border border-green-300 px-2 py-1 text-right font-bold text-green-700 text-base">+30,000円</td>
                       </tr>
                       <tr>
-                        <td className="border border-blue-200 px-3 py-2">6ヶ月後</td>
-                        <td className="border border-blue-200 px-3 py-2 text-right font-bold text-green-600">+96,000円</td>
+                        <td className="border border-blue-200 px-2 py-1">6ヶ月後</td>
+                        <td className="border border-blue-200 px-2 py-1 text-right font-bold text-green-600">+96,000円</td>
                       </tr>
                       <tr>
-                        <td className="border border-blue-200 px-3 py-2">1年後</td>
-                        <td className="border border-blue-200 px-3 py-2 text-right font-bold text-green-600">+492,000円</td>
+                        <td className="border border-blue-200 px-2 py-1">1年後</td>
+                        <td className="border border-blue-200 px-2 py-1 text-right font-bold text-green-600">+492,000円</td>
                       </tr>
                       <tr className="bg-blue-100">
-                        <td className="border border-blue-300 px-3 py-2 font-bold">2年後</td>
-                        <td className="border border-blue-300 px-3 py-2 text-right font-bold text-green-700 text-xl">+1,284,000円</td>
+                        <td className="border border-blue-300 px-2 py-1 font-bold">2年後</td>
+                        <td className="border border-blue-300 px-2 py-1 text-right font-bold text-green-700 text-base">+1,284,000円</td>
                       </tr>
                     </tbody>
                   </table>
                 </div>
 
                 <div>
-                  <div className="bg-gradient-to-br from-green-50 to-emerald-50 rounded-xl p-6 border-2 border-green-300 mb-4">
-                    <h3 className="text-xl font-bold text-slate-800 mb-4 text-center">ROI サマリー</h3>
-                    <div className="space-y-4">
+                  <div className="bg-gradient-to-br from-green-50 to-emerald-50 rounded-xl p-4 border-2 border-green-300 mb-3">
+                    <h3 className="text-base font-bold text-slate-800 mb-3 text-center">ROI サマリー</h3>
+                    <div className="space-y-3">
                       <div className="text-center">
-                        <div className="text-sm text-slate-600 mb-1">投資回収期間</div>
-                        <div className="text-5xl font-black text-green-600">5ヶ月</div>
+                        <div className="text-xs text-slate-600 mb-1">投資回収期間</div>
+                        <div className="text-4xl font-black text-green-600">5ヶ月</div>
                       </div>
-                      <div className="border-t-2 border-green-200 pt-4 grid grid-cols-2 gap-4">
+                      <div className="border-t-2 border-green-200 pt-3 grid grid-cols-2 gap-3">
                         <div className="text-center">
                           <div className="text-xs text-slate-600 mb-1">年間削減</div>
-                          <div className="text-2xl font-bold text-green-600">792,000円</div>
+                          <div className="text-xl font-bold text-green-600">792,000円</div>
                         </div>
                         <div className="text-center">
                           <div className="text-xs text-slate-600 mb-1">2年間累積</div>
-                          <div className="text-2xl font-bold text-green-600">1,284,000円</div>
+                          <div className="text-xl font-bold text-green-600">1,284,000円</div>
                         </div>
                       </div>
                     </div>
                   </div>
 
-                  <div className="bg-blue-100 border-2 border-blue-300 rounded-xl p-4">
+                  <div className="bg-blue-100 border-2 border-blue-300 rounded-xl p-3">
                     <div className="flex items-center gap-2 mb-2">
-                      <CheckCircle2 className="w-5 h-5 text-blue-700" />
-                      <span className="font-bold text-blue-900">結論</span>
+                      <CheckCircle2 className="w-4 h-4 text-blue-700" />
+                      <span className="font-bold text-blue-900 text-sm">結論</span>
                     </div>
-                    <p className="text-slate-800 text-sm leading-relaxed">
+                    <p className="text-slate-800 text-xs leading-relaxed">
                       規模が大きくなるほど効果が顕著。<span className="font-bold text-blue-700">短期回収・高ROI・スケーラブル</span>な戦略的投資として推奨します。
                     </p>
                   </div>
@@ -1166,35 +1166,35 @@ function App() {
         {currentSlide === 12 && (
           <Slide id={12} title="技術アーキテクチャ" subtitle="システム構成と実装詳細" pageNumber={12} totalPageCount={TOTAL_SLIDES}>
             <div className="h-full">
-              <div className="bg-slate-50 rounded-xl p-6 border border-slate-200">
-                <div className="space-y-4 text-sm">
+              <div className="bg-slate-50 rounded-xl p-4 border border-slate-200">
+                <div className="space-y-3 text-sm">
                   {/* 管理コンソール */}
-                  <div className="bg-blue-50 rounded-lg p-4 border-2 border-blue-300">
-                    <div className="font-bold text-slate-800 mb-2 text-center text-lg">管理コンソール</div>
-                    <div className="grid grid-cols-2 gap-3 text-xs">
+                  <div className="bg-blue-50 rounded-lg p-3 border-2 border-blue-300">
+                    <div className="font-bold text-slate-800 mb-2 text-center text-base">管理コンソール</div>
+                    <div className="grid grid-cols-2 gap-2 text-xs">
                       <div className="bg-white rounded p-2 border border-blue-200">
                         <div className="font-semibold text-slate-700">タスク一括生成</div>
-                        <div className="text-slate-600">• 企業選択<br />• 案件選択<br />• 事前分析実行</div>
+                        <div className="text-slate-600 text-[10px]">• 企業選択<br />• 案件選択<br />• 事前分析実行</div>
                       </div>
                       <div className="bg-white rounded p-2 border border-blue-200">
                         <div className="font-semibold text-slate-700">進捗ダッシュボード</div>
-                        <div className="text-slate-600">• 自動: 15,000件<br />• 手動: 12,000件<br />• 完了率: 85%</div>
+                        <div className="text-slate-600 text-[10px]">• 自動: 15,000件<br />• 手動: 12,000件<br />• 完了率: 85%</div>
                       </div>
                     </div>
                   </div>
 
-                  <div className="text-center text-slate-400 text-xl">↓</div>
+                  <div className="text-center text-slate-400 text-base">↓</div>
 
                   {/* Flask API Server */}
-                  <div className="bg-indigo-50 rounded-lg p-4 border-2 border-indigo-300">
-                    <div className="font-bold text-slate-800 mb-3 text-center text-lg">Flask API Server (Core)</div>
+                  <div className="bg-indigo-50 rounded-lg p-3 border-2 border-indigo-300">
+                    <div className="font-bold text-slate-800 mb-2 text-center text-base">Flask API Server (Core)</div>
                     <div className="grid grid-cols-3 gap-2">
-                      <div className="bg-white rounded p-3 border border-indigo-200 col-span-3">
-                        <div className="font-semibold text-slate-700 mb-1 flex items-center gap-2">
-                          <Settings className="w-4 h-4" />
+                      <div className="bg-white rounded p-2 border border-indigo-200 col-span-3">
+                        <div className="font-semibold text-slate-700 mb-1 flex items-center gap-1 text-xs">
+                          <Settings className="w-3 h-3" />
                           FormAnalyzer（フォーム事前分析）
                         </div>
-                        <div className="text-slate-600 text-xs">
+                        <div className="text-slate-600 text-[10px]">
                           - reCAPTCHA検出 &nbsp;&nbsp; - v2/v3判定 &nbsp;&nbsp; - フォームフィールド解析
                         </div>
                       </div>
@@ -1269,70 +1269,70 @@ function App() {
         {currentSlide === 13 && (
           <Slide id={13} title="実装ロードマップ" subtitle="3週間の開発計画" pageNumber={13} totalPageCount={TOTAL_SLIDES}>
             <div className="h-full">
-              <div className="space-y-4">
+              <div className="space-y-3">
                 {/* Phase 1 */}
-                <div className="bg-blue-50 rounded-xl p-5 border-2 border-blue-300">
-                  <div className="flex items-center gap-3 mb-3">
-                    <div className="bg-blue-600 text-white px-4 py-2 rounded-lg font-bold text-lg">Week 1</div>
-                    <div className="font-bold text-xl text-slate-800">フォーム分析基盤</div>
+                <div className="bg-blue-50 rounded-xl p-4 border-2 border-blue-300">
+                  <div className="flex items-center gap-3 mb-2">
+                    <div className="bg-blue-600 text-white px-3 py-1 rounded-lg font-bold text-base">Week 1</div>
+                    <div className="font-bold text-lg text-slate-800">フォーム分析基盤</div>
                   </div>
                   <div className="grid grid-cols-4 gap-2 text-sm">
-                    <div className="bg-white rounded-lg p-3 border border-blue-200">
-                      <div className="font-semibold text-slate-700 mb-1">Day 1-2</div>
+                    <div className="bg-white rounded-lg p-2 border border-blue-200">
+                      <div className="font-semibold text-slate-700 mb-1 text-xs">Day 1-2</div>
                       <div className="text-xs text-slate-600">FormAnalyzer実装</div>
                     </div>
-                    <div className="bg-white rounded-lg p-3 border border-blue-200">
-                      <div className="font-semibold text-slate-700 mb-1">Day 3-4</div>
+                    <div className="bg-white rounded-lg p-2 border border-blue-200">
+                      <div className="font-semibold text-slate-700 mb-1 text-xs">Day 3-4</div>
                       <div className="text-xs text-slate-600">reCAPTCHA検出ロジック</div>
                     </div>
-                    <div className="bg-white rounded-lg p-3 border border-blue-200">
-                      <div className="font-semibold text-slate-700 mb-1">Day 5</div>
+                    <div className="bg-white rounded-lg p-2 border border-blue-200">
+                      <div className="font-semibold text-slate-700 mb-1 text-xs">Day 5</div>
                       <div className="text-xs text-slate-600">フォームフィールド解析</div>
                     </div>
-                    <div className="bg-white rounded-lg p-3 border border-blue-200">
-                      <div className="font-semibold text-slate-700 mb-1">Day 6-7</div>
+                    <div className="bg-white rounded-lg p-2 border border-blue-200">
+                      <div className="font-semibold text-slate-700 mb-1 text-xs">Day 6-7</div>
                       <div className="text-xs text-slate-600">テスト・デバッグ</div>
                     </div>
                   </div>
-                  <div className="mt-3 bg-blue-100 rounded p-2 text-xs">
+                  <div className="mt-2 bg-blue-100 rounded p-2 text-[10px]">
                     <span className="font-semibold">成功基準:</span> reCAPTCHA検出精度95%以上、分析速度5秒以内/サイト
                   </div>
                 </div>
 
                 {/* Phase 2 */}
-                <div className="bg-indigo-50 rounded-xl p-5 border-2 border-indigo-300">
-                  <div className="flex items-center gap-3 mb-3">
-                    <div className="bg-indigo-600 text-white px-4 py-2 rounded-lg font-bold text-lg">Week 2</div>
-                    <div className="font-bold text-xl text-slate-800">自動振り分け機能</div>
+                <div className="bg-indigo-50 rounded-xl p-4 border-2 border-indigo-300">
+                  <div className="flex items-center gap-3 mb-2">
+                    <div className="bg-indigo-600 text-white px-3 py-1 rounded-lg font-bold text-base">Week 2</div>
+                    <div className="font-bold text-lg text-slate-800">自動振り分け機能</div>
                   </div>
                   <div className="grid grid-cols-4 gap-2 text-sm">
-                    <div className="bg-white rounded-lg p-3 border border-indigo-200">
-                      <div className="font-semibold text-slate-700 mb-1">Day 8</div>
+                    <div className="bg-white rounded-lg p-2 border border-indigo-200">
+                      <div className="font-semibold text-slate-700 mb-1 text-xs">Day 8</div>
                       <div className="text-xs text-slate-600">DB スキーマ拡張</div>
                     </div>
-                    <div className="bg-white rounded-lg p-3 border border-indigo-200">
-                      <div className="font-semibold text-slate-700 mb-1">Day 9-10</div>
+                    <div className="bg-white rounded-lg p-2 border border-indigo-200">
+                      <div className="font-semibold text-slate-700 mb-1 text-xs">Day 9-10</div>
                       <div className="text-xs text-slate-600">Task Router実装</div>
                     </div>
-                    <div className="bg-white rounded-lg p-3 border border-indigo-200">
-                      <div className="font-semibold text-slate-700 mb-1">Day 11-12</div>
+                    <div className="bg-white rounded-lg p-2 border border-indigo-200">
+                      <div className="font-semibold text-slate-700 mb-1 text-xs">Day 11-12</div>
                       <div className="text-xs text-slate-600">AutoExecutor実装</div>
                     </div>
-                    <div className="bg-white rounded-lg p-3 border border-indigo-200">
-                      <div className="font-semibold text-slate-700 mb-1">Day 13-14</div>
+                    <div className="bg-white rounded-lg p-2 border border-indigo-200">
+                      <div className="font-semibold text-slate-700 mb-1 text-xs">Day 13-14</div>
                       <div className="text-xs text-slate-600">統合テスト</div>
                     </div>
                   </div>
-                  <div className="mt-3 bg-indigo-100 rounded p-2 text-xs">
+                  <div className="mt-2 bg-indigo-100 rounded p-2 text-[10px]">
                     <span className="font-semibold">成功基準:</span> 自動タスクが無人実行、並列処理10件、リトライ動作確認
                   </div>
                 </div>
 
                 {/* Phase 3 */}
-                <div className="bg-green-50 rounded-xl p-5 border-2 border-green-300">
-                  <div className="flex items-center gap-3 mb-3">
-                    <div className="bg-green-600 text-white px-4 py-2 rounded-lg font-bold text-lg">Week 3</div>
-                    <div className="font-bold text-xl text-slate-800">UI統合・運用化</div>
+                <div className="bg-green-50 rounded-xl p-4 border-2 border-green-300">
+                  <div className="flex items-center gap-3 mb-2">
+                    <div className="bg-green-600 text-white px-3 py-1 rounded-lg font-bold text-base">Week 3</div>
+                    <div className="font-bold text-lg text-slate-800">UI統合・運用化</div>
                   </div>
                   <div className="grid grid-cols-5 gap-2 text-sm">
                     <div className="bg-white rounded-lg p-3 border border-green-200">
@@ -1507,28 +1507,28 @@ function App() {
         {currentSlide === 15 && (
           <Slide id={15} title="リスク分析と対策" subtitle="想定リスクと軽減策" pageNumber={15} totalPageCount={TOTAL_SLIDES}>
             <div className="h-full">
-              <div className="space-y-4">
+              <div className="space-y-3">
                 {/* リスク1 */}
-                <div className="bg-amber-50 rounded-xl p-4 border-2 border-amber-300">
-                  <div className="flex items-center justify-between mb-3">
+                <div className="bg-amber-50 rounded-xl p-3 border-2 border-amber-300">
+                  <div className="flex items-center justify-between mb-2">
                     <div className="flex items-center gap-2">
-                      <AlertCircle className="w-5 h-5 text-amber-600" />
-                      <div className="font-bold text-lg text-slate-800">リスク1: reCAPTCHA誤判定</div>
+                      <AlertCircle className="w-4 h-4 text-amber-600" />
+                      <div className="font-bold text-base text-slate-800">リスク1: reCAPTCHA誤判定</div>
                     </div>
                     <div className="flex items-center gap-2">
-                      <span className="bg-amber-200 text-amber-800 px-3 py-1 rounded-full font-bold text-sm">🟡 中</span>
-                      <span className="text-slate-400">→</span>
-                      <span className="bg-green-200 text-green-800 px-3 py-1 rounded-full font-bold text-sm">🟢 低</span>
+                      <span className="bg-amber-200 text-amber-800 px-2 py-1 rounded-full font-bold text-xs">🟡 中</span>
+                      <span className="text-slate-400 text-xs">→</span>
+                      <span className="bg-green-200 text-green-800 px-2 py-1 rounded-full font-bold text-xs">🟢 低</span>
                     </div>
                   </div>
-                  <div className="grid grid-cols-2 gap-3 text-sm">
-                    <div className="bg-white rounded p-3 border border-amber-200">
-                      <div className="font-semibold text-red-700 mb-1">リスク内容</div>
+                  <div className="grid grid-cols-2 gap-2 text-sm">
+                    <div className="bg-white rounded p-2 border border-amber-200">
+                      <div className="font-semibold text-red-700 mb-1 text-xs">リスク内容</div>
                       <div className="text-slate-700 text-xs">reCAPTCHA v2を「無し」と誤判定 → 自動送信失敗</div>
                     </div>
-                    <div className="bg-white rounded p-3 border border-amber-200">
-                      <div className="font-semibold text-green-700 mb-1">対策</div>
-                      <div className="text-slate-700 text-xs">
+                    <div className="bg-white rounded p-2 border border-amber-200">
+                      <div className="font-semibold text-green-700 mb-1 text-xs">対策</div>
+                      <div className="text-slate-700 text-[10px]">
                         1. 保守的な判定<br />
                         2. フォールバック機能<br />
                         3. 学習機能で精度向上<br />
@@ -1539,26 +1539,26 @@ function App() {
                 </div>
 
                 {/* リスク2 */}
-                <div className="bg-orange-50 rounded-xl p-4 border-2 border-orange-300">
-                  <div className="flex items-center justify-between mb-3">
+                <div className="bg-orange-50 rounded-xl p-3 border-2 border-orange-300">
+                  <div className="flex items-center justify-between mb-2">
                     <div className="flex items-center gap-2">
-                      <AlertCircle className="w-5 h-5 text-orange-600" />
-                      <div className="font-bold text-lg text-slate-800">リスク2: 自動実行の不安定性</div>
+                      <AlertCircle className="w-4 h-4 text-orange-600" />
+                      <div className="font-bold text-base text-slate-800">リスク2: 自動実行の不安定性</div>
                     </div>
                     <div className="flex items-center gap-2">
-                      <span className="bg-amber-200 text-amber-800 px-3 py-1 rounded-full font-bold text-sm">🟡 中</span>
-                      <span className="text-slate-400">→</span>
-                      <span className="bg-green-200 text-green-800 px-3 py-1 rounded-full font-bold text-sm">🟢 低</span>
+                      <span className="bg-amber-200 text-amber-800 px-2 py-1 rounded-full font-bold text-xs">🟡 中</span>
+                      <span className="text-slate-400 text-xs">→</span>
+                      <span className="bg-green-200 text-green-800 px-2 py-1 rounded-full font-bold text-xs">🟢 低</span>
                     </div>
                   </div>
-                  <div className="grid grid-cols-2 gap-3 text-sm">
-                    <div className="bg-white rounded p-3 border border-orange-200">
-                      <div className="font-semibold text-red-700 mb-1">リスク内容</div>
+                  <div className="grid grid-cols-2 gap-2 text-sm">
+                    <div className="bg-white rounded p-2 border border-orange-200">
+                      <div className="font-semibold text-red-700 mb-1 text-xs">リスク内容</div>
                       <div className="text-slate-700 text-xs">フォーム構造の変更、サイトのレスポンス遅延でタイムアウト</div>
                     </div>
-                    <div className="bg-white rounded p-3 border border-orange-200">
-                      <div className="font-semibold text-green-700 mb-1">対策</div>
-                      <div className="text-slate-700 text-xs">
+                    <div className="bg-white rounded p-2 border border-orange-200">
+                      <div className="font-semibold text-green-700 mb-1 text-xs">対策</div>
+                      <div className="text-slate-700 text-[10px]">
                         1. リトライ機能（3回）<br />
                         2. Slack/メール通知<br />
                         3. 手動フォールバック<br />
@@ -1569,26 +1569,26 @@ function App() {
                 </div>
 
                 {/* リスク3 */}
-                <div className="bg-blue-50 rounded-xl p-4 border-2 border-blue-300">
-                  <div className="flex items-center justify-between mb-3">
+                <div className="bg-blue-50 rounded-xl p-3 border-2 border-blue-300">
+                  <div className="flex items-center justify-between mb-2">
                     <div className="flex items-center gap-2">
-                      <AlertCircle className="w-5 h-5 text-blue-600" />
-                      <div className="font-bold text-lg text-slate-800">リスク3: 開発スケジュール遅延</div>
+                      <AlertCircle className="w-4 h-4 text-blue-600" />
+                      <div className="font-bold text-base text-slate-800">リスク3: 開発スケジュール遅延</div>
                     </div>
                     <div className="flex items-center gap-2">
-                      <span className="bg-amber-200 text-amber-800 px-3 py-1 rounded-full font-bold text-sm">🟡 中</span>
-                      <span className="text-slate-400">→</span>
-                      <span className="bg-green-200 text-green-800 px-3 py-1 rounded-full font-bold text-sm">🟢 低</span>
+                      <span className="bg-amber-200 text-amber-800 px-2 py-1 rounded-full font-bold text-xs">🟡 中</span>
+                      <span className="text-slate-400 text-xs">→</span>
+                      <span className="bg-green-200 text-green-800 px-2 py-1 rounded-full font-bold text-xs">🟢 低</span>
                     </div>
                   </div>
-                  <div className="grid grid-cols-2 gap-3 text-sm">
-                    <div className="bg-white rounded p-3 border border-blue-200">
-                      <div className="font-semibold text-red-700 mb-1">リスク内容</div>
+                  <div className="grid grid-cols-2 gap-2 text-sm">
+                    <div className="bg-white rounded p-2 border border-blue-200">
+                      <div className="font-semibold text-red-700 mb-1 text-xs">リスク内容</div>
                       <div className="text-slate-700 text-xs">技術的課題で実装が遅れる、3週間で完成しない</div>
                     </div>
-                    <div className="bg-white rounded p-3 border border-blue-200">
-                      <div className="font-semibold text-green-700 mb-1">対策</div>
-                      <div className="text-slate-700 text-xs">
+                    <div className="bg-white rounded p-2 border border-blue-200">
+                      <div className="font-semibold text-green-700 mb-1 text-xs">対策</div>
+                      <div className="text-slate-700 text-[10px]">
                         1. 段階的リリース<br />
                         2. MVPアプローチ<br />
                         3. 外部リソース活用<br />
@@ -1765,59 +1765,59 @@ function App() {
         {currentSlide === 17 && (
           <Slide id={17} title="市場分析" subtitle="競合比較とビジネスモデル" pageNumber={17} totalPageCount={TOTAL_SLIDES}>
             <div className="h-full">
-              <h3 className="text-2xl font-bold text-slate-800 mb-6">競合分析</h3>
+              <h3 className="text-xl font-bold text-slate-800 mb-4">競合分析</h3>
               
-              <table className="w-full border-collapse mb-6">
+              <table className="w-full border-collapse mb-4">
                 <thead>
                   <tr className="bg-slate-100">
-                    <th className="border border-slate-300 px-4 py-3 text-left font-semibold text-slate-700">サービス</th>
-                    <th className="border border-slate-300 px-4 py-3 text-center font-semibold text-slate-700">自動化度</th>
-                    <th className="border border-slate-300 px-4 py-3 text-center font-semibold text-slate-700">reCAPTCHA対応</th>
-                    <th className="border border-slate-300 px-4 py-3 text-right font-semibold text-slate-700">単価</th>
+                    <th className="border border-slate-300 px-3 py-2 text-left font-semibold text-slate-700 text-sm">サービス</th>
+                    <th className="border border-slate-300 px-3 py-2 text-center font-semibold text-slate-700 text-sm">自動化度</th>
+                    <th className="border border-slate-300 px-3 py-2 text-center font-semibold text-slate-700 text-sm">reCAPTCHA対応</th>
+                    <th className="border border-slate-300 px-3 py-2 text-right font-semibold text-slate-700 text-sm">単価</th>
                   </tr>
                 </thead>
                 <tbody>
                   <tr className="bg-red-50">
-                    <td className="border border-slate-300 px-4 py-3 font-semibold text-slate-800">A社</td>
-                    <td className="border border-slate-300 px-4 py-3 text-center">完全手動</td>
-                    <td className="border border-slate-300 px-4 py-3 text-center">ワーカー対応</td>
-                    <td className="border border-slate-300 px-4 py-3 text-right font-bold text-lg">3円/件</td>
+                    <td className="border border-slate-300 px-3 py-2 font-semibold text-slate-800 text-sm">A社</td>
+                    <td className="border border-slate-300 px-3 py-2 text-center text-xs">完全手動</td>
+                    <td className="border border-slate-300 px-3 py-2 text-center text-xs">ワーカー対応</td>
+                    <td className="border border-slate-300 px-3 py-2 text-right font-bold text-base">3円/件</td>
                   </tr>
                   <tr className="bg-orange-50">
-                    <td className="border border-slate-300 px-4 py-3 font-semibold text-slate-800">B社</td>
-                    <td className="border border-slate-300 px-4 py-3 text-center">半自動</td>
-                    <td className="border border-slate-300 px-4 py-3 text-center">ワーカー対応</td>
-                    <td className="border border-slate-300 px-4 py-3 text-right font-bold text-lg">2.5円/件</td>
+                    <td className="border border-slate-300 px-3 py-2 font-semibold text-slate-800 text-sm">B社</td>
+                    <td className="border border-slate-300 px-3 py-2 text-center text-xs">半自動</td>
+                    <td className="border border-slate-300 px-3 py-2 text-center text-xs">ワーカー対応</td>
+                    <td className="border border-slate-300 px-3 py-2 text-right font-bold text-base">2.5円/件</td>
                   </tr>
                   <tr className="bg-green-100">
-                    <td className="border border-slate-300 px-4 py-3 font-bold text-green-800">提案システム</td>
-                    <td className="border border-slate-300 px-4 py-3 text-center font-bold text-green-700">ハイブリッド</td>
-                    <td className="border border-slate-300 px-4 py-3 text-center font-bold text-green-700">自動振り分け</td>
-                    <td className="border border-slate-300 px-4 py-3 text-right font-bold text-green-700 text-2xl">1.03円/件</td>
+                    <td className="border border-slate-300 px-3 py-2 font-bold text-green-800 text-sm">提案システム</td>
+                    <td className="border border-slate-300 px-3 py-2 text-center font-bold text-green-700 text-xs">ハイブリッド</td>
+                    <td className="border border-slate-300 px-3 py-2 text-center font-bold text-green-700 text-xs">自動振り分け</td>
+                    <td className="border border-slate-300 px-3 py-2 text-right font-bold text-green-700 text-xl">1.03円/件</td>
                   </tr>
                 </tbody>
               </table>
 
-              <div className="bg-blue-100 border-2 border-blue-300 rounded-xl p-5 mb-6">
-                <div className="flex items-center gap-2 mb-2">
-                  <TrendingUp className="w-6 h-6 text-blue-700" />
-                  <span className="font-bold text-xl text-blue-900">競争優位性</span>
+              <div className="bg-blue-100 border-2 border-blue-300 rounded-xl p-4 mb-4">
+                <div className="flex items-center gap-2 mb-1">
+                  <TrendingUp className="w-5 h-5 text-blue-700" />
+                  <span className="font-bold text-lg text-blue-900">競争優位性</span>
                 </div>
                 <div className="text-center">
-                  <div className="text-5xl font-black text-blue-600 mb-2">実質単価60%削減</div>
-                  <div className="text-slate-700">業界最安値水準で圧倒的なコスト競争力を実現</div>
+                  <div className="text-4xl font-black text-blue-600 mb-1">実質単価60%削減</div>
+                  <div className="text-slate-700 text-sm">業界最安値水準で圧倒的なコスト競争力を実現</div>
                 </div>
               </div>
 
-              <h3 className="text-xl font-bold text-slate-800 mb-4">価格戦略の選択肢</h3>
-              <div className="grid grid-cols-3 gap-4">
-                <div className="bg-amber-50 rounded-xl p-4 border-2 border-amber-300">
-                  <div className="font-bold text-lg text-amber-800 mb-3 text-center">オプション1</div>
-                  <div className="text-center mb-3">
-                    <div className="text-sm text-slate-600">価格据え置き</div>
-                    <div className="text-3xl font-black text-amber-600">2円/件</div>
+              <h3 className="text-base font-bold text-slate-800 mb-3">価格戦略の選択肢</h3>
+              <div className="grid grid-cols-3 gap-3">
+                <div className="bg-amber-50 rounded-xl p-3 border-2 border-amber-300">
+                  <div className="font-bold text-base text-amber-800 mb-2 text-center">オプション1</div>
+                  <div className="text-center mb-2">
+                    <div className="text-xs text-slate-600">価格据え置き</div>
+                    <div className="text-2xl font-black text-amber-600">2円/件</div>
                   </div>
-                  <div className="bg-white rounded p-3 border border-amber-200 text-sm space-y-1">
+                  <div className="bg-white rounded p-2 border border-amber-200 text-xs space-y-1">
                     <div className="flex justify-between">
                       <span className="text-slate-600">実質コスト</span>
                       <span className="font-bold">1.03円</span>
@@ -1827,18 +1827,18 @@ function App() {
                       <span className="font-bold text-green-600">51.5%</span>
                     </div>
                     <div className="border-t border-amber-200 pt-1 mt-1">
-                      <div className="font-semibold text-amber-700">利益率向上</div>
+                      <div className="font-semibold text-amber-700 text-[10px]">利益率向上</div>
                     </div>
                   </div>
                 </div>
 
-                <div className="bg-blue-50 rounded-xl p-4 border-2 border-blue-300">
-                  <div className="font-bold text-lg text-blue-800 mb-3 text-center">オプション2</div>
-                  <div className="text-center mb-3">
-                    <div className="text-sm text-slate-600">値下げ攻勢</div>
-                    <div className="text-3xl font-black text-blue-600">1.5円/件</div>
+                <div className="bg-blue-50 rounded-xl p-3 border-2 border-blue-300">
+                  <div className="font-bold text-base text-blue-800 mb-2 text-center">オプション2</div>
+                  <div className="text-center mb-2">
+                    <div className="text-xs text-slate-600">値下げ攻勢</div>
+                    <div className="text-2xl font-black text-blue-600">1.5円/件</div>
                   </div>
-                  <div className="bg-white rounded p-3 border border-blue-200 text-sm space-y-1">
+                  <div className="bg-white rounded p-2 border border-blue-200 text-xs space-y-1">
                     <div className="flex justify-between">
                       <span className="text-slate-600">実質コスト</span>
                       <span className="font-bold">1.03円</span>
@@ -1882,48 +1882,48 @@ function App() {
         {currentSlide === 18 && (
           <Slide id={18} title="投資計画" subtitle="初期投資と運用コスト" pageNumber={18} totalPageCount={TOTAL_SLIDES}>
             <div className="h-full">
-              <div className="grid grid-cols-2 gap-8 mb-6">
+              <div className="grid grid-cols-2 gap-6 mb-4">
                 <div>
-                  <h3 className="text-xl font-bold text-slate-800 mb-4">初期投資</h3>
-                  <div className="bg-blue-50 rounded-xl p-6 border-2 border-blue-300">
+                  <h3 className="text-base font-bold text-slate-800 mb-3">初期投資</h3>
+                  <div className="bg-blue-50 rounded-xl p-4 border-2 border-blue-300">
                     <table className="w-full border-collapse">
                       <thead>
                         <tr className="bg-blue-100">
-                          <th className="border border-blue-300 px-4 py-3 text-left font-semibold text-slate-700">項目</th>
-                          <th className="border border-blue-300 px-4 py-3 text-right font-semibold text-slate-700">金額</th>
+                          <th className="border border-blue-300 px-3 py-2 text-left font-semibold text-slate-700 text-sm">項目</th>
+                          <th className="border border-blue-300 px-3 py-2 text-right font-semibold text-slate-700 text-sm">金額</th>
                         </tr>
                       </thead>
                       <tbody>
                         <tr>
-                          <td className="border border-blue-200 px-4 py-3">
-                            <div className="font-semibold text-slate-800">開発費</div>
+                          <td className="border border-blue-200 px-3 py-2">
+                            <div className="font-semibold text-slate-800 text-sm">開発費</div>
                             <div className="text-xs text-slate-600">エンジニア3週間</div>
                           </td>
-                          <td className="border border-blue-200 px-4 py-3 text-right font-bold text-xl">300,000円</td>
+                          <td className="border border-blue-200 px-3 py-2 text-right font-bold text-lg">300,000円</td>
                         </tr>
                         <tr>
-                          <td className="border border-blue-200 px-4 py-3 text-slate-700">サーバー増強</td>
-                          <td className="border border-blue-200 px-4 py-3 text-right font-bold text-lg">0円</td>
+                          <td className="border border-blue-200 px-3 py-2 text-slate-700 text-xs">サーバー増強</td>
+                          <td className="border border-blue-200 px-3 py-2 text-right font-bold text-base">0円</td>
                         </tr>
                         <tr>
-                          <td className="border border-blue-200 px-4 py-3 text-slate-700">テスト環境</td>
-                          <td className="border border-blue-200 px-4 py-3 text-right font-bold text-lg">0円</td>
+                          <td className="border border-blue-200 px-3 py-2 text-slate-700 text-xs">テスト環境</td>
+                          <td className="border border-blue-200 px-3 py-2 text-right font-bold text-base">0円</td>
                         </tr>
                         <tr className="bg-blue-200">
-                          <td className="border border-blue-300 px-4 py-3 font-bold text-slate-900">合計</td>
-                          <td className="border border-blue-300 px-4 py-3 text-right font-bold text-2xl text-blue-700">300,000円</td>
+                          <td className="border border-blue-300 px-3 py-2 font-bold text-slate-900 text-sm">合計</td>
+                          <td className="border border-blue-300 px-3 py-2 text-right font-bold text-xl text-blue-700">300,000円</td>
                         </tr>
                       </tbody>
                     </table>
-                    <div className="mt-4 text-xs text-slate-600 bg-white rounded p-3 border border-blue-200">
+                    <div className="mt-2 text-[10px] text-slate-600 bg-white rounded p-2 border border-blue-200">
                       ※ 既存VPS流用、Codespacesでテスト対応のため追加インフラ費用なし
                     </div>
                   </div>
                 </div>
 
                 <div>
-                  <h3 className="text-xl font-bold text-slate-800 mb-4">運用コスト（月額）</h3>
-                  <div className="bg-green-50 rounded-xl p-6 border-2 border-green-300">
+                  <h3 className="text-base font-bold text-slate-800 mb-3">運用コスト（月額）</h3>
+                  <div className="bg-green-50 rounded-xl p-4 border-2 border-green-300">
                     <table className="w-full border-collapse">
                       <thead>
                         <tr className="bg-green-100">
@@ -1964,50 +1964,50 @@ function App() {
                 </div>
               </div>
 
-              <div className="bg-gradient-to-br from-purple-50 to-indigo-50 rounded-xl p-6 border-2 border-purple-300">
-                <h3 className="text-xl font-bold text-slate-800 mb-4 text-center">投資回収シミュレーション</h3>
-                <div className="grid grid-cols-5 gap-4 mb-4">
+              <div className="bg-gradient-to-br from-purple-50 to-indigo-50 rounded-xl p-4 border-2 border-purple-300">
+                <h3 className="text-base font-bold text-slate-800 mb-3 text-center">投資回収シミュレーション</h3>
+                <div className="grid grid-cols-5 gap-3 mb-3">
                   <div className="text-center">
-                    <div className="text-sm text-slate-600 mb-1">初期投資</div>
-                    <div className="text-2xl font-bold text-red-600">300,000円</div>
+                    <div className="text-xs text-slate-600 mb-1">初期投資</div>
+                    <div className="text-xl font-bold text-red-600">300,000円</div>
                   </div>
-                  <div className="flex items-center justify-center text-3xl text-slate-400">÷</div>
+                  <div className="flex items-center justify-center text-2xl text-slate-400">÷</div>
                   <div className="text-center">
-                    <div className="text-sm text-slate-600 mb-1">月額削減</div>
-                    <div className="text-2xl font-bold text-green-600">66,000円</div>
+                    <div className="text-xs text-slate-600 mb-1">月額削減</div>
+                    <div className="text-xl font-bold text-green-600">66,000円</div>
                   </div>
-                  <div className="flex items-center justify-center text-3xl text-slate-400">=</div>
+                  <div className="flex items-center justify-center text-2xl text-slate-400">=</div>
                   <div className="text-center">
-                    <div className="text-sm text-slate-600 mb-1">回収期間</div>
-                    <div className="text-3xl font-black text-blue-600">4.5ヶ月</div>
+                    <div className="text-xs text-slate-600 mb-1">回収期間</div>
+                    <div className="text-2xl font-black text-blue-600">4.5ヶ月</div>
                   </div>
                 </div>
 
-                <div className="bg-white rounded-lg p-4 border-2 border-purple-300">
-                  <div className="font-bold text-slate-800 mb-3 text-center">累積効果</div>
-                  <div className="grid grid-cols-3 gap-4 text-center text-sm">
+                <div className="bg-white rounded-lg p-3 border-2 border-purple-300">
+                  <div className="font-bold text-slate-800 mb-2 text-center text-sm">累積効果</div>
+                  <div className="grid grid-cols-3 gap-3 text-center text-sm">
                     <div>
-                      <div className="text-slate-600 mb-1">6ヶ月後</div>
-                      <div className="text-xl font-bold text-green-600">+96,000円</div>
+                      <div className="text-slate-600 mb-1 text-xs">6ヶ月後</div>
+                      <div className="text-lg font-bold text-green-600">+96,000円</div>
                     </div>
                     <div>
-                      <div className="text-slate-600 mb-1">1年後</div>
-                      <div className="text-2xl font-bold text-green-600">+492,000円</div>
+                      <div className="text-slate-600 mb-1 text-xs">1年後</div>
+                      <div className="text-xl font-bold text-green-600">+492,000円</div>
                     </div>
                     <div>
-                      <div className="text-slate-600 mb-1">2年後</div>
-                      <div className="text-3xl font-black text-green-600">+1,284,000円</div>
+                      <div className="text-slate-600 mb-1 text-xs">2年後</div>
+                      <div className="text-2xl font-black text-green-600">+1,284,000円</div>
                     </div>
                   </div>
                 </div>
               </div>
 
-              <div className="mt-4 bg-blue-100 border-2 border-blue-300 rounded-xl p-4">
-                <div className="flex items-center gap-2 mb-2">
-                  <CheckCircle2 className="w-5 h-5 text-blue-700" />
-                  <span className="font-bold text-blue-900">投資判断</span>
+              <div className="mt-3 bg-blue-100 border-2 border-blue-300 rounded-xl p-3">
+                <div className="flex items-center gap-2 mb-1">
+                  <CheckCircle2 className="w-4 h-4 text-blue-700" />
+                  <span className="font-bold text-blue-900 text-sm">投資判断</span>
                 </div>
-                <p className="text-slate-800 font-semibold text-lg">
+                <p className="text-slate-800 font-semibold text-sm">
                   ✅ <span className="text-blue-700">5ヶ月で投資回収、高ROI案件</span> - 財務的に健全な戦略的投資
                 </p>
               </div>
@@ -2018,84 +2018,84 @@ function App() {
         {/* Slide 19: Go/No-Go判断 */}
         {currentSlide === 19 && (
           <Slide id={19} title="意思決定のための要約" subtitle="Go/No-Goの判断材料" pageNumber={19} totalPageCount={TOTAL_SLIDES}>
-            <div className="grid grid-cols-2 gap-8 h-full">
+            <div className="grid grid-cols-2 gap-6 h-full">
               <div>
-                <h3 className="text-2xl font-bold text-green-600 mb-4 flex items-center gap-2">
-                  <CheckCircle2 className="w-7 h-7" />
+                <h3 className="text-xl font-bold text-green-600 mb-3 flex items-center gap-2">
+                  <CheckCircle2 className="w-6 h-6" />
                   Goを推奨する理由
                 </h3>
-                <div className="space-y-4">
-                  <div className="bg-green-50 rounded-xl p-5 border-2 border-green-300">
-                    <div className="flex items-center gap-2 mb-3">
-                      <DollarSign className="w-6 h-6 text-green-600" />
-                      <div className="font-bold text-lg text-slate-800">財務面</div>
+                <div className="space-y-3">
+                  <div className="bg-green-50 rounded-xl p-3 border-2 border-green-300">
+                    <div className="flex items-center gap-2 mb-2">
+                      <DollarSign className="w-5 h-5 text-green-600" />
+                      <div className="font-bold text-base text-slate-800">財務面</div>
                     </div>
-                    <ul className="space-y-2 text-sm text-slate-700">
+                    <ul className="space-y-1 text-xs text-slate-700">
                       <li className="flex items-start gap-2">
-                        <CheckCircle2 className="w-4 h-4 text-green-600 flex-shrink-0 mt-0.5" />
+                        <CheckCircle2 className="w-3 h-3 text-green-600 flex-shrink-0 mt-0.5" />
                         <span>月額66,000円削減（51%コストカット）</span>
                       </li>
                       <li className="flex items-start gap-2">
-                        <CheckCircle2 className="w-4 h-4 text-green-600 flex-shrink-0 mt-0.5" />
+                        <CheckCircle2 className="w-3 h-3 text-green-600 flex-shrink-0 mt-0.5" />
                         <span>5ヶ月で投資回収</span>
                       </li>
                       <li className="flex items-start gap-2">
-                        <CheckCircle2 className="w-4 h-4 text-green-600 flex-shrink-0 mt-0.5" />
+                        <CheckCircle2 className="w-3 h-3 text-green-600 flex-shrink-0 mt-0.5" />
                         <span>年間79万円の削減効果</span>
                       </li>
                     </ul>
                   </div>
 
-                  <div className="bg-blue-50 rounded-xl p-5 border-2 border-blue-300">
-                    <div className="flex items-center gap-2 mb-3">
-                      <Settings className="w-6 h-6 text-blue-600" />
-                      <div className="font-bold text-lg text-slate-800">技術面</div>
+                  <div className="bg-blue-50 rounded-xl p-3 border-2 border-blue-300">
+                    <div className="flex items-center gap-2 mb-2">
+                      <Settings className="w-5 h-5 text-blue-600" />
+                      <div className="font-bold text-base text-slate-800">技術面</div>
                     </div>
-                    <ul className="space-y-2 text-sm text-slate-700">
+                    <ul className="space-y-1 text-xs text-slate-700">
                       <li className="flex items-start gap-2">
-                        <CheckCircle2 className="w-4 h-4 text-blue-600 flex-shrink-0 mt-0.5" />
+                        <CheckCircle2 className="w-3 h-3 text-blue-600 flex-shrink-0 mt-0.5" />
                         <span>既存技術スタックで実装可能</span>
                       </li>
                       <li className="flex items-start gap-2">
-                        <CheckCircle2 className="w-4 h-4 text-blue-600 flex-shrink-0 mt-0.5" />
+                        <CheckCircle2 className="w-3 h-3 text-blue-600 flex-shrink-0 mt-0.5" />
                         <span>リスクは限定的かつ管理可能</span>
                       </li>
                       <li className="flex items-start gap-2">
-                        <CheckCircle2 className="w-4 h-4 text-blue-600 flex-shrink-0 mt-0.5" />
+                        <CheckCircle2 className="w-3 h-3 text-blue-600 flex-shrink-0 mt-0.5" />
                         <span>段階的リリースで早期効果</span>
                       </li>
                     </ul>
                   </div>
 
-                  <div className="bg-indigo-50 rounded-xl p-5 border-2 border-indigo-300">
-                    <div className="flex items-center gap-2 mb-3">
-                      <TrendingUp className="w-6 h-6 text-indigo-600" />
-                      <div className="font-bold text-lg text-slate-800">ビジネス面</div>
+                  <div className="bg-indigo-50 rounded-xl p-3 border-2 border-indigo-300">
+                    <div className="flex items-center gap-2 mb-2">
+                      <TrendingUp className="w-5 h-5 text-indigo-600" />
+                      <div className="font-bold text-base text-slate-800">ビジネス面</div>
                     </div>
-                    <ul className="space-y-2 text-sm text-slate-700">
+                    <ul className="space-y-1 text-xs text-slate-700">
                       <li className="flex items-start gap-2">
-                        <CheckCircle2 className="w-4 h-4 text-indigo-600 flex-shrink-0 mt-0.5" />
+                        <CheckCircle2 className="w-3 h-3 text-indigo-600 flex-shrink-0 mt-0.5" />
                         <span>競合優位性の確立</span>
                       </li>
                       <li className="flex items-start gap-2">
-                        <CheckCircle2 className="w-4 h-4 text-indigo-600 flex-shrink-0 mt-0.5" />
+                        <CheckCircle2 className="w-3 h-3 text-indigo-600 flex-shrink-0 mt-0.5" />
                         <span>スケーラビリティの向上</span>
                       </li>
                       <li className="flex items-start gap-2">
-                        <CheckCircle2 className="w-4 h-4 text-indigo-600 flex-shrink-0 mt-0.5" />
+                        <CheckCircle2 className="w-3 h-3 text-indigo-600 flex-shrink-0 mt-0.5" />
                         <span>市場拡大の基盤</span>
                       </li>
                     </ul>
                   </div>
 
-                  <div className="bg-purple-50 rounded-xl p-5 border-2 border-purple-300">
-                    <div className="flex items-center gap-2 mb-3">
-                      <Users className="w-6 h-6 text-purple-600" />
-                      <div className="font-bold text-lg text-slate-800">運用面</div>
+                  <div className="bg-purple-50 rounded-xl p-3 border-2 border-purple-300">
+                    <div className="flex items-center gap-2 mb-2">
+                      <Users className="w-5 h-5 text-purple-600" />
+                      <div className="font-bold text-base text-slate-800">運用面</div>
                     </div>
-                    <ul className="space-y-2 text-sm text-slate-700">
+                    <ul className="space-y-1 text-xs text-slate-700">
                       <li className="flex items-start gap-2">
-                        <CheckCircle2 className="w-4 h-4 text-purple-600 flex-shrink-0 mt-0.5" />
+                        <CheckCircle2 className="w-3 h-3 text-purple-600 flex-shrink-0 mt-0.5" />
                         <span>ワーカー負荷55%軽減</span>
                       </li>
                       <li className="flex items-start gap-2">
@@ -2174,79 +2174,79 @@ function App() {
         {currentSlide === 20 && (
           <Slide id={20} title="次のステップ" subtitle="承認後のアクションプラン" pageNumber={20} totalPageCount={TOTAL_SLIDES}>
             <div className="h-full">
-              <h3 className="text-2xl font-bold text-slate-800 mb-6 text-center">承認後のタイムライン</h3>
+              <h3 className="text-xl font-bold text-slate-800 mb-4 text-center">承認後のタイムライン</h3>
               
-              <div className="space-y-4 mb-6">
-                <div className="bg-blue-50 rounded-xl p-5 border-2 border-blue-300">
-                  <div className="flex items-center gap-3 mb-3">
-                    <div className="bg-blue-600 text-white px-4 py-2 rounded-lg font-bold">Week 1</div>
-                    <div className="font-bold text-xl text-slate-800">即座に開始</div>
+              <div className="space-y-3 mb-4">
+                <div className="bg-blue-50 rounded-xl p-3 border-2 border-blue-300">
+                  <div className="flex items-center gap-3 mb-2">
+                    <div className="bg-blue-600 text-white px-3 py-1 rounded-lg font-bold text-sm">Week 1</div>
+                    <div className="font-bold text-base text-slate-800">即座に開始</div>
                   </div>
-                  <ul className="space-y-2 text-sm text-slate-700 ml-4">
+                  <ul className="space-y-1 text-xs text-slate-700 ml-4">
                     <li className="flex items-center gap-2">
-                      <CheckCircle2 className="w-4 h-4 text-blue-600" />
+                      <CheckCircle2 className="w-3 h-3 text-blue-600" />
                       <span>キックオフミーティング</span>
                     </li>
                     <li className="flex items-center gap-2">
-                      <CheckCircle2 className="w-4 h-4 text-blue-600" />
+                      <CheckCircle2 className="w-3 h-3 text-blue-600" />
                       <span>技術仕様の最終確認</span>
                     </li>
                     <li className="flex items-center gap-2">
-                      <CheckCircle2 className="w-4 h-4 text-blue-600" />
+                      <CheckCircle2 className="w-3 h-3 text-blue-600" />
                       <span>開発環境セットアップ</span>
                     </li>
                   </ul>
                 </div>
 
-                <div className="bg-indigo-50 rounded-xl p-5 border-2 border-indigo-300">
-                  <div className="flex items-center gap-3 mb-3">
-                    <div className="bg-indigo-600 text-white px-4 py-2 rounded-lg font-bold">Week 2-4</div>
-                    <div className="font-bold text-xl text-slate-800">開発期間</div>
+                <div className="bg-indigo-50 rounded-xl p-3 border-2 border-indigo-300">
+                  <div className="flex items-center gap-3 mb-2">
+                    <div className="bg-indigo-600 text-white px-3 py-1 rounded-lg font-bold text-sm">Week 2-4</div>
+                    <div className="font-bold text-base text-slate-800">開発期間</div>
                   </div>
-                  <ul className="space-y-2 text-sm text-slate-700 ml-4">
+                  <ul className="space-y-1 text-xs text-slate-700 ml-4">
                     <li className="flex items-center gap-2">
-                      <CheckCircle2 className="w-4 h-4 text-indigo-600" />
+                      <CheckCircle2 className="w-3 h-3 text-indigo-600" />
                       <span>週次進捗報告</span>
                     </li>
                     <li className="flex items-center gap-2">
-                      <CheckCircle2 className="w-4 h-4 text-indigo-600" />
+                      <CheckCircle2 className="w-3 h-3 text-indigo-600" />
                       <span>中間レビュー（Week 2終了時）</span>
                     </li>
                     <li className="flex items-center gap-2">
-                      <CheckCircle2 className="w-4 h-4 text-indigo-600" />
+                      <CheckCircle2 className="w-3 h-3 text-indigo-600" />
                       <span>ステークホルダーデモ（Week 3）</span>
                     </li>
                   </ul>
                 </div>
 
-                <div className="bg-green-50 rounded-xl p-5 border-2 border-green-300">
-                  <div className="flex items-center gap-3 mb-3">
-                    <div className="bg-green-600 text-white px-4 py-2 rounded-lg font-bold">Week 5</div>
-                    <div className="font-bold text-xl text-slate-800">リリース</div>
+                <div className="bg-green-50 rounded-xl p-3 border-2 border-green-300">
+                  <div className="flex items-center gap-3 mb-2">
+                    <div className="bg-green-600 text-white px-3 py-1 rounded-lg font-bold text-sm">Week 5</div>
+                    <div className="font-bold text-base text-slate-800">リリース</div>
                   </div>
-                  <ul className="space-y-2 text-sm text-slate-700 ml-4">
+                  <ul className="space-y-1 text-xs text-slate-700 ml-4">
                     <li className="flex items-center gap-2">
-                      <CheckCircle2 className="w-4 h-4 text-green-600" />
+                      <CheckCircle2 className="w-3 h-3 text-green-600" />
                       <span>本番環境デプロイ</span>
                     </li>
                     <li className="flex items-center gap-2">
-                      <CheckCircle2 className="w-4 h-4 text-green-600" />
+                      <CheckCircle2 className="w-3 h-3 text-green-600" />
                       <span>ワーカー向け説明会</span>
                     </li>
                     <li className="flex items-center gap-2">
-                      <CheckCircle2 className="w-4 h-4 text-green-600" />
+                      <CheckCircle2 className="w-3 h-3 text-green-600" />
                       <span>監視体制確立</span>
                     </li>
                   </ul>
                 </div>
               </div>
 
-              <h3 className="text-xl font-bold text-slate-800 mb-4">必要な承認事項</h3>
-              <div className="grid grid-cols-2 gap-4 mb-6">
-                <div className="bg-purple-50 rounded-lg p-4 border-2 border-purple-300">
+              <h3 className="text-base font-bold text-slate-800 mb-3">必要な承認事項</h3>
+              <div className="grid grid-cols-2 gap-3 mb-4">
+                <div className="bg-purple-50 rounded-lg p-3 border-2 border-purple-300">
                   <div className="flex items-center gap-2 mb-2">
-                    <div className="w-6 h-6 border-2 border-purple-600 rounded flex items-center justify-center">
-                      <span className="text-purple-600 text-sm">☐</span>
+                    <div className="w-5 h-5 border-2 border-purple-600 rounded flex items-center justify-center">
+                      <span className="text-purple-600 text-xs">☐</span>
                     </div>
                     <span className="font-semibold text-slate-800">初期投資30万円の予算承認</span>
                   </div>
